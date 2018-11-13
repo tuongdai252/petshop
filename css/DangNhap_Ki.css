@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+.Top_dau {
+	padding: 5px 10px;
+	text-align:right;
+}
+
+.Top_dau a {
+	color:red;
+	text-align:center;
+	padding:5px 10px;
+	text-decoration:none;
+	font-size:15px;
+	line-height:22px;
+	font-weight:bold;
+}
+
+.Top_dau a:hover {
+	background-color:#ff8080;
+	color:white;
+	border-radius:10px;
+	padding:5px 10px;
+}
