@@ -2,44 +2,57 @@
 /* CSS Document */
 .Footer {
 	width:100%;
-	background:white;
-	padding:40px;
 }
-.Footer .Cot {
-	float:left;
-	width:50%;
-	padding:10px;
+
+.Footer .container{
+    max-width: 1200px;
+    margin: auto;
 }
-.Footer .Cot .Icon a {
-	width:7%;
-	padding:10px;
-	font-size:22px;
-	text-align:center;
-	text-decoration:none;
-	margin:5px;
+
+.cot-first{
+    float: left;
+    width: 300px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
-.Footer .Cot .Icon a.fa-facebook-f {
- 	background: #3B5998;
-  	color: white;
-	border-radius:50%;
+
+.cot-last{
+    float: left;
+    width: 300px;
+    padding-right: 0;
+    padding-left: 60px;
 }
-.Footer .Cot .Icon a.fa-twitter {
-	background: #55ACEE;
-  	color: white;
-	border-radius:50%;	
+
+.cot{
+    float: left;
+    width: 300px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
-.Footer .Cot .Icon a.fa-google {
-	background: #dd4b39;
-  	color: white;
-	border-radius:50%;
+
+.Footer p{
+    font-weight: 600;
 }
-.Footer .Cot .Icon a.fa-yahoo {
-	background: #430297;
-  	color: white;
-	border-radius:50%;
+
+.Footer ul{
+    list-style: none;
+    padding: 0;
 }
-.Footer:after {
-	content:"";
-	display:table;
-	clear:both;	
+
+.Footer a{
+    text-decoration: none;
+    line-height: 25px;
+    color: #8c8c8c;
+}
+
+.social-network{
+    width: 160px;
+    height: 40px;
+    background: url(../images/icon.png);
+}
+
+.social-network a{
+    float: left;
+    width: 25%;
+    height: 100%;
 }
