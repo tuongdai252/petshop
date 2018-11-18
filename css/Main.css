@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+
+.Main {
+	max-width: 1200px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+}
+
+.Main hr{
+    margin-top: 0px;
+}
+
+.Main .title-background{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.Main .title{
+    color: red;
+	padding:5px;
+    text-transform: uppercase;
+}
+
+.Main .container{
+    margin: 0 40px;
+}
+
+.Main .sanpham{
+    max-width: 200px;
+    background-color: pink;
+    border: 1px solid red;
+    text-align: center;
+    margin: 0 10px;
+    margin-bottom: 30px;
+}
+
+.Main .sanpham img{
+    width: 100%;
+    max-height: 200px;
+}
+
+.Main div.sanpham{
+    float:left;
+}
+
+.Main .gia {
+    color: grey;
+    font-size: 22px;
+}
+
+.Main .sanpham button {
+    border: none;
+    padding: 12px;
+    color: white;
+    background-color: deeppink;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.Main .sanpham button:hover {
+    opacity: 0.7;
+}
+
+.Main .xemtatca{
+    float:right;
+    font-size: 20px;
+    padding-top: 10px;
+    cursor: pointer;
+    text-decoration: none;
+	color:#333333;
+}
+
