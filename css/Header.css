@@ -1,35 +1,48 @@
 @charset "utf-8";
 /* CSS Document */
-.Header {
-	overflow:hidden;
-	padding:70px;
-	padding-bottom:55px;
+.header{
+    height: 75px;
+    width: 100%;
 }
 
-.Header a {
-	float: left;
-	padding:10px;
-	width:225px;
-	height:71px;
+.header .container{
+    max-width: 1200px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
 }
 
-.Header a.logo {
-	float:left;
-	margin-top:-38px;
+.header-logo{
+    display: inline-block;
+    float: left;
+    margin-right: 85px;
 }
 
-.Header form.Phan_tim_kiem {
+.header-logo .logo {
+    height: 75px;
+    width: 237.67px;
+}
+
+.Timkiem{
+    display: inline-block;
+    float: left;
+    margin-top: 25px;
+}
+
+.Timkiem form.Phan_tim_kiem {
 	margin:auto;
-	width:50%;
+	width:390px;
 	height:51px;
-	margin-top:-19px;
+	margin-top:-13px;
 	background:lightpink;
 	border-radius:5px;
 	padding:5px;
 	padding-right:0px;
+    margin-left: 25px;
+    margin-right: 110px;
 }
 
-.Header form.Phan_tim_kiem input[type=text] {
+.Timkiem form.Phan_tim_kiem input[type=text] {
 	padding:10px;
 	background-color:#F0F0F0;
 	font-size:18px;
@@ -37,13 +50,13 @@
 	width:90%;
 	outline:none;
 	border:0;
-	margin-top:-14px;
+	margin-top:auto;
 }
 
-.Header form.Phan_tim_kiem button {
+.Timkiem form.Phan_tim_kiem button {
 	float:left;
 	width:10%;
-	margin-top:-16px;
+	margin-top:-5px;
 	padding:14px;
 	background:none;
 	font-size:20px;
@@ -53,13 +66,42 @@
 	border:0;
 }
 
-.Header form.Phan_gio_hang button{
-	float:right;
-	margin-top:-51px;
-	margin-right:25px;
-	padding:0px;
+.Taikhoan{
+    display: inline-block;
+    float: left;
+    margin-top:20px;
+    margin-left: 25px;
+}
+
+.Taikhoan div{
+    float: left;
+}
+
+.Taikhoan a {
+    display: block;
+	color:red;
+	text-align:center;
+	padding:5px 10px;
+	text-decoration:none;
+	font-size:15px;
+	line-height:22px;
+	font-weight:bold;
+}
+
+.Taikhoan a:hover {
+	background-color:#ff8080;
+	color:white;
+	border-radius:10px;
+	padding:5px 10px;
+}
+
+.Giohang{
+    display: inline-block;
+}
+
+.Giohang form.Phan_gio_hang button{
 	background:none;
-	font-size:50px;
+	font-size: 30px;
 	border-radius:20px;
 	cursor:pointer;
 	outline:none;
