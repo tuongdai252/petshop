@@ -1,46 +1,33 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link href="css/DangNhap_Ki.css" rel="stylesheet" type="text/css" />
     <link href="css/Header.css" rel="stylesheet" type="text/css" />
-    <link href="css/Middle.css" rel="stylesheet" type="text/css" />
+    <link href="css/Menu.css" rel="stylesheet" type="text/css" />
+    <link href="css/Main.css" rel="stylesheet" type="text/css" />
     <link href="css/Footer.css" rel="stylesheet" type="text/css" />
-    <title>Shop Pet</title>
-</head>
+    <title>Pet Shop</title>
 <style>
 * {
-	box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-webkit-box-sizing:border-box;	
+box-sizing:border-box;
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;	
 }
 
 ::-webkit-scrollbar {
-	width:5px;	
+    width:5px;	
 }
 
 ::-webkit-scrollbar-thumb {
-	background:lightpink;
-	border-radius:20px;	
+    background:lightpink;
+    border-radius:20px;	
 }
-
+    
 html {
   scroll-behavior: smooth;
 }
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-	margin:0;
-}
-
-.Dua_vao_giua {
-	max-width:95%;
-	margin:auto;
-	padding:10px;
-	padding-top:0px;
-}
-
+    
 #Bam_len_top {
 	display:none;
 	position:fixed;
@@ -55,185 +42,224 @@ body {
 	padding:15px;
 	border-radius:5px;
 }
+    
+.clear{
+        clear: both;
+    }
 </style>
-<body>
+</head>
 
+<body>
 <script src="js/Scroll_on_Top.js"></script>
 
 <button onclick="Dua_len_dau()" id="Bam_len_top" title="Lên đầu trang"><i class="fa fa-arrow-up"></i></button>
 
-<div class="Dua_vao_giua">
-	<div class="Top_dau">
-    	<a href="#"><i class="fa fa-user-plus"></i> Đăng ký</a>
-        <a href="#"><i class="fa fa-sign-in-alt"></i> Đăng nhập</a>
-    </div>
-    <hr style="margin:0px"/>
-    <div class="Header">
-    	<div><a class="logo" href="index.html"><img src="#" width="225" height="71"/></a></div>
-        <div><form class="Phan_tim_kiem">
-        	<input type="text" placeholder="Tìm kiếm" />
-            <button type="submit"><i class="fa fa-search"></i></button>
-        </form></div>
-        <div><form class="Phan_gio_hang">
-        	<button type="submit"><i class="fa fa-shopping-cart"></i></button>
-        </form></div>
-    </div>
-    <hr style="margin-top:0px"/>
-    <div class="Middle">
-        <div class="Main">
-        	<div>
-            	<h1 class="title-background">
-                	<span class="title">Sản phẩm mới</span>
-               		<a href="SP_Moi.html" class="xemtatca"><span>Xem tất cả&rarr;</span></a>
-                	<hr>
-               	</h1>
-                <div>
-                	<div class="sanpham">
-                    	<a><img src="images/No_image_available.png"/></a>
-                        <h2>Tên sản phẩm</h2>
-                        <p class="gia">99$</p>
-                        <p>Giới thiệu sản phẩm</p>
-                        <p><button>Thêm vào giỏ</button></p>
-                    </div>
-                    <div class="sanpham">
-                    	<a><img src="images/No_image_available.png"/></a>
-                    	<h2>Tên sản phẩm</h2>
-                    	<p class="gia">99$</p>
-                    	<p>Giới thiệu sản phẩm</p>
-                    	<p><button>Thêm vào giỏ</button></p>
-                    </div>
-                    <div class="sanpham">
-                    	<a><img src="images/No_image_available.png"/></a>
-                        <h2>Tên sản phẩm</h2>
-                        <p class="gia">99$</p>
-                        <p>Giới thiệu sản phẩm</p>
-                        <p><button>Thêm vào giỏ</button></p>
-                    </div>
-                    <div class="sanpham">
-                    	<a><img src="images/No_image_available.png"/></a>
-                    	<h2>Tên sản phẩm</h2>
-                    	<p class="gia">99$</p>
-                    	<p>Giới thiệu sản phẩm</p>
-                    	<p><button>Thêm vào giỏ</button></p>
-                    </div>
-                    <div class="sanpham">
-                    	<a><img src="images/No_image_available.png"/></a>
-                        <h2>Tên sản phẩm</h2>
-                        <p class="gia">99$</p>
-                        <p>Giới thiệu sản phẩm</p>
-                        <p><button>Thêm vào giỏ</button></p>
-                    </div>
-                    <div class="sanpham">
-                    	<a><img src="images/No_image_available.png"/></a>
-                    	<h2>Tên sản phẩm</h2>
-                    	<p class="gia">99$</p>
-                    	<p>Giới thiệu sản phẩm</p>
-                    	<p><button>Thêm vào giỏ</button></p>
-                    </div>
-                    <div class="sanpham">
-                    	<a><img src="images/No_image_available.png"/></a>
-                        <h2>Tên sản phẩm</h2>
-                        <p class="gia">99$</p>
-                        <p>Giới thiệu sản phẩm</p>
-                        <p><button>Thêm vào giỏ</button></p>
-                    </div>
-                    <div class="sanpham">
-                    	<a><img src="images/No_image_available.png"/></a>
-                    	<h2>Tên sản phẩm</h2>
-                    	<p class="gia">99$</p>
-                    	<p>Giới thiệu sản phẩm</p>
-                    	<p><button>Thêm vào giỏ</button></p>
-                    </div>
-                </div>
+<div class="header">
+    <div class="container">
+        <div class="header-logo">
+            <a class="logo" href="index.html">
+                <img src="images/logo.png" height= "75px" width="237.67px">
+            </a>
+        </div>
+        <div class="Timkiem">
+            <form class="Phan_tim_kiem">
+                <input type="text" placeholder="Tìm kiếm" />
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="Taikhoan">
+            <div class="Dangnhap">
+                <a href="#"><i class="fa fa-sign-in-alt"></i> Đăng nhập</a>
             </div>
-            <div class="clear"></div>
-            <div>
-            	<h1 class="title-background">
-                	<span class="title">Sản phẩm mới</span>
-               		<a href="SP_Moi.html" class="xemtatca"><span>Xem tất cả&rarr;</span></a>
-                	<hr>
-                </h1>
-                <div>
-                	<div class="sanpham">
-                    	<a><img src="images/No_image_available.png"/></a>
-                        <h2>Tên sản phẩm</h2>
-                        <p class="gia">99$</p>
-                        <p>Giới thiệu sản phẩm</p>
-                        <p><button>Thêm vào giỏ</button></p>
-                    </div>
-                    <div class="sanpham">
-                    	<a><img src="images/No_image_available.png"/></a>
-                    	<h2>Tên sản phẩm</h2>
-                    	<p class="gia">99$</p>
-                    	<p>Giới thiệu sản phẩm</p>
-                    	<p><button>Thêm vào giỏ</button></p>
-                    </div>
-                    <div class="sanpham">
-                    	<a><img src="images/No_image_available.png"/></a>
-                        <h2>Tên sản phẩm</h2>
-                        <p class="gia">99$</p>
-                        <p>Giới thiệu sản phẩm</p>
-                        <p><button>Thêm vào giỏ</button></p>
-                    </div>
-                    <div class="sanpham">
-                    	<a><img src="images/No_image_available.png"/></a>
-                    	<h2>Tên sản phẩm</h2>
-                    	<p class="gia">99$</p>
-                    	<p>Giới thiệu sản phẩm</p>
-                    	<p><button>Thêm vào giỏ</button></p>
-                    </div>
-                    <div class="sanpham">
-                    	<a><img src="images/No_image_available.png"/></a>
-                        <h2>Tên sản phẩm</h2>
-                        <p class="gia">99$</p>
-                        <p>Giới thiệu sản phẩm</p>
-                        <p><button>Thêm vào giỏ</button></p>
-                    </div>
-                    <div class="sanpham">
-                    	<a><img src="images/No_image_available.png"/></a>
-                    	<h2>Tên sản phẩm</h2>
-                    	<p class="gia">99$</p>
-                    	<p>Giới thiệu sản phẩm</p>
-                    	<p><button>Thêm vào giỏ</button></p>
-                    </div>
-                    <div class="sanpham">
-                    	<a><img src="images/No_image_available.png"/></a>
-                        <h2>Tên sản phẩm</h2>
-                        <p class="gia">99$</p>
-                        <p>Giới thiệu sản phẩm</p>
-                        <p><button>Thêm vào giỏ</button></p>
-                    </div>
-                    <div class="sanpham">
-                    	<a><img src="images/No_image_available.png"/></a>
-                    	<h2>Tên sản phẩm</h2>
-                    	<p class="gia">99$</p>
-                    	<p>Giới thiệu sản phẩm</p>
-                    	<p><button>Thêm vào giỏ</button></p>
-                    </div>
-                </div>
+            <div class="Dangky">
+                <a href="#"><i class="fa fa-user-plus"></i> Đăng ký</a>
             </div>
-            <div class="clear"></div>
+            <div class="Giohang">
+                <form class="Phan_gio_hang">
+                    <button type="submit"><i class="fa fa-shopping-cart"></i></button>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="Footer">
-    	<hr style="margin-top:0px" />
-    	<div class="Cot" style="padding-top:30px;padding-left:80px">
-        	Copyright@petcity.com <br /><br />
-            Thành viên nhóm:
+</div>
+<div class="clear"></div>
+<div class="Menu-list">
+    <div class="container">
+        <ul>
+            <li class="Menu">Trang chủ</li>
+            <li class="Menu">Giới thiệu</li>
+            <li class="Menu">Shop cho chó</li>
+            <li class="Menu">Shop cho mèo</li>
+            <li class="Menu">Shop vật nuôi khác</li>
+            <li class="Menu">Khuyến mãi</li>
+            <li class="Menu">Tin tức</li>
+            <li class="Menu">Liên hệ</li>
+        </ul>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="Main">
+    <div>
+        <h1 class="title-background">
+            <span class="title">Sản phẩm mới</span>
+            <a href="SP_Moi.html" class="xemtatca"><span>Xem tất cả&rarr;</span></a>
+            <hr>
+        </h1>
+         <div class="container">
+            <div class="sanpham">
+                <a><img src="images/No_image_available.png"/></a>
+                <h2>Tên sản phẩm</h2>
+                <p class="gia">99$</p>
+                <p><button>Thêm vào giỏ</button></p>
+            </div>
+            <div class="sanpham">
+                <a><img src="images/No_image_available.png"/></a>
+                <h2>Tên sản phẩm</h2>
+                <p class="gia">99$</p>
+                <p><button>Thêm vào giỏ</button></p>
+            </div>
+            <div class="sanpham">
+                <a><img src="images/No_image_available.png"/></a>
+                <h2>Tên sản phẩm</h2>
+                <p class="gia">99$</p>
+                <p><button>Thêm vào giỏ</button></p>
+            </div>
+            <div class="sanpham">
+                <a><img src="images/No_image_available.png"/></a>
+                <h2>Tên sản phẩm</h2>
+                <p class="gia">99$</p>
+                <p><button>Thêm vào giỏ</button></p>
+            </div>
+            <div class="sanpham">
+                <a><img src="images/No_image_available.png"/></a>
+                <h2>Tên sản phẩm</h2>
+                <p class="gia">99$</p>
+                <p><button>Thêm vào giỏ</button></p>
+            </div>
+            <div class="sanpham">
+                <a><img src="images/No_image_available.png"/></a>
+                <h2>Tên sản phẩm</h2>
+                <p class="gia">99$</p>
+                <p><button>Thêm vào giỏ</button></p>
+            </div>
+            <div class="sanpham">
+                <a><img src="images/No_image_available.png"/></a>
+                <h2>Tên sản phẩm</h2>
+                <p class="gia">99$</p>
+                <p><button>Thêm vào giỏ</button></p>
+            </div>
+            <div class="sanpham">
+                <a><img src="images/No_image_available.png"/></a>
+                <h2>Tên sản phẩm</h2>
+                <p class="gia">99$</p>
+                <p><button>Thêm vào giỏ</button></p>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div>
+        <h1 class="title-background">
+            <span class="title">Sản phẩm giảm giá</span>
+            <a href="SP_GiamGia.html" class="xemtatca"><span>Xem tất cả&rarr;</span></a>
+            <hr>
+        </h1>
+         <div class="container">
+            <div class="sanpham">
+                <a><img src="images/No_image_available.png"/></a>
+                <h2>Tên sản phẩm</h2>
+                <p class="gia">99$</p>
+                <p><button>Thêm vào giỏ</button></p>
+            </div>
+            <div class="sanpham">
+                <a><img src="images/No_image_available.png"/></a>
+                <h2>Tên sản phẩm</h2>
+                <p class="gia">99$</p>
+                <p><button>Thêm vào giỏ</button></p>
+            </div>
+            <div class="sanpham">
+                <a><img src="images/No_image_available.png"/></a>
+                <h2>Tên sản phẩm</h2>
+                <p class="gia">99$</p>
+                <p><button>Thêm vào giỏ</button></p>
+            </div>
+            <div class="sanpham">
+                <a><img src="images/No_image_available.png"/></a>
+                <h2>Tên sản phẩm</h2>
+                <p class="gia">99$</p>
+                <p><button>Thêm vào giỏ</button></p>
+            </div>
+            <div class="sanpham">
+                <a><img src="images/No_image_available.png"/></a>
+                <h2>Tên sản phẩm</h2>
+                <p class="gia">99$</p>
+                <p><button>Thêm vào giỏ</button></p>
+            </div>
+            <div class="sanpham">
+                <a><img src="images/No_image_available.png"/></a>
+                <h2>Tên sản phẩm</h2>
+                <p class="gia">99$</p>
+                <p><button>Thêm vào giỏ</button></p>
+            </div>
+            <div class="sanpham">
+                <a><img src="images/No_image_available.png"/></a>
+                <h2>Tên sản phẩm</h2>
+                <p class="gia">99$</p>
+                <p><button>Thêm vào giỏ</button></p>
+            </div>
+            <div class="sanpham">
+                <a><img src="images/No_image_available.png"/></a>
+                <h2>Tên sản phẩm</h2>
+                <p class="gia">99$</p>
+                <p><button>Thêm vào giỏ</button></p>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="Footer">
+    <div class="container">
+        <div class="cot-first">
+            <p>Danh mục</p>
             <ul>
-            	<li>Phạm Hoàng Anh</li>
-                <li>Đỗ Tường Đại</li>
-                <li>Hà Triệu Đạt</li>
-                <li>Lữ Kiều Hoa</li>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Shop cho chó</a></li>
+                <li><a href="#">Shop cho mèo</a></li>
+                <li><a href="#">Shop vật nuôi khác</a></li>
+                <li><a href="#">Khuyến mãi</a></li>
             </ul>
         </div>
-        <div class="Cot">
-        	<h2>Giữ kết nối</h2>
-            <div class="Icon">
-            	<a href="#" class="fab fa-facebook-f"></a>
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fab fa-google"></a>
-                <a href="#" class="fab fa-yahoo"></a>
-            </div>
+        <div class="cot">
+            <p>Thông tin</p>
+            <ul>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Tuyển dụng</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </div>
+        <div class="cot">
+            <p>Chính sách</p>
+            <ul>
+                <li><a href="#">Chính sách giao hàng</a></li>
+                <li><a href="#">Phương thức thanh toán</a></li>
+                <li><a href="#">Chính sách bảo hành</a></li>
+                <li><a href="#">Chính sách đổi, trả hàng</a></li>
+                <li><a href="#">Điều khoản sử dụng</a></li>
+            </ul>
+        </div>
+        <div class="cot-last">
+            <p>Liên hệ</p>
+            <ul>
+                <li class="social-network">
+                    <a href="https://www.facebook.com/" target="_blank"></a>
+                    <a href="https://www.instagram.com/" target="_blank"></a>
+                    <a href="https://www.twitter.com/" target="_blank"></a>
+                    <a href="https://www.youtube.com/" target="_blank"></a>
+                </li>
+                <li><a href="callto:028xxxxxxxx">Sđt: 028xxxxxxxx</a></li>
+                <li><a href="mailto:petshop@gmail.com">Email: petshop@gmail.com</a></li>
+            </ul>
         </div>
     </div>
 </div>
