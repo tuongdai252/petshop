@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="css/DangNhap_Ki.css" rel="stylesheet" type="text/css" />
     <link href="css/Header.css" rel="stylesheet" type="text/css" />
     <link href="css/Menu.css" rel="stylesheet" type="text/css" />
     <link href="css/Main.css" rel="stylesheet" type="text/css" />
@@ -54,24 +55,11 @@ html {
 
 <button onclick="Dua_len_dau()" id="Bam_len_top" title="Lên đầu trang"><i class="fa fa-arrow-up"></i></button>
 
-<div class="header">
+<div class="Top_dau">
     <div class="container">
-        <div class="header-logo">
-            <a class="logo" href="index.html">
-                <img src="images/logo.png" height= "75px" width="237.67px">
-            </a>
-        </div>
-        <div class="Timkiem">
-            <form class="Phan_tim_kiem">
-                <input type="text" placeholder="Tìm kiếm" />
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
-        <div class="Taikhoan">
-            <div class="Dangnhap">
-                <button onclick="document.getElementById('Phan_dang_nhap').style.display='block'"><i class="fa fa-sign-in-alt"></i> Đăng nhập</button>
-            </div>
-                <div id="Phan_dang_nhap" class="Khung_dang_nhap">
+    	<button href="#"><i class="fa fa-user-plus"></i> Đăng ký</button>
+        <button onclick="document.getElementById('Phan_dang_nhap').style.display='block'"><i class="fa fa-sign-in-alt"></i> Đăng nhập</button>
+        <div id="Phan_dang_nhap" class="Khung_dang_nhap">
                     <form class="Noi_dung_khung Hoat_canh">
                         <div class="Cach_khung">
                             <input type="text" placeholder="Tên đăng nhập" id="Ten_dang_nhap" required/>
@@ -91,14 +79,25 @@ html {
                         }
                     </script>
                 </div>
-            <div class="Dangky">
-                <button><i class="fa fa-user-plus"></i> Đăng ký</button>
-            </div>
-            <div class="Giohang">
-                <form class="Phan_gio_hang">
-                    <button type="submit"><i class="fa fa-shopping-cart"></i></button>
-                </form>
-            </div>
+    </div>
+</div>
+<div class="header">
+    <div class="container">
+        <div class="header-logo">
+            <a class="logo" href="index.html">
+                <img src="images/logo.png" height= "75px" width="237.67px">
+            </a>
+        </div>
+        <div class="Timkiem">
+            <form class="Phan_tim_kiem">
+                <input type="text" placeholder="Tìm kiếm" />
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="Giohang">
+            <form class="Phan_gio_hang">
+                <button type="submit"><i class="fa fa-shopping-cart"></i></button>
+            </form>
         </div>
     </div>
 </div>
@@ -106,14 +105,14 @@ html {
 <div class="Menu-list">
     <div class="container">
         <ul>
-            <li class="Menu"><a href="index.html">Trang chủ</a></li>
-            <li class="Menu"><a href="#">Giới thiệu</a></li>
-            <li class="Menu" onMouseOver="">Shop cho chó</li>
-            <li class="Menu" onMouseOver="">Shop cho mèo</li>
-            <li class="Menu" onMouseOver="">Shop vật nuôi khác</li>
-            <li class="Menu"><a href="#">Khuyến mãi</a></li>
-            <li class="Menu"><a href="#">Tin tức</a></li>
-            <li class="Menu"><a href="#">Liên hệ</a></li>
+            <li class="Menu">Trang chủ</li>
+            <li class="Menu">Giới thiệu</li>
+            <li class="Menu">Shop cho chó</li>
+            <li class="Menu">Shop cho mèo</li>
+            <li class="Menu">Shop vật nuôi khác</li>
+            <li class="Menu">Khuyến mãi</li>
+            <li class="Menu">Tin tức</li>
+            <li class="Menu">Liên hệ</li>
         </ul>
     </div>
 </div>
@@ -123,7 +122,7 @@ html {
         <h1 class="title-background">
             <span class="title">Sản phẩm mới</span>
             <a href="SP_Moi.html" class="xemtatca"><span>Xem tất cả&rarr;</span></a>
-            <hr class="clear">
+            <hr>
         </h1>
          <div class="container">
             <div class="sanpham">
@@ -181,7 +180,7 @@ html {
         <h1 class="title-background">
             <span class="title">Sản phẩm giảm giá</span>
             <a href="SP_GiamGia.html" class="xemtatca"><span>Xem tất cả&rarr;</span></a>
-            <hr class="clear">
+            <hr>
         </h1>
          <div class="container">
             <div class="sanpham">
