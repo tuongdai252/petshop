@@ -60,25 +60,25 @@ html {
     	<button href="#"><i class="fa fa-user-plus"></i> Đăng ký</button>
         <button onclick="document.getElementById('Phan_dang_nhap').style.display='block'"><i class="fa fa-sign-in-alt"></i> Đăng nhập</button>
         <div id="Phan_dang_nhap" class="Khung_dang_nhap">
-                    <form class="Noi_dung_khung Hoat_canh">
-                        <div class="Cach_khung">
-                            <input type="text" placeholder="Tên đăng nhập" id="Ten_dang_nhap" required/>
-                            <input type="password" placeholder="Mật khẩu" id="Mat_khau" required/>
-                            <label style="float:left;padding:10px">
-                                <input type="checkbox" id="Nho_mk" checked  />Nhớ mật khẩu
-                            </label>
-                            <div class="Quen_mat_khau"><a href="#">Quên mật khẩu?</a></div>
-                            <button type="submit"><strong>Đăng nhập</strong></button>
-                        </div>
-                    </form>
-                    <script>
-                        //Khi người dùng click bên ngoài khung đăng nhập thì khung đăng nhập sẽ tắt
-                        window.onclick = function(event) {
-                            if(event.target == document.getElementById('Phan_dang_nhap'))
-                                document.getElementById('Phan_dang_nhap').style.display = "none";	
-                        }
-                    </script>
+            <form class="Noi_dung_khung Hoat_canh">
+                <div class="Cach_khung">
+                    <input type="text" placeholder="Tên đăng nhập" id="Ten_dang_nhap" required/>
+                    <input type="password" placeholder="Mật khẩu" id="Mat_khau" required/>
+                    <label style="float:left;padding:10px">
+                        <input type="checkbox" id="Nho_mk" checked  />Nhớ mật khẩu
+                    </label>
+                    <div class="Quen_mat_khau"><a href="#">Quên mật khẩu?</a></div>
+                    <button type="submit"><strong>Đăng nhập</strong></button>
                 </div>
+            </form>
+            <script>
+                //Khi người dùng click bên ngoài khung đăng nhập thì khung đăng nhập sẽ tắt
+                window.onclick = function(event) {
+                if(event.target == document.getElementById('Phan_dang_nhap'))
+                    document.getElementById('Phan_dang_nhap').style.display = "none";	
+                }
+            </script>
+        </div>
     </div>
 </div>
 <div class="header">
@@ -107,9 +107,57 @@ html {
         <ul>
             <li class="Menu">Trang chủ</li>
             <li class="Menu">Giới thiệu</li>
-            <li class="Menu">Shop cho chó</li>
-            <li class="Menu">Shop cho mèo</li>
-            <li class="Menu">Shop vật nuôi khác</li>
+            <li class="Menu">
+                <a href="#">Shop cho chó</a>
+                <i class="fa fa-angle-down"></i>
+                <div class="dropdown-content">
+                    <a href="#">Thức ăn</a>
+                    <a href="#">Quần áo</a>
+                    <a href="#">Vật dụng</a>
+                    <a href="#">Làm đẹp</a>
+                    <a href="#">Đồ chơi</a>
+                    <a href="#">Chuồng, giường</a>
+                </div>
+            </li>
+            <li class="Menu">
+                <a href="#">Shop cho mèo</a>
+                <i class="fa fa-angle-down"></i>
+                <div class="dropdown-content">
+                    <a href="#">Thức ăn</a>
+                    <a href="#">Quần áo</a>
+                    <a href="#">Vật dụng</a>
+                    <a href="#">Làm đẹp</a>
+                    <a href="#">Đồ chơi</a>
+                    <a href="#">Chuồng, giường</a>
+                </div>
+            </li>
+            <li class="Menu">
+                Shop vật nuôi khác
+                <i class="fa fa-angle-down"></i>
+                <div class="dropdown-content">
+                    <div class="column">
+                        <a href="#" style="text-decoration: underline">Chim <i class="fa fa-caret-down"></i></a>
+                        <a href="#">Thức ăn</a>
+                        <a href="#">Vật dụng</a>
+                        <a href="#">Đồ chơi</a>
+                        <a href="#">Lồng và phụ kiện</a>
+                    </div>
+                    <div class="column">
+                        <a href="#" style="text-decoration: underline">Cá <i class="fa fa-caret-down"></i></a>
+                        <a href="#">Thức ăn</a>
+                        <a href="#">Vật dụng</a>
+                        <a href="#">Đồ chơi</a>
+                        <a href="#">Bể cá và phụ kiện</a>
+                    </div>
+                    <div class="column">
+                        <a href="#" style="text-decoration: underline">Hamster <i class="fa fa-caret-down"></i></a>
+                        <a href="#">Thức ăn</a>
+                        <a href="#">Vật dụng</a>
+                        <a href="#">Đồ chơi</a>
+                        <a href="#">Chuồng và phụ kiện</a>
+                    </div>
+                </div>
+            </li>
             <li class="Menu">Khuyến mãi</li>
             <li class="Menu">Tin tức</li>
             <li class="Menu">Liên hệ</li>
