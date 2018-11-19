@@ -69,10 +69,30 @@ html {
         </div>
         <div class="Taikhoan">
             <div class="Dangnhap">
-                <a href="#"><i class="fa fa-sign-in-alt"></i> Đăng nhập</a>
+                <button onclick="document.getElementById('Phan_dang_nhap').style.display='block'"><i class="fa fa-sign-in-alt"></i> Đăng nhập</button>
             </div>
+                <div id="Phan_dang_nhap" class="Khung_dang_nhap">
+                    <form class="Noi_dung_khung Hoat_canh">
+                        <div class="Cach_khung">
+                            <input type="text" placeholder="Tên đăng nhập" id="Ten_dang_nhap" required/>
+                            <input type="password" placeholder="Mật khẩu" id="Mat_khau" required/>
+                            <label style="float:left;padding:10px">
+                                <input type="checkbox" id="Nho_mk" checked  />Nhớ mật khẩu
+                            </label>
+                            <div class="Quen_mat_khau"><a href="#">Quên mật khẩu?</a></div>
+                            <button type="submit"><strong>Đăng nhập</strong></button>
+                        </div>
+                    </form>
+                    <script>
+                        //Khi người dùng click bên ngoài khung đăng nhập thì khung đăng nhập sẽ tắt
+                        window.onclick = function(event) {
+                            if(event.target == document.getElementById('Phan_dang_nhap'))
+                                document.getElementById('Phan_dang_nhap').style.display = "none";	
+                        }
+                    </script>
+                </div>
             <div class="Dangky">
-                <a href="#"><i class="fa fa-user-plus"></i> Đăng ký</a>
+                <button><i class="fa fa-user-plus"></i> Đăng ký</button>
             </div>
             <div class="Giohang">
                 <form class="Phan_gio_hang">
@@ -86,14 +106,14 @@ html {
 <div class="Menu-list">
     <div class="container">
         <ul>
-            <li class="Menu">Trang chủ</li>
-            <li class="Menu">Giới thiệu</li>
-            <li class="Menu">Shop cho chó</li>
-            <li class="Menu">Shop cho mèo</li>
-            <li class="Menu">Shop vật nuôi khác</li>
-            <li class="Menu">Khuyến mãi</li>
-            <li class="Menu">Tin tức</li>
-            <li class="Menu">Liên hệ</li>
+            <li class="Menu"><a href="index.html">Trang chủ</a></li>
+            <li class="Menu"><a href="#">Giới thiệu</a></li>
+            <li class="Menu" onMouseOver="">Shop cho chó</li>
+            <li class="Menu" onMouseOver="">Shop cho mèo</li>
+            <li class="Menu" onMouseOver="">Shop vật nuôi khác</li>
+            <li class="Menu"><a href="#">Khuyến mãi</a></li>
+            <li class="Menu"><a href="#">Tin tức</a></li>
+            <li class="Menu"><a href="#">Liên hệ</a></li>
         </ul>
     </div>
 </div>
@@ -103,7 +123,7 @@ html {
         <h1 class="title-background">
             <span class="title">Sản phẩm mới</span>
             <a href="SP_Moi.html" class="xemtatca"><span>Xem tất cả&rarr;</span></a>
-            <hr>
+            <hr class="clear">
         </h1>
          <div class="container">
             <div class="sanpham">
@@ -161,7 +181,7 @@ html {
         <h1 class="title-background">
             <span class="title">Sản phẩm giảm giá</span>
             <a href="SP_GiamGia.html" class="xemtatca"><span>Xem tất cả&rarr;</span></a>
-            <hr>
+            <hr class="clear">
         </h1>
          <div class="container">
             <div class="sanpham">
