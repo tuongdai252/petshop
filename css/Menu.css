@@ -27,9 +27,17 @@
     cursor: default;
 }
 
+.Menu:hover{
+    color: deeppink;
+}
+
 .Menu a{
     text-decoration: none;
     color: #000000;
+}
+
+.Menu a:hover{
+    color: deeppink;
 }
 
 .dropdown-content {
@@ -40,6 +48,7 @@
     max-width: 450px;
     left: 0px;
     right: 0px;
+    z-index: 100;
 }
 
 .dropdown-content a {
