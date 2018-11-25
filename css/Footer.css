@@ -2,6 +2,7 @@
 /* CSS Document */
 .Footer {
 	width:100%;
+	background-color:#f5f5f5;
 }
 
 .Footer .container{
@@ -56,5 +57,5 @@
     width: 25%;
     height: 100%;
     outline: none;
-    border-radius: 50%;
+	border-radius:50%;
 }
