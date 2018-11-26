@@ -26,10 +26,6 @@
 	font-weight:bold;
 }
 
-.Menu:hover{
-    color: deeppink;
-}
-
 .Menu a{
     text-decoration: none;
     color: #000000;
@@ -48,6 +44,7 @@
     left: 0px;
     right: 0px;
     z-index: 100;
+    margin-top: 15px;
 }
 
 .dropdown-content a {
@@ -72,4 +69,27 @@
 
 .dropdown-content .Menu-sub:hover .dropdown-sub{
     display: block;
+}
+
+/*For small screen*/
+@media only screen and (max-width: 1200px) {
+    .Menu{
+        padding: 15px 50px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Menu-list .container{
+        margin-right: 30px;
+    }
+    
+    .Menu{
+        width: 100%;
+        position: inherit;
+    }
+    
+    .dropdown-content{
+        position: inherit;
+        margin-top: 0;
+    }
 }

@@ -10,25 +10,15 @@
     margin: auto;
 }
 
-.cot-first{
-    float: left;
-    width: 300px;
-    padding-left: 60px;
-    padding-right: 60px;
-}
-
-.cot-last{
-    float: left;
-    width: 300px;
-    padding-right: 0;
-    padding-left: 60px;
-}
-
 .cot{
     float: left;
     width: 300px;
     padding-left: 60px;
     padding-right: 60px;
+}
+
+.cot:last-child{
+    padding-right: 0;
 }
 
 .Footer p{

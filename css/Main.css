@@ -50,6 +50,13 @@
     font-size: 22px;
 }
 
+.Main .giacu{
+    margin-left: 10px;
+    text-decoration: line-through;
+    font-size: 19px;
+    color: red;
+}
+
 .Main .sanpham button {
     border: none;
     padding: 12px;

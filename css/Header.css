@@ -84,3 +84,43 @@
 	border:0;
 	color:#ff0000;
 }
+
+/*For small screen*/
+@media only screen and (max-width: 1200px) {
+    .header .container{
+        padding-right: 0;
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .header-logo{
+        margin-left: -40px;
+        margin-right: 80px;
+    }
+    
+    ..Timkiem form.Phan_tim_kiem{
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header-logo{
+        margin-left: -25px;
+    }
+    
+    .Timkiem form.Phan_tim_kiem {
+        width: 100%;
+    }
+    
+    .Timkiem form.Phan_tim_kiem input[type=text] {
+        width: 85%;
+    }
+    
+    .Timkiem form.Phan_tim_kiem button {
+        width: 15%;
+    }
+    
+    .Giohang{
+        float:none;
+    }
+}
