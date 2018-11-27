@@ -1,13 +1,14 @@
 <!doctype html>
-<html>
-<head>
+<html><head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="css/DangNhap_Ki.css" rel="stylesheet" type="text/css" />
     <link href="css/Header.css" rel="stylesheet" type="text/css" />
     <link href="css/Menu.css" rel="stylesheet" type="text/css" />
     <link href="css/Main.css" rel="stylesheet" type="text/css" />
     <link href="css/Footer.css" rel="stylesheet" type="text/css" />
+    <link href="css/SlideShow.css" rel="stylesheet" type="text/css">
     <title>Pet Shop</title>
 <style>
 * {
@@ -30,7 +31,8 @@ html {
 }
 
 body {
-	margin:0;	
+	margin:0;
+    padding: 0;
 }
     
      
@@ -126,9 +128,9 @@ html, body {
                     <a href="#">Quần áo</a>
                     <a href="#">Vòng cổ</a>
                     <a href="#">Vật dụng</a>
-                    <a href="#">Mỹ phẩm &amp; làm đẹp</a>
+                    <a href="#">Sữa tắm</a>
                     <a href="#">Đồ chơi</a>
-                    <a href="#">Chuồng, giường, nhà</a>
+                    <a href="#">Chuồng, giường</a>
                 </div>
             </li>
             <li class="Menu">
@@ -138,16 +140,16 @@ html, body {
                     <a href="#">Quần áo</a>
                     <a href="#">Vòng cổ</a>
                     <a href="#">Vật dụng</a>
-                    <a href="#">Mỹ phẩm &amp; làm đẹp</a>
+                    <a href="#">Sữa tắm</a>
                     <a href="#">Đồ chơi</a>
-                    <a href="#">Chuồng, giường, nhà</a>
+                    <a href="#">Chuồng, giường</a>
                 </div>
             </li>
             <li class="Menu">
                 <a href="#">Shop vật nuôi khác <i class="fa fa-angle-down"></i></a>
                 <div class="dropdown-content">
                     <div class="Menu-sub">
-                        <a href="#" style="text-decoration: underline">Chim <i class="fa fa-caret-down"></i></a>
+                        <a href="#">Chim <i class="fa fa-caret-down"></i></a>
                         <div class="dropdown-sub">
                             <a href="#">Thức ăn</a>
                             <a href="#">Vật dụng</a>
@@ -155,7 +157,7 @@ html, body {
                         </div>
                     </div>
                     <div class="Menu-sub">
-                        <a href="#" style="text-decoration: underline">Cá <i class="fa fa-caret-down"></i></a>
+                        <a href="#">Cá <i class="fa fa-caret-down"></i></a>
                         <div class="dropdown-sub">
                             <a href="#">Thức ăn</a>
                             <a href="#">Vật dụng</a>
@@ -163,7 +165,7 @@ html, body {
                         </div>
                     </div>
                     <div class="Menu-sub">
-                        <a href="#" style="text-decoration: underline">Hamster <i class="fa fa-caret-down"></i></a>
+                        <a href="#">Hamster <i class="fa fa-caret-down"></i></a>
                         <div class="dropdown-sub">
                             <a href="#">Thức ăn</a>
                             <a href="#">Vật dụng</a>
@@ -179,6 +181,46 @@ html, body {
     <hr style="margin-top:0;border:0.5px solid #e6e6e6">
 </div>
 <div class="clear"></div>
+    
+<div class="Slide-Container">
+	<div class="slide fade"><img src="images/363.jpg" style="vertical-align:middle"></div>
+    <div class="slide fade"><img src="images/330.jpg" style="vertical-align:middle"></div>
+    <div class="slide fade"><img src="images/banner_49ae49a2.png" style="vertical-align:middle"></div>
+    <div class="slide fade"><img src="images/329.jpg" style="vertical-align:middle"></div>
+    <div style="text-align:center">
+    	<span class="dot" onClick="currentSlide(0)"></span>
+        <span class="dot" onClick="currentSlide(1)"></span>
+        <span class="dot" onClick="currentSlide(2)"></span>
+        <span class="dot" onClick="currentSlide(3)"></span>
+    </div>
+    <script>
+		var slideIndex; //slideIndex đại diện cho mỗi slide (Vd: Hình 1 là slideindex=1 ....)
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("slide");
+			var dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+         		slides[i].style.display = "none";  
+      		}
+			for (i = 0; i < dots.length; i++) {
+          		dots[i].className = dots[i].className.replace(" active", "");
+    		}
+			slides[slideIndex].style.display = "block";  
+			dots[slideIndex].className += " active";
+			slideIndex++; //Chuyển silde kế tiếp
+			if (slideIndex > slides.length - 1) {	//Nếu slide cuối
+				slideIndex = 0;			//Chuyển về slide đầu
+			}
+			setTimeout(showSlides, 5000);	//Lệnh tự động chuyển đồi sau 5s
+		}
+		showSlides(slideIndex = 0);
+		function currentSlide(n) {
+    		showSlides(slideIndex = n);
+  		}
+	</script>
+</div>
+    
+    
 <div class="Main">
     <div>
         <h1 class="title-background">

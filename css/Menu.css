@@ -8,8 +8,8 @@
 
 .Menu-list .container{
     max-width: 1200px;
-    margin:auto;
-	margin-top:-17px;
+    margin: auto;
+	margin-top: -17px;
 }
 
 .Menu{
@@ -38,13 +38,14 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     min-width: 160px;
     max-width: 450px;
     left: 0px;
     right: 0px;
-    z-index: 100;
-    margin-top: 15px;
+    top: 48px;
+    z-index: 1;
+    box-shadow: 5px 5px 2px grey;
 }
 
 .dropdown-content a {
@@ -65,6 +66,7 @@
 
 .dropdown-content .Menu-sub .dropdown-sub{
     display: none;
+    font-weight: normal;
 }
 
 .dropdown-content .Menu-sub:hover .dropdown-sub{
@@ -74,22 +76,12 @@
 /*For small screen*/
 @media only screen and (max-width: 1200px) {
     .Menu{
-        padding: 15px 50px;
+        padding: 15px 15px;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .Menu-list .container{
-        margin-right: 30px;
-    }
-    
     .Menu{
-        width: 100%;
-        position: inherit;
-    }
-    
-    .dropdown-content{
-        position: inherit;
-        margin-top: 0;
+        padding: 10px; 10px;
     }
 }

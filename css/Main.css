@@ -81,3 +81,38 @@
 	color:#333333;
 }
 
+/*For small screen*/
+@media only screen and (max-width: 550px) {
+    .Main h1{
+        font-size: 20px;
+    }
+    
+    .Main .xemtatca{
+        padding-top: 5px;
+        font-size: 15px;
+    }
+    
+    .Main .sanpham{
+        max-width: 40%;
+        max-height: 200px;
+        font-size: 10px;
+    }
+    
+    .Main .sanpham img{
+        max-height: 100px;
+    }
+    
+    .Main .sanpham h2{
+        margin-top: 0;
+    }
+    
+    .Main .gia{
+        font-size: 15px;
+    }
+    
+    .Main .sanpham button{
+        padding: 9px;
+        margin-top: -15px;
+        font-size: 15px;
+    }
+}

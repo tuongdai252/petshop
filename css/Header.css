@@ -90,7 +90,6 @@
     .header .container{
         padding-right: 0;
         padding-left: 0;
-        text-align: center;
     }
     
     .header-logo{
@@ -98,14 +97,22 @@
         margin-right: 80px;
     }
     
-    ..Timkiem form.Phan_tim_kiem{
+    .Timkiem form.Phan_tim_kiem{
         margin-right: 0;
+    }
+    
+    .Giohang{
+        float: right;
     }
 }
 
 @media only screen and (max-width: 600px) {
     .header-logo{
         margin-left: -25px;
+    }
+    
+    .Timkiem{
+        width: 100%;
     }
     
     .Timkiem form.Phan_tim_kiem {
@@ -121,6 +128,6 @@
     }
     
     .Giohang{
-        float:none;
+        margin-top: -150px;
     }
 }
