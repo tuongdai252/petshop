@@ -84,4 +84,8 @@
     .Menu{
         padding: 10px; 10px;
     }
+    
+    .dropdown-content {
+        top:32px;
+    }
 }
