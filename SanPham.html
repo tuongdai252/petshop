@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -8,15 +8,14 @@
     <link href="css/DangNhap_Ki.css" rel="stylesheet" type="text/css" />
     <link href="css/Header.css" rel="stylesheet" type="text/css" />
     <link href="css/Menu.css" rel="stylesheet" type="text/css" />
-    <link href="css/Main.css" rel="stylesheet" type="text/css" />
     <link href="css/Footer.css" rel="stylesheet" type="text/css" />
-    <link href="css/SlideShow.css" rel="stylesheet" type="text/css">
-    <title>Pet Shop - Nơi mua sắm tuyệt vời cho thú cưng của bạn</title>
+    <link href="css/SanPham.css" rel="stylesheet" type="text/css" />
+    <title>Sản phẩm</title>
 <style>
 * {
 	box-sizing:border-box;
 	-moz-box-sizing:border-box;
-	-webkit-box-sizing:border-box;	
+	-webkit-box-sizing:border-box;
 }
 
 ::-webkit-scrollbar {
@@ -202,168 +201,27 @@ html, body {
     </div>
 </div>
 <div class="clear"></div>
-    
-<div class="Slide-Container">
-	<div class="slide fade"><img src="images/slideshow/363.jpg" style="vertical-align:middle"></div>
-    <div class="slide fade"><img src="images/slideshow/330.jpg" style="vertical-align:middle"></div>
-    <div class="slide fade"><img src="images/slideshow/banner_49ae49a2.png" style="vertical-align:middle"></div>
-    <div class="slide fade"><img src="images/slideshow/329.jpg" style="vertical-align:middle"></div>
-    <div style="text-align:center">
-    	<span class="dot" onClick="currentSlide(0)"></span>
-        <span class="dot" onClick="currentSlide(1)"></span>
-        <span class="dot" onClick="currentSlide(2)"></span>
-        <span class="dot" onClick="currentSlide(3)"></span>
+
+<div class="chitietsp">
+    <div class="hinhanh">
+        <img src="images/sanpham/120_2271_20431239_341674479620345_7843554253853490907_n.jpg">
     </div>
-    <script>
-		var slideIndex; //slideIndex đại diện cho mỗi slide (Vd: Hình 1 là slideindex=0 ....)
-		function showSlides() {
-			var i;
-			var slides = document.getElementsByClassName("slide");
-			var dots = document.getElementsByClassName("dot");
-			for (i = 0; i < slides.length; i++) {
-         		slides[i].style.display = "none";  
-      		}
-			for (i = 0; i < dots.length; i++) {
-          		dots[i].className = dots[i].className.replace(" active", "");
-    		}
-			slides[slideIndex].style.display = "block";  
-			dots[slideIndex].className += " active";
-			slideIndex++; //Chuyển silde kế tiếp
-			if (slideIndex > slides.length - 1) {	//Nếu slide cuối
-				slideIndex = 0;			//Chuyển về slide đầu
-			}
-			setTimeout(showSlides, 5000);	//Lệnh tự động chuyển đồi sau 5s
-		}
-		showSlides(slideIndex = 0);
-		function currentSlide(n) {
-    		showSlides(slideIndex = n);
-  		}
-	</script>
-</div>
-    
-    
-<div class="Main">
-    <div>
-        <h1 class="title-background">
-            <span class="title">Sản phẩm mới</span>
-            <a href="SP_Moi.html" class="xemtatca"><span>Xem tất cả&rarr;</span></a>
-            <hr>
-        </h1>
-         <div class="container">
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3013_74216cb16b0b8755de1a.jpg"/></a>
-                <a class="p-name">Áo cho thú cưng size S</a>
-                <p class="gia">155.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3009_f194b965bddf518108ce.jpg"/></a>
-                <a class="p-name">Nệm vòm cao cấp</a>
-                <p class="gia">510.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/2134_RoyalCanin-MiniAdultLight195g.png"/></a>
-                <a class="p-name">Mini Adult Light</a>
-                <p class="gia">59.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/2577_tui-pet-phi-hanh-gia-pet-city2.jpg"/></a>
-                <a class="p-name">Balo di chuyển phi hành gia (nhựa)</a>
-                <p class="gia">520.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/999_furminatorchomeolongdaipetcity.jpg"/></a>
-                <a class="p-name">Lược cho mèo lông dài</a>
-                <p class="gia">652.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/2362_Cats_Eye_petcity.jpg"/></a>
-                <a class="p-name">Thức ăn cho mèo túi 1,5kg</a>
-                <p class="gia">166.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/2953_caymeoleoafpnaturecozypetcity1.jpg"/></a>
-                <a class="p-name">Cây mèo leo</a>
-                <p class="gia">2.380.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/250_3410_makar_toilet_cat_pink_petcity.jpg"/></a>
-                <a class="p-name">Nhà vệ sinh mèo</a>
-                <p class="gia">750.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
+    <div class="overview">
+        <h1>Nhà đầu mèo</h1>
+        <p>Mã SP: PETSSNDM</p>
+        <p class="gia">338.000đ<span class="giacu">450.000đ</span><p>
+        <div class="soluong">
+            <b>Số lượng: </b>
+            <select name="soluong">
+            <script>
+                for(i=1;i<=10;i++)
+                    document.write("<option value="+i+">"+i+"</option>");
+            </script>
+            </select>
         </div>
-    </div>
-    <div class="clear"></div>
-    <div>
-        <h1 class="title-background">
-            <span class="title">Sản phẩm giảm giá</span>
-            <a href="SP_GiamGia.html" class="xemtatca"><span>Xem tất cả&rarr;</span></a>
-            <hr>
-        </h1>
-         <div class="container">
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/120_2271_20431239_341674479620345_7843554253853490907_n.jpg"/></a>
-                <a class="p-name">Nhà đầu mèo</a>
-                <span class="giacu">450.000đ</span>
-                <p class="gia">338.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/120_260_pet_supplies_new_pet_cat_backpack_pet_font_b_handbag_b_font_font_b_dog_b.jpg"/></a>
-                <a class="p-name">Túi xách nylon vòm</a>
-                <span class="giacu">280.000đ</span>
-                <p class="gia">200.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/1399_0_m__y_s___y_chuy__n_d___ng_d__nh_cho_ch___m__o.jpg"/></a>
-                <a class="p-name">Máy sấy lông - CP160</a>
-                <span class="giacu">2.150.000đ</span>
-                <p class="gia">1.720.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/2143_Royalcanin-MaxiAdult10kg.jpg"/></a>
-                <a class="p-name">Maxi Adult 10kg</a>
-                <span class="giacu">1.050.000đ</span>
-                <p class="gia">977.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3271_kimononopetcity4.jpg"/></a>
-                <a class="p-name">Áo kimino</a>
-                <span class="giacu">180.000đ</span>
-                <p class="gia">90.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3748_146725445258.png"/></a>
-                <a class="p-name">Bát đôi hình xương M</a>
-                <span class="giacu">526.000đ</span>
-                <p class="gia">421.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3757_8727323850-1832263803.jpg"/></a>
-                <a class="p-name">Balo di chuyển phi hành gia (nhựa trong)</a>
-                <span class="giacu">700.000đ</span>
-                <p class="gia">560.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3512_Untitl111ed.png"/></a>
-                <a class="p-name">Sữa tắm hoa mẫu đơn 400ml</a>
-                <span class="giacu">355.000đ</span>
-                <p class="gia">308.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
+        <a href="#" class="datmua">Đặt mua ngay</a>
+        <div class="thongtin">
+            Thông tin sản phẩm Thông tin sản phẩm Thông tin sản phẩm Thông tin sản phẩm Thông tin sản phẩm Thông tin sản phẩm
         </div>
     </div>
     <div class="clear"></div>

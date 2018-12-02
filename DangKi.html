@@ -1,0 +1,451 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="images/logo/petshop.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href=" css/DangNhap_Ki.css" rel="stylesheet" type="text/css" />
+    <link href="css/Header.css" rel="stylesheet" type="text/css" />
+    <link href="css/Footer.css" rel="stylesheet" type="text/css" />
+    <link href="css/Menu.css" rel="stylesheet" type="text/css"/>
+    <title>Pet Shop - Nơi mua sắm tuyệt vời cho thú cưng của bạn</title>
+    <link href="index.html"/>
+<style>
+* {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;	
+}
+
+::-webkit-scrollbar {
+    width:5px;	
+}
+
+::-webkit-scrollbar-thumb {
+    background:lightpink;
+    border-radius:20px;	
+}
+    
+html {
+ 	scroll-behavior: smooth;
+}
+
+body {
+	margin:0;
+    padding: 0;
+}
+     
+html, body { 
+    cursor:url('http://www.snazzyspace.com/cursorsfolder/dog-paw.png'), auto; 
+}
+    
+#Bam_len_top {
+	display:none;
+	position:fixed;
+	bottom:50px;
+	right:10px;
+	z-index:99;
+	font-size:20px;
+	border:none;
+	outline:none;
+	background-color:lightpink;
+	cursor:pointer;
+	padding:15px;
+	border-radius:20px;
+}
+
+#Trang_gio_hang {
+	display:none;
+	position:fixed;
+	right:8px;
+	bottom:110px;
+	z-index:99;
+	font-size:18px;
+	border:none;
+	background-color:lightpink;
+	cursor:pointer;
+	padding:15px;
+	border-radius:50%;
+}
+    
+.clear{
+    clear: both;
+}
+
+.test {
+	height:40px;
+	width:500px;
+	font-size:16px;
+	padding:10px 20px;
+	outline:none;
+	border-radius:5px;
+}
+
+.Nut_Submit_Delete {
+	text-align:center;
+	padding:15px;
+}
+
+.Nut_Submit_Delete input {
+	padding:10px 40px;
+	border-radius:20px;
+	outline:none;
+}
+body{
+	background-image:url(images/dangky/8cc6d2466228e4f2a9fad8cb7ab7d51d.jpg);
+}
+.font-dk{
+	font-size: 15px;
+	color: rgb(94, 94, 94);
+}
+.input-ns{
+	height: 32px;
+	border: 1px solid rgb(193, 193, 193);
+	border-radius: 5px;
+}.item-ns{
+	padding:0 10px 0 0;
+}
+			
+</style>
+</head>
+
+<body>
+<script src="js/Scroll_on_Top.js"></script>
+
+<button onclick="Dua_len_dau()" id="Bam_len_top" title="Lên đầu trang"><i class="fa fa-arrow-up"></i></button>
+<button onClick="Mo_Gio_hang()" id="Trang_gio_hang"><i class="fa fa-shopping-cart"></i></button>
+
+<div class="header">
+    <div class="container">
+        <div class="header-logo">
+            <a class="logo" href="index.html">
+                <img src="images/logo/logo.png" height= "75px" width="237.67px">
+            </a>
+        </div>
+        <div class="Timkiem">
+            <form class="Phan_tim_kiem">
+                <input type="text" placeholder="Tìm kiếm" />
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="Giohang">
+            <form class="Phan_gio_hang">
+                <button type="submit"><i class="fa fa-shopping-cart"></i></button>
+            </form>
+        </div>
+        <div class="clear"></div>
+	</div>
+</div>            
+       
+<div class="Menu-list">
+    <div class="container">
+        <ul style="margin-top:0;margin-bottom:0">
+            <li class="Menu"><a href="index.html">Trang chủ</a></li>
+            <li class="Menu"><a href="#">Giới thiệu</a></li>
+            <li class="Menu">
+                <a href="#">Shop cho chó <i class="fa fa-angle-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Thức ăn</a>
+                    <a href="#">Quần áo</a>
+                    <a href="#">Vòng cổ</a>
+                    <a href="#">Vật dụng</a>
+                    <a href="#">Sữa tắm</a>
+                    <a href="#">Đồ chơi</a>
+                    <a href="#">Chuồng, giường</a>
+                </div>
+            </li>
+            <li class="Menu">
+                <a href="#">Shop cho mèo <i class="fa fa-angle-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Thức ăn</a>
+                    <a href="#">Quần áo</a>
+                    <a href="#">Vòng cổ</a>
+                    <a href="#">Vật dụng</a>
+                    <a href="#">Sữa tắm</a>
+                    <a href="#">Đồ chơi</a>
+                    <a href="#">Chuồng, giường</a>
+                </div>
+            </li>
+            <li class="Menu">
+                <a href="#">Shop vật nuôi khác <i class="fa fa-angle-down"></i></a>
+                <div class="dropdown-content">
+                    <div class="Menu-sub">
+                        <a href="#">Chim <i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-sub">
+                            <a href="#">Thức ăn</a>
+                            <a href="#">Vật dụng</a>
+                            <a href="#">Lồng và phụ kiện</a>
+                        </div>
+                    </div>
+                    <div class="Menu-sub">
+                        <a href="#">Cá <i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-sub">
+                            <a href="#">Thức ăn</a>
+                            <a href="#">Vật dụng</a>
+                            <a href="#">Bể cá và phụ kiện</a>
+                        </div>
+                    </div>
+                    <div class="Menu-sub">
+                        <a href="#">Hamster <i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-sub">
+                            <a href="#">Thức ăn</a>
+                            <a href="#">Vật dụng</a>
+                            <a href="#">Chuồng và phụ kiện</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="Menu"><a href="#">Khuyến mãi</a></li>
+            <div class="clear"></div>
+        </ul>
+    </div>
+</div>
+<div class="clear"></div> 
+               
+<div class="Middle">
+	
+    <form action="#" method="post">
+       		 
+<div style="text-align:center;margin:auto;">
+	<a><img src="images/dangky/a15ec2a159ad63ec717d1523f3b1db4d.jpg" height="250" width="65%"></a>
+    <h1>ĐĂNG KÝ NGƯỜI DÙNG</h1>
+</div>
+
+
+<div style="text-align:center">
+    <div>
+        <h3>Tên đăng nhập</h3>
+     	<div><input class="test" type="text" name="" id="Ten" size="70" placeholder=""></div>
+    </div>
+    <div>
+         <h3>Mật khẩu</h3>
+         <div style="width:500px;margin:auto"><input type="password" name="" id="Ip" placeholder="tối thiểu 5 kí tự" required ></div>
+    </div>
+    <div>
+         <h3>Nhập lại mật khẩu</h3>
+         <div style="width:500px;margin:auto"><input type="password" name="Name" id="ReIp" placeholder="nhập lại mật khẩu ở trên" required></div>		
+    </div>
+</div>
+
+<div style="text-align:center">
+	<div>
+    	<h3>Họ và tên</h3>
+    	<input type="text" name="Name" id="Name" class="test" placeholder=""/>
+    </div>
+	<div>
+    	<h3>Ngày tháng năm sinh</h3>
+		<div class="item-dk" style="padding-top:16px;">
+                        <!--ngay sinh-->
+                        <div class="item-ns">
+                            <select style="color: rgb(94, 94, 94);" name="thang" id="thang" class="input-ns" onchange="day_func()">
+                                <option class="" value="">tháng</option>
+                            </select>
+                            <select style="color: rgb(94, 94, 94); width: 60px" name="ngay" id="ngay" class="input-ns">
+                            </select>
+                            <select style="color: rgb(94, 94, 94);" name="nam" id="nam" class="input-ns">
+                            </select>
+                        </div
+    ></div>
+    <div>
+    	<h3>Số điện thoại</h3>
+    	<input type="text" name="phone" id="phone" class="test" placeholder=" ">*
+    </div>
+    <div>
+   		<h3>Số chứng minh nhân dân</h3>
+        <input type="text" name="cmnd" id="cmnd" class="test" placeholder=" ">*
+    </div>
+    <div>
+    	<h3>Địa chỉ</h3>
+        <input type="text" name="home" id="home" class="test">*
+    </div>
+    <div>
+    	<h3 style="margin-bottom:8px">Giới tính:</h3>
+    	<div style="font-size:18px">
+        	<span style="padding-right:35px"><input name="qualif" type="radio" />Nam</span>
+        	<span><input name="qualif" type="radio" />Nữ</span>
+        </div>
+    </div>
+</div>
+
+<div class="Nut_Submit_Delete">
+    <span style="padding-right:35px"><input type="button" value="Đăng ký" style="cursor:pointer" onClick="kiemtra()"></span>
+    <span><input type="reset" style="cursor:pointer" value="Nhập lại" /></span>
+</div>
+
+<div class="clear"></div>
+
+</div>
+<hr style="border:1.5px solid #e6e6e6;margin-bottom:0">
+
+<div class="Footer">
+    <div class="container">
+        <div class="cot">
+            <h3>Danh mục</h3>
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Shop cho chó</a></li>
+                <li><a href="#">Shop cho mèo</a></li>
+                <li><a href="#">Shop vật nuôi khác</a></li>
+            </ul>
+        </div>
+        <div class="cot">
+            <h3>Thông tin</h3>
+            <ul>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Tuyển dụng</a></li>
+                <li><a href="#">Sitemap</a></li>
+            </ul>
+        </div>
+        <div class="cot">
+            <h3>Chính sách</h3>
+            <ul>
+                <li><a href="#">Chính sách giao hàng</a></li>
+                <li><a href="#">Phương thức thanh toán</a></li>
+                <li><a href="#">Chính sách bảo hành</a></li>
+                <li><a href="#">Chính sách đổi, trả hàng</a></li>
+                <li><a href="#">Điều khoản sử dụng</a></li>
+            </ul>
+        </div>
+        <div class="cot">
+            <h3>Liên hệ</h3>
+            <ul>
+                <li class="social-network">
+                    <a href="https://www.facebook.com/"></a>
+                    <a href="https://www.instagram.com/"></a>
+                    <a href="https://www.twitter.com/"></a>
+                    <a href="https://www.youtube.com/"></a>
+                </li>
+                <li style="padding-top:7px"><a href="callto:028xxxxxxxx">Sđt: 028xxxxxxxx</a></li>
+                <li><a href="mailto:petshop@gmail.com">Email: petshop@gmail.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+</form>
+</body>
+  <script type="text/javascript">
+        window.addEventListener('load', function() {
+            //thang
+            var th = document.getElementById('thang');
+            var n = 12;
+            th.innerHTML = ' <option class="" value="" >Tháng</option>';
+            for (var i = 1; i <= n; i++)
+                th.innerHTML += '<option class="" value="' + i + '" >tháng ' + i + '</option>';
+            // het thang
+            // nam
+            var na = document.getElementById('nam');
+            na.innerHTML = ' <option class="" value="" >năm</option>';
+            for (var i = 1970; i <= 2018; i++)
+                na.innerHTML += '<option class="" value="' + i + '" >' + i + '</option>';
+            //het nam
+            //th.addEventListener()
+            //ngay
+        });
+	function kiemtra()
+	{
+		var a= document.getElementById("Ten");
+		var b=document.getElementById("Ip");
+		var c= document.getElementById("ReIp");
+		var d=document.getElementById("Name");
+		var g=document.getElementById("phone");
+		var h=document.getElementById("cmnd");
+		var s=document.getElementById("home");
+		if(a.value=="")
+		{
+			window.alert("Chưa nhập Tên đăng nhập");
+			a.focus();
+			return false;
+		}
+		if(b.value=="")
+		{
+			window.alert("Chưa nhập mật khẩu ");
+			b.focus();
+			return false;
+		}
+		if(b.value.length<5)
+		{
+			window.alert("Chưa đủ 5 kí tự,hãy nhập lại");
+			b.focus();
+			return false;
+		}
+		
+		if(b.value!=c.value)
+		{
+			window.alert("Mật khẩu bạn nhập lại đã sai,xin hãy nhập lại");
+			c.focus();
+			return false;
+		}
+		if(d.value=="")
+		{
+			window.alert("Họ và tên bạn đang để trống");
+			d.focus();
+			return false;
+		}
+		if(g.value=="")
+		{
+			window.alert("Số điện thoại bạn đang để trống");
+			g.focus();
+			return false;
+		}
+		if(g.value.length<8||g.value.length>13)
+		{
+			window.alert("Số đện thoại của bạn không có thật");
+			b.focus();
+			return false;
+		}
+		if(h.value=="")
+		{
+			window.alert("Chứng minh nhân dân của bạn đang để trống");
+			h.focus();
+			return false;
+		}
+		if(h.value.length!=9)
+		{
+			window.alert("Số chứng minh nhân dân không hợp lệ");
+			h.focus();
+			return false;	
+		}
+		if(s.value=="")
+		{
+			window.alert("Địa chỉ của bạn đang để trống");
+			s.focus();
+			return false;
+		}
+		alert("Chúc mừng! Bạn đã đăng kí thành công");
+	}
+	function day_func() {
+            var na = document.getElementById('nam');
+            var th = document.getElementById('thang');
+            console.log('run');
+            var n = document.getElementById('ngay');
+            n.innerHTML = ' <option class="" value="" >ngày</option>';
+            var day = 0;
+            if (th.value == 1 || th.value == 3 || th.value == 5 || th.value == 7 || th.value == 8 || th.value == 10||th.value==12) {
+                day = 31;
+                var n = document.getElementById('ngay');
+                for (var i = 1; i <= day; i++)
+                    n.innerHTML += '<option class="" value="' + i + '" >' + i + '</option>';
+            }
+            if (th.value == 4 || th.value == 6 || th.value == 9|| th.value == 11) {
+                day = 30;
+                var n = document.getElementById('ngay');
+                for (var i = 1; i <= day; i++)
+                    n.innerHTML += '<option class="" value="' + i + '" >' + i + '</option>';
+            }
+            if (th.value == 2) {
+                if (na.value % 400 == 0 || (na.value % 4 == 0 && na.value % 100 != 0)) {
+                    day = 29;
+                    var n = document.getElementById('ngay');
+                    for (var i = 1; i <= day; i++)
+                        n.innerHTML += '<option class="" value="' + i + '" >' + i + '</option>';
+                } else {
+                    day = 28;
+                    var n = document.getElementById('ngay');
+                    for (var i = 1; i <= day; i++)
+                        n.innerHTML += '<option class="" value="' + i + '" >' + i + '</option>';
+                }
+            }
+        }
+		;
+</script>
