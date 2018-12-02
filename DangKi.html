@@ -1,15 +1,15 @@
-<!doctype html>
-<html><head>
+﻿<!doctype html>
+<html>
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="images/logo/petshop.ico">
+    <link rel="icon" href="images/logo/petshop.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link href=" css/DangNhap_Ki.css" rel="stylesheet" type="text/css" />
+    <link href="css/DangNhap_Ki.css" rel="stylesheet" type="text/css" />
     <link href="css/Header.css" rel="stylesheet" type="text/css" />
+    <link href="css/Menu.css" rel="stylesheet" type="text/css" />
     <link href="css/Footer.css" rel="stylesheet" type="text/css" />
-    <link href="css/Menu.css" rel="stylesheet" type="text/css"/>
-    <title>Pet Shop - Nơi mua sắm tuyệt vời cho thú cưng của bạn</title>
-    <link href="index.html"/>
+    <title>Đăng ký tài khoản</title>
 <style>
 * {
 	box-sizing:border-box;
@@ -34,6 +34,7 @@ body {
 	margin:0;
     padding: 0;
 }
+    
      
 html, body { 
     cursor:url('http://www.snazzyspace.com/cursorsfolder/dog-paw.png'), auto; 
@@ -67,11 +68,11 @@ html, body {
 	padding:15px;
 	border-radius:50%;
 }
-    
+
 .clear{
     clear: both;
 }
-
+    
 .test {
 	height:40px;
 	width:500px;
@@ -105,7 +106,12 @@ body{
 }.item-ns{
 	padding:0 10px 0 0;
 }
-			
+    
+@media only screen and (max-width: 900px) {
+    .Middle img{
+        width: 100%;
+    }
+}
 </style>
 </head>
 
@@ -134,9 +140,10 @@ body{
             </form>
         </div>
         <div class="clear"></div>
-	</div>
-</div>            
-       
+    </div>
+</div>
+<div class="clear"></div>
+
 <div class="Menu-list">
     <div class="container">
         <ul style="margin-top:0;margin-bottom:0">
@@ -200,87 +207,89 @@ body{
         </ul>
     </div>
 </div>
-<div class="clear"></div> 
-               
+<div class="clear"></div>
+    
 <div class="Middle">
 	
     <form action="#" method="post">
        		 
-<div style="text-align:center;margin:auto;">
-	<a><img src="images/dangky/a15ec2a159ad63ec717d1523f3b1db4d.jpg" height="250" width="65%"></a>
-    <h1>ĐĂNG KÝ NGƯỜI DÙNG</h1>
-</div>
-
-
-<div style="text-align:center">
-    <div>
-        <h3>Tên đăng nhập</h3>
-     	<div><input class="test" type="text" name="" id="Ten" size="70" placeholder=""></div>
-    </div>
-    <div>
-         <h3>Mật khẩu</h3>
-         <div style="width:500px;margin:auto"><input type="password" name="" id="Ip" placeholder="tối thiểu 5 kí tự" required ></div>
-    </div>
-    <div>
-         <h3>Nhập lại mật khẩu</h3>
-         <div style="width:500px;margin:auto"><input type="password" name="Name" id="ReIp" placeholder="nhập lại mật khẩu ở trên" required></div>		
-    </div>
-</div>
-
-<div style="text-align:center">
-	<div>
-    	<h3>Họ và tên</h3>
-    	<input type="text" name="Name" id="Name" class="test" placeholder=""/>
-    </div>
-	<div>
-    	<h3>Ngày tháng năm sinh</h3>
-		<div class="item-dk" style="padding-top:16px;">
-                        <!--ngay sinh-->
-                        <div class="item-ns">
-                            <select style="color: rgb(94, 94, 94);" name="thang" id="thang" class="input-ns" onchange="day_func()">
-                                <option class="" value="">tháng</option>
-                            </select>
-                            <select style="color: rgb(94, 94, 94); width: 60px" name="ngay" id="ngay" class="input-ns">
-                            </select>
-                            <select style="color: rgb(94, 94, 94);" name="nam" id="nam" class="input-ns">
-                            </select>
-                        </div
-    ></div>
-    <div>
-    	<h3>Số điện thoại</h3>
-    	<input type="text" name="phone" id="phone" class="test" placeholder=" ">*
-    </div>
-    <div>
-   		<h3>Số chứng minh nhân dân</h3>
-        <input type="text" name="cmnd" id="cmnd" class="test" placeholder=" ">*
-    </div>
-    <div>
-    	<h3>Địa chỉ</h3>
-        <input type="text" name="home" id="home" class="test">*
-    </div>
-    <div>
-    	<h3 style="margin-bottom:8px">Giới tính:</h3>
-    	<div style="font-size:18px">
-        	<span style="padding-right:35px"><input name="qualif" type="radio" />Nam</span>
-        	<span><input name="qualif" type="radio" />Nữ</span>
+        <div style="text-align:center;margin:auto;">
+            <a><img src="images/dangky/a15ec2a159ad63ec717d1523f3b1db4d.jpg" height="300" width="900"></a>
+            <h1 style="color:orangered">ĐĂNG KÝ NGƯỜI DÙNG</h1>
         </div>
-    </div>
+
+
+        <div style="text-align:center;color:darkorchid">
+            <div>
+                <h3>Tên đăng nhập</h3>
+                <div><input class="test" type="text" name="" id="UserName" size="70" placeholder="Nhập tên đăng nhập....."></div>
+            </div>
+            <div>
+                 <h3>Mật khẩu</h3>
+                 <div style="width:500px;margin:auto"><input type="password" name="" id="MatKhau" placeholder="Tối thiểu 5 kí tự" required ></div>
+            </div>
+            <div>
+                 <h3>Nhập lại mật khẩu</h3>
+                 <div style="width:500px;margin:auto"><input type="password" name="Name" id="Re-MatKhau" placeholder="**************" required></div>		
+            </div>
+        </div>
+
+        <div style="text-align:center;color:darkorchid">
+            <div>
+                <h3>Họ và tên</h3>
+                <input type="text" name="Name" id="Name" class="test" placeholder=""/>
+            </div>
+            <div>
+                <h3>Ngày tháng năm sinh</h3>
+                <div class="item-dk" style="padding-top:16px;">
+                    <!--ngay sinh-->
+                    <div class="item-ns">
+                        <select style="color: rgb(94, 94, 94);" name="thang" id="thang" class="input-ns" onchange="day_func()">
+                            <option class="" value="">tháng</option>
+                        </select>
+                        <select style="color: rgb(94, 94, 94); width: 60px" name="ngay" id="ngay" class="input-ns">
+                        </select>
+                        <select style="color: rgb(94, 94, 94);" name="nam" id="nam" class="input-ns">
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <h3>Số điện thoại</h3>
+                    <input type="text" name="phone" id="phone" class="test" placeholder=" ">*
+                </div>
+                <div>
+                    <h3>Số chứng minh nhân dân</h3>
+                    <input type="text" name="cmnd" id="cmnd" class="test" placeholder=" ">*
+                </div>
+                <div>
+                    <h3>Địa chỉ</h3>
+                    <input type="text" name="home" id="home" class="test">*
+                </div>
+                <div>
+                    <h3 style="margin-bottom:8px">Giới tính</h3>
+                    <div style="font-size:18px">
+                        <span style="padding-right:35px"><label><input name="sex" id="sex" type="radio" value="Nam"/>Nam</label></span>
+                        <span><label><input name="sex" id="sex" type="radio" value="Nu"/>Nữ</label></span>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="Nut_Submit_Delete">
+                <span style="padding-right:35px"><input type="button" value="Đăng ký" style="cursor:pointer" onClick="kiemtra()"></span>
+                <span><input type="reset" style="cursor:pointer" value="Nhập lại" onclick="document.getElementById('UserName').focus();"/></span>
+            </div>
+
+            <div class="clear"></div>
+
+        </div>
+    </form>
 </div>
 
-<div class="Nut_Submit_Delete">
-    <span style="padding-right:35px"><input type="button" value="Đăng ký" style="cursor:pointer" onClick="kiemtra()"></span>
-    <span><input type="reset" style="cursor:pointer" value="Nhập lại" /></span>
-</div>
-
-<div class="clear"></div>
-
-</div>
 <hr style="border:1.5px solid #e6e6e6;margin-bottom:0">
-
 <div class="Footer">
     <div class="container">
         <div class="cot">
-            <h3>Danh mục</h3>
+            <p>Danh mục</p>
             <ul>
                 <li><a href="#">Trang chủ</a></li>
                 <li><a href="#">Shop cho chó</a></li>
@@ -289,7 +298,7 @@ body{
             </ul>
         </div>
         <div class="cot">
-            <h3>Thông tin</h3>
+            <p>Thông tin</p>
             <ul>
                 <li><a href="#">Giới thiệu</a></li>
                 <li><a href="#">Tuyển dụng</a></li>
@@ -297,7 +306,7 @@ body{
             </ul>
         </div>
         <div class="cot">
-            <h3>Chính sách</h3>
+            <p>Chính sách</p>
             <ul>
                 <li><a href="#">Chính sách giao hàng</a></li>
                 <li><a href="#">Phương thức thanh toán</a></li>
@@ -307,7 +316,7 @@ body{
             </ul>
         </div>
         <div class="cot">
-            <h3>Liên hệ</h3>
+            <p>Liên hệ</p>
             <ul>
                 <li class="social-network">
                     <a href="https://www.facebook.com/"></a>
@@ -322,9 +331,10 @@ body{
     </div>
     <div class="clear"></div>
 </div>
-</form>
 </body>
-  <script type="text/javascript">
+</html>
+
+<script type="text/javascript">
         window.addEventListener('load', function() {
             //thang
             var th = document.getElementById('thang');
@@ -344,75 +354,75 @@ body{
         });
 	function kiemtra()
 	{
-		var a= document.getElementById("Ten");
-		var b=document.getElementById("Ip");
-		var c= document.getElementById("ReIp");
-		var d=document.getElementById("Name");
-		var g=document.getElementById("phone");
-		var h=document.getElementById("cmnd");
-		var s=document.getElementById("home");
-		if(a.value=="")
+		var username= document.getElementById("UserName");
+		var password=document.getElementById("MatKhau");
+		var re_password= document.getElementById("Re-MatKhau");
+		var name=document.getElementById("Name");
+		var phone=document.getElementById("phone");
+		var cmnd=document.getElementById("cmnd");
+		var direct=document.getElementById("home");
+		if(username.value=="")
 		{
 			window.alert("Chưa nhập Tên đăng nhập");
-			a.focus();
+			username.focus();
 			return false;
 		}
-		if(b.value=="")
+		if(password.value=="")
 		{
 			window.alert("Chưa nhập mật khẩu ");
-			b.focus();
+			password.focus();
 			return false;
 		}
-		if(b.value.length<5)
+		if(password.value.length<5)
 		{
 			window.alert("Chưa đủ 5 kí tự,hãy nhập lại");
-			b.focus();
+			password.focus();
 			return false;
 		}
 		
-		if(b.value!=c.value)
+		if(password.value!=re_password.value)
 		{
 			window.alert("Mật khẩu bạn nhập lại đã sai,xin hãy nhập lại");
-			c.focus();
+			re_password.focus();
 			return false;
 		}
-		if(d.value=="")
+		if(name.value=="")
 		{
 			window.alert("Họ và tên bạn đang để trống");
-			d.focus();
+			name.focus();
 			return false;
 		}
-		if(g.value=="")
+		if(phone.value=="")
 		{
 			window.alert("Số điện thoại bạn đang để trống");
-			g.focus();
+			phone.focus();
 			return false;
 		}
-		if(g.value.length<8||g.value.length>13)
+		if(phone.value.length<8||phone.value.length>13)
 		{
 			window.alert("Số đện thoại của bạn không có thật");
-			b.focus();
+			phone.focus();
 			return false;
 		}
-		if(h.value=="")
+		if(cmnd.value=="")
 		{
 			window.alert("Chứng minh nhân dân của bạn đang để trống");
-			h.focus();
+			cmnd.focus();
 			return false;
 		}
-		if(h.value.length!=9)
+		if(cmnd.value.length!=9)
 		{
 			window.alert("Số chứng minh nhân dân không hợp lệ");
-			h.focus();
+			cmnd.focus();
 			return false;	
 		}
-		if(s.value=="")
+		if(direct.value=="")
 		{
 			window.alert("Địa chỉ của bạn đang để trống");
-			s.focus();
+			direct.focus();
 			return false;
 		}
-		alert("Chúc mừng! Bạn đã đăng kí thành công");
+		return User();
 	}
 	function day_func() {
             var na = document.getElementById('nam');
