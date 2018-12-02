@@ -10,8 +10,7 @@
     <link href="css/Menu.css" rel="stylesheet" type="text/css" />
     <link href="css/Main.css" rel="stylesheet" type="text/css" />
     <link href="css/Footer.css" rel="stylesheet" type="text/css" />
-    <link href="css/SlideShow.css" rel="stylesheet" type="text/css">
-    <title>Pet Shop - Nơi mua sắm tuyệt vời cho thú cưng của bạn</title>
+    <title>Phương thức thanh toán</title>
 <style>
 * {
 	box-sizing:border-box;
@@ -226,168 +225,40 @@ html, body {
 </div>
 <div class="clear"></div>
     
-<div class="Slide-Container">
-	<div class="slide fade"><img src="images/slideshow/363.jpg" style="vertical-align:middle"></div>
-    <div class="slide fade"><img src="images/slideshow/330.jpg" style="vertical-align:middle"></div>
-    <div class="slide fade"><img src="images/slideshow/banner_49ae49a2.png" style="vertical-align:middle"></div>
-    <div class="slide fade"><img src="images/slideshow/329.jpg" style="vertical-align:middle"></div>
-    <div style="text-align:center">
-    	<span class="dot" onClick="currentSlide(0)"></span>
-        <span class="dot" onClick="currentSlide(1)"></span>
-        <span class="dot" onClick="currentSlide(2)"></span>
-        <span class="dot" onClick="currentSlide(3)"></span>
-    </div>
-    <script>
-		var slideIndex; //slideIndex đại diện cho mỗi slide (Vd: Hình 1 là slideindex=0 ....)
-		function showSlides() {
-			var i;
-			var slides = document.getElementsByClassName("slide");
-			var dots = document.getElementsByClassName("dot");
-			for (i = 0; i < slides.length; i++) {
-         		slides[i].style.display = "none";  
-      		}
-			for (i = 0; i < dots.length; i++) {
-          		dots[i].className = dots[i].className.replace(" active", "");
-    		}
-			slides[slideIndex].style.display = "block";  
-			dots[slideIndex].className += " active";
-			slideIndex++; //Chuyển silde kế tiếp
-			if (slideIndex > slides.length - 1) {	//Nếu slide cuối
-				slideIndex = 0;			//Chuyển về slide đầu
-			}
-			setTimeout(showSlides, 5000);	//Lệnh tự động chuyển đồi sau 5s
-		}
-		showSlides(slideIndex = 0);
-		function currentSlide(n) {
-    		showSlides(slideIndex = n);
-  		}
-	</script>
-</div>
-    
-    
 <div class="Main">
     <div>
-        <h1 class="title-background">
-            <span class="title">Sản phẩm mới</span>
-            <a href="SP_Moi.html" class="xemtatca"><span>Xem tất cả&rarr;</span></a>
-            <hr>
-        </h1>
-         <div class="container">
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3013_74216cb16b0b8755de1a.jpg"/></a>
-                <a class="p-name">Áo cho thú cưng size S</a>
-                <p class="gia">155.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3009_f194b965bddf518108ce.jpg"/></a>
-                <a class="p-name">Nệm vòm cao cấp</a>
-                <p class="gia">510.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/2134_RoyalCanin-MiniAdultLight195g.png"/></a>
-                <a class="p-name">Mini Adult Light</a>
-                <p class="gia">59.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/2577_tui-pet-phi-hanh-gia-pet-city2.jpg"/></a>
-                <a class="p-name">Balo di chuyển phi hành gia (nhựa)</a>
-                <p class="gia">520.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/999_furminatorchomeolongdaipetcity.jpg"/></a>
-                <a class="p-name">Lược cho mèo lông dài</a>
-                <p class="gia">652.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/2362_Cats_Eye_petcity.jpg"/></a>
-                <a class="p-name">Thức ăn cho mèo túi 1,5kg</a>
-                <p class="gia">166.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/2953_caymeoleoafpnaturecozypetcity1.jpg"/></a>
-                <a class="p-name">Cây mèo leo</a>
-                <p class="gia">2.380.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/250_3410_makar_toilet_cat_pink_petcity.jpg"/></a>
-                <a class="p-name">Nhà vệ sinh mèo</a>
-                <p class="gia">750.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-        </div>
-    </div>
-    <div class="clear"></div>
-    <div>
-        <h1 class="title-background">
-            <span class="title">Sản phẩm giảm giá</span>
-            <a href="SP_GiamGia.html" class="xemtatca"><span>Xem tất cả&rarr;</span></a>
-            <hr>
-        </h1>
-         <div class="container">
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/120_2271_20431239_341674479620345_7843554253853490907_n.jpg"/></a>
-                <a class="p-name">Nhà đầu mèo</a>
-                <span class="giacu">450.000đ</span>
-                <p class="gia">338.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/120_260_pet_supplies_new_pet_cat_backpack_pet_font_b_handbag_b_font_font_b_dog_b.jpg"/></a>
-                <a class="p-name">Túi xách nylon vòm</a>
-                <span class="giacu">280.000đ</span>
-                <p class="gia">200.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/1399_0_m__y_s___y_chuy__n_d___ng_d__nh_cho_ch___m__o.jpg"/></a>
-                <a class="p-name">Máy sấy lông - CP160</a>
-                <span class="giacu">2.150.000đ</span>
-                <p class="gia">1.720.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/2143_Royalcanin-MaxiAdult10kg.jpg"/></a>
-                <a class="p-name">Maxi Adult 10kg</a>
-                <span class="giacu">1.050.000đ</span>
-                <p class="gia">977.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3271_kimononopetcity4.jpg"/></a>
-                <a class="p-name">Áo kimino</a>
-                <span class="giacu">180.000đ</span>
-                <p class="gia">90.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3748_146725445258.png"/></a>
-                <a class="p-name">Bát đôi hình xương M</a>
-                <span class="giacu">526.000đ</span>
-                <p class="gia">421.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3757_8727323850-1832263803.jpg"/></a>
-                <a class="p-name">Balo di chuyển phi hành gia (nhựa trong)</a>
-                <span class="giacu">700.000đ</span>
-                <p class="gia">560.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3512_Untitl111ed.png"/></a>
-                <a class="p-name">Sữa tắm hoa mẫu đơn 400ml</a>
-                <span class="giacu">355.000đ</span>
-                <p class="gia">308.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-        </div>
+        <h1><span style="font-size: medium; color: #0000ff;"><strong>Phương thức thanh toán khi mua hàng tại PetShop</strong><br></span></h1>
+        <p><span style="font-size: small;">Để tạo thuận lợi cho việc mua sắm của Quý Khách tại PetShop, chúng tôi hỗ trợ Quý khách các phương thức thanh toán sau </span></p>
+        <p><span style="font-size: small;"><strong>1- Dịch vụ giao hàng và thu tiền tận nơi COD:</strong> <br> </span></p>
+        <p><span style="font-size: small;">Sau khi Quý Khách hàng đặt mua hàng tại PetShop, dựa vào các thông tin quý khách cung cấp, nhân viên của chúng tôi sẽ đến tận nơi giao hàng và Quý Khách thanh toán tiền ngay cho nhân viên giao hàng. Trong trường hợp Quý Khách muốn được giao hàng đến 1 địa chỉ khác, Quý Khách sẽ thanh toán trước với chúng tôi tại địa chỉ : </span></p>
+        <ul>
+        <li><span>250/3 Lý Chính Thắng, Quận 3</span></li>
+        <li>Tel: (028) xxxx xxxx</li>
+        <li>Thời gian làm việc: Từ 8.00am - 9.30pm tất cả các ngày trong tuần</li>
+        </ul>
+        <p><strong style="font-size: small;">2- Thanh toán chuyển khoản qua Ngân hàng</strong></p>
+        <p><span style="font-size: small;">Bạn đến bất kỳ ngân hàng nào ở Việt Nam để chuyển tiền theo thông tin bên dưới (bạn không nhất thiết phải có tài khoản ngân hàng).</span></p>
+        <h1><span style="font-size: small;">Siêu thị PetShop có các tài khoản tại các Ngân hàng sau : </span></h1>
+        <p><span>Ngân hàng VietinBank&nbsp;</span></p>
+        <p><span>Số TK :  106868xxxxxx</span></p>
+        <p><span>Chi nhánh:  Hoàng Mai</span></p>
+        <p>&nbsp;</p>
+        <p><span style="font-size: small;"><strong>3- Thanh toán qua máy ATM VietinBank</strong></span></p>
+        <p><span style="font-size: small;">Ngoài các phương thức thanh toán trên, Quý khách cũng có thể dùng chuyển khoản bằng hệ thống ATM của ngân hàng VietinBank . Quý khách có thể đến bất kỳ máy ATM nào thuộc VietinBank  để chuyển khoản cho Petcity theo số tài khoản người nhận như sau :</span></p>
+        <p><span>Ngân hàng VietinBank&nbsp;</span></p>
+        <p><span>Số TK :  106868xxxxxx</span></p>
+        <p><span>Chi nhánh:  Hoàng Mai</span></p>
+        <p><span style="font-size: small;"><strong>4- Thanh toán bằng thẻ Visa, Master, các Thẻ ATM (thanh toán tại cửa hàng):</strong></span></p>
+        <p align="left">Quý khách có thể thanh toán bằng thẻ Visa, Master.. các Thẻ ATM khác trực tiếp tại cửa hàng qua hệ thống máy Chấp nhận thanh toán POS (theo hình thức ưu đãi vẫn như khách hàng thanh toán bằng tiền mặt mà không phải mất phí giao dịch cho tất cả các sản phẩm)</p>
+        <p>Để biết thêm thông tin, Quý khách vui lòng liên hệ:</p>
+        <ul>
+        <li>Siêu thị PetShop</li>
+        <li>250/3 Lý Chính Thắng, Quận 3</li>
+        <li>Tel: (028) xxxx xxxx</li>
+        <li>E-mail: petshop@gmail.com</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><span style="color: #ff0000;">PetShop - Nơi mua sắm tuyệt vời cho thú cưng của bạn</span></p>
     </div>
     <div class="clear"></div>
 </div>

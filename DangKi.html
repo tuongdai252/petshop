@@ -272,7 +272,12 @@ body{
                         <span><label><input name="sex" id="sex" type="radio" value="Nu"/>Nữ</label></span>
                     </div>
                 </div>
-            </div> 
+            </div>
+            
+            <div style="margin-top: 10px">
+                <input type="checkbox" name="agree" id="agree">
+                <span>Tôi đã đọc và đồng ý với <a href="dieukhoansudung.html" style="text-decoration: none; font-weight: bold; color: unset">Điều khoản sử dụng</a> của PetShop</span>
+            </div>
 
             <div class="Nut_Submit_Delete">
                 <span style="padding-right:35px"><input type="button" value="Đăng ký" style="cursor:pointer" onClick="kiemtra()"></span>
@@ -280,7 +285,6 @@ body{
             </div>
 
             <div class="clear"></div>
-
         </div>
     </form>
 </div>
@@ -291,7 +295,7 @@ body{
         <div class="cot">
             <p>Danh mục</p>
             <ul>
-                <li><a href="#">Trang chủ</a></li>
+                <li><a href="index.html">Trang chủ</a></li>
                 <li><a href="#">Shop cho chó</a></li>
                 <li><a href="#">Shop cho mèo</a></li>
                 <li><a href="#">Shop vật nuôi khác</a></li>
@@ -300,19 +304,19 @@ body{
         <div class="cot">
             <p>Thông tin</p>
             <ul>
-                <li><a href="#">Giới thiệu</a></li>
-                <li><a href="#">Tuyển dụng</a></li>
-                <li><a href="#">Sitemap</a></li>
+                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li><a href="tuyendung.html">Tuyển dụng</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
             </ul>
         </div>
         <div class="cot">
             <p>Chính sách</p>
             <ul>
-                <li><a href="#">Chính sách giao hàng</a></li>
-                <li><a href="#">Phương thức thanh toán</a></li>
-                <li><a href="#">Chính sách bảo hành</a></li>
-                <li><a href="#">Chính sách đổi, trả hàng</a></li>
-                <li><a href="#">Điều khoản sử dụng</a></li>
+                <li><a href="chinhsachgiaohang.html">Chính sách giao hàng</a></li>
+                <li><a href="phuongthucthanhtoan.html">Phương thức thanh toán</a></li>
+                <li><a href="chinhsachbaohanh.html">Chính sách bảo hành</a></li>
+                <li><a href="chinhsachdoitra.html">Chính sách đổi, trả hàng</a></li>
+                <li><a href="dieukhoansudung.html">Điều khoản sử dụng</a></li>
             </ul>
         </div>
         <div class="cot">
@@ -333,7 +337,7 @@ body{
 </div>
 </body>
 </html>
-
+<script src="js/User.js"></script>
 <script type="text/javascript">
         window.addEventListener('load', function() {
             //thang
@@ -361,6 +365,7 @@ body{
 		var phone=document.getElementById("phone");
 		var cmnd=document.getElementById("cmnd");
 		var direct=document.getElementById("home");
+        var agree=document.getElementById("agree");
 		if(username.value=="")
 		{
 			window.alert("Chưa nhập Tên đăng nhập");
@@ -410,7 +415,7 @@ body{
 			cmnd.focus();
 			return false;
 		}
-		if(cmnd.value.length!=9)
+		if(cmnd.value.length!=9 && cmnd.value.length!=12)
 		{
 			window.alert("Số chứng minh nhân dân không hợp lệ");
 			cmnd.focus();
@@ -420,6 +425,12 @@ body{
 		{
 			window.alert("Địa chỉ của bạn đang để trống");
 			direct.focus();
+			return false;
+		}
+        if(!agree.checked)
+		{
+			window.alert("Bạn chưa đồng ý Điều khoản sử dụng");
+			agree.focus();
 			return false;
 		}
 		return User();

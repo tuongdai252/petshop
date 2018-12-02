@@ -10,8 +10,7 @@
     <link href="css/Menu.css" rel="stylesheet" type="text/css" />
     <link href="css/Main.css" rel="stylesheet" type="text/css" />
     <link href="css/Footer.css" rel="stylesheet" type="text/css" />
-    <link href="css/SlideShow.css" rel="stylesheet" type="text/css">
-    <title>Pet Shop - Nơi mua sắm tuyệt vời cho thú cưng của bạn</title>
+    <title>Chính sách bảo hành</title>
 <style>
 * {
 	box-sizing:border-box;
@@ -226,168 +225,34 @@ html, body {
 </div>
 <div class="clear"></div>
     
-<div class="Slide-Container">
-	<div class="slide fade"><img src="images/slideshow/363.jpg" style="vertical-align:middle"></div>
-    <div class="slide fade"><img src="images/slideshow/330.jpg" style="vertical-align:middle"></div>
-    <div class="slide fade"><img src="images/slideshow/banner_49ae49a2.png" style="vertical-align:middle"></div>
-    <div class="slide fade"><img src="images/slideshow/329.jpg" style="vertical-align:middle"></div>
-    <div style="text-align:center">
-    	<span class="dot" onClick="currentSlide(0)"></span>
-        <span class="dot" onClick="currentSlide(1)"></span>
-        <span class="dot" onClick="currentSlide(2)"></span>
-        <span class="dot" onClick="currentSlide(3)"></span>
-    </div>
-    <script>
-		var slideIndex; //slideIndex đại diện cho mỗi slide (Vd: Hình 1 là slideindex=0 ....)
-		function showSlides() {
-			var i;
-			var slides = document.getElementsByClassName("slide");
-			var dots = document.getElementsByClassName("dot");
-			for (i = 0; i < slides.length; i++) {
-         		slides[i].style.display = "none";  
-      		}
-			for (i = 0; i < dots.length; i++) {
-          		dots[i].className = dots[i].className.replace(" active", "");
-    		}
-			slides[slideIndex].style.display = "block";  
-			dots[slideIndex].className += " active";
-			slideIndex++; //Chuyển silde kế tiếp
-			if (slideIndex > slides.length - 1) {	//Nếu slide cuối
-				slideIndex = 0;			//Chuyển về slide đầu
-			}
-			setTimeout(showSlides, 5000);	//Lệnh tự động chuyển đồi sau 5s
-		}
-		showSlides(slideIndex = 0);
-		function currentSlide(n) {
-    		showSlides(slideIndex = n);
-  		}
-	</script>
-</div>
-    
-    
 <div class="Main">
     <div>
-        <h1 class="title-background">
-            <span class="title">Sản phẩm mới</span>
-            <a href="SP_Moi.html" class="xemtatca"><span>Xem tất cả&rarr;</span></a>
-            <hr>
-        </h1>
-         <div class="container">
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3013_74216cb16b0b8755de1a.jpg"/></a>
-                <a class="p-name">Áo cho thú cưng size S</a>
-                <p class="gia">155.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3009_f194b965bddf518108ce.jpg"/></a>
-                <a class="p-name">Nệm vòm cao cấp</a>
-                <p class="gia">510.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/2134_RoyalCanin-MiniAdultLight195g.png"/></a>
-                <a class="p-name">Mini Adult Light</a>
-                <p class="gia">59.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/2577_tui-pet-phi-hanh-gia-pet-city2.jpg"/></a>
-                <a class="p-name">Balo di chuyển phi hành gia (nhựa)</a>
-                <p class="gia">520.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/999_furminatorchomeolongdaipetcity.jpg"/></a>
-                <a class="p-name">Lược cho mèo lông dài</a>
-                <p class="gia">652.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/2362_Cats_Eye_petcity.jpg"/></a>
-                <a class="p-name">Thức ăn cho mèo túi 1,5kg</a>
-                <p class="gia">166.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/2953_caymeoleoafpnaturecozypetcity1.jpg"/></a>
-                <a class="p-name">Cây mèo leo</a>
-                <p class="gia">2.380.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/250_3410_makar_toilet_cat_pink_petcity.jpg"/></a>
-                <a class="p-name">Nhà vệ sinh mèo</a>
-                <p class="gia">750.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-        </div>
-    </div>
-    <div class="clear"></div>
-    <div>
-        <h1 class="title-background">
-            <span class="title">Sản phẩm giảm giá</span>
-            <a href="SP_GiamGia.html" class="xemtatca"><span>Xem tất cả&rarr;</span></a>
-            <hr>
-        </h1>
-         <div class="container">
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/120_2271_20431239_341674479620345_7843554253853490907_n.jpg"/></a>
-                <a class="p-name">Nhà đầu mèo</a>
-                <span class="giacu">450.000đ</span>
-                <p class="gia">338.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/120_260_pet_supplies_new_pet_cat_backpack_pet_font_b_handbag_b_font_font_b_dog_b.jpg"/></a>
-                <a class="p-name">Túi xách nylon vòm</a>
-                <span class="giacu">280.000đ</span>
-                <p class="gia">200.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/1399_0_m__y_s___y_chuy__n_d___ng_d__nh_cho_ch___m__o.jpg"/></a>
-                <a class="p-name">Máy sấy lông - CP160</a>
-                <span class="giacu">2.150.000đ</span>
-                <p class="gia">1.720.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/2143_Royalcanin-MaxiAdult10kg.jpg"/></a>
-                <a class="p-name">Maxi Adult 10kg</a>
-                <span class="giacu">1.050.000đ</span>
-                <p class="gia">977.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3271_kimononopetcity4.jpg"/></a>
-                <a class="p-name">Áo kimino</a>
-                <span class="giacu">180.000đ</span>
-                <p class="gia">90.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3748_146725445258.png"/></a>
-                <a class="p-name">Bát đôi hình xương M</a>
-                <span class="giacu">526.000đ</span>
-                <p class="gia">421.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3757_8727323850-1832263803.jpg"/></a>
-                <a class="p-name">Balo di chuyển phi hành gia (nhựa trong)</a>
-                <span class="giacu">700.000đ</span>
-                <p class="gia">560.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3512_Untitl111ed.png"/></a>
-                <a class="p-name">Sữa tắm hoa mẫu đơn 400ml</a>
-                <span class="giacu">355.000đ</span>
-                <p class="gia">308.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-        </div>
+        <p><span style="color: #ff0000;"><strong><span style="font-size: 20px;">Chính sách giao hàng của PetShop</span></strong></span></p>
+        <p>Khi nhận được đơn đặt hàng của Quý khách, chúng tôi sẽ khẩn trương xử lý để giao hàng cho Quý khách trong thời gian sớm nhất có thể. Đối với những Khách hàng mới mua hàng lần đầu tại PetShop, chúng tôi sẽ liên lạc trước để xác nhận tính xác thực của đơn hàng.</p>
+        <p>Trong quá trình đặt hàng, Quý khách vui lòng điền đầy đủ và chính xác các thông tin theo yêu cầu để tạo điều kiện thuận lợi cho chúng tôi trong việc thực hiện đơn hàng.</p>
+        <p>PetShop áp dụng các hình thức vận chuyển miễn phí như sau:</p>
+        <p><strong>1/ Tại Tp.HCM: giao hàng miễn phí cho tất cả các đơn hàng &gt; 200k tới 12 quận, cụ thể:</strong></p>
+        <ul>
+        <li>Danh sách các quận giao hàng miễn phí với đơn hàng &gt;200k: Quận 1, Quận 3, Quận 4, Quận 5, Quận 6, Quận 10, Quận 11, Phú Nhuận, Bình Thạnh, Tân Bình, Tân Phú, Gò Vấp. Hàng sẽ được giao nhanh nhất <strong>30 phút</strong> &amp; chậm nhất trong vòng <strong>48h</strong> kể từ khi đặt hàng.</li>
+        <li>Với các đơn hàng &lt; 200k hoặc các địa điểm không giao miễn phí, chúng tôi sẽ phục vụ với chi phí giao hàng hợp lý nhất. Chi phí &amp; thời gian giao hàng sẽ thông báo trước khi chúng tôi giao hàng. Phí giao hàng tối thiểu là 20k/đơn hàng</li>
+        <li>Trong các trường hợp khác, quyền quyết định thuộc PetShop</li>
+        </ul>
+        <p><strong>2/ Giao hàng tới các tỉnh:</strong></p>
+        <ul>
+        <li>Thời gian nhận hàng: <strong>từ 2-10 ngày</strong>, tùy thuộc vào loại hàng / hình thức gửi hàng, giao dịch viên của chúng tôi sẽ thông báo cụ thể về thời gian nhận hàng của Quý khách sau khi Quý khách xác nhận đơn hàng.</li>
+        <li>Hình thức chuyển hàng: Chuyển qua xe khách hoặc chuyển phát</li>
+        <li>Trước khi chuyển hàng, chúng tôi sẽ thông báo cho Quý khách về thời gian &amp; cước phí giao hàng. Quý khách tự thanh toán chi phí vận chuyển khi nhận được hàng. Riêng một số tỉnh, Quý khách cần thanh toán phí vận chuyển trước khi chuyển hàng</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>Để biết thêm thông tin, Quý khách vui lòng liên hệ:</p>
+        <ul>
+        <li>Siêu thị PetShop</li>
+        <li>250/3 Lý Chính Thắng, Quận 3</li>
+        <li>Tel: (028) xxxx xxxx</li>
+        <li>E-mail: petshop@gmail.com</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p><span style="color: #ff0000;">PetShop - Nơi mua sắm tuyệt vời cho thú cưng của bạn</span></p>
     </div>
     <div class="clear"></div>
 </div>

@@ -10,8 +10,7 @@
     <link href="css/Menu.css" rel="stylesheet" type="text/css" />
     <link href="css/Main.css" rel="stylesheet" type="text/css" />
     <link href="css/Footer.css" rel="stylesheet" type="text/css" />
-    <link href="css/SlideShow.css" rel="stylesheet" type="text/css">
-    <title>Pet Shop - Nơi mua sắm tuyệt vời cho thú cưng của bạn</title>
+    <title>Điều khoản sử dụng</title>
 <style>
 * {
 	box-sizing:border-box;
@@ -226,168 +225,25 @@ html, body {
 </div>
 <div class="clear"></div>
     
-<div class="Slide-Container">
-	<div class="slide fade"><img src="images/slideshow/363.jpg" style="vertical-align:middle"></div>
-    <div class="slide fade"><img src="images/slideshow/330.jpg" style="vertical-align:middle"></div>
-    <div class="slide fade"><img src="images/slideshow/banner_49ae49a2.png" style="vertical-align:middle"></div>
-    <div class="slide fade"><img src="images/slideshow/329.jpg" style="vertical-align:middle"></div>
-    <div style="text-align:center">
-    	<span class="dot" onClick="currentSlide(0)"></span>
-        <span class="dot" onClick="currentSlide(1)"></span>
-        <span class="dot" onClick="currentSlide(2)"></span>
-        <span class="dot" onClick="currentSlide(3)"></span>
-    </div>
-    <script>
-		var slideIndex; //slideIndex đại diện cho mỗi slide (Vd: Hình 1 là slideindex=0 ....)
-		function showSlides() {
-			var i;
-			var slides = document.getElementsByClassName("slide");
-			var dots = document.getElementsByClassName("dot");
-			for (i = 0; i < slides.length; i++) {
-         		slides[i].style.display = "none";  
-      		}
-			for (i = 0; i < dots.length; i++) {
-          		dots[i].className = dots[i].className.replace(" active", "");
-    		}
-			slides[slideIndex].style.display = "block";  
-			dots[slideIndex].className += " active";
-			slideIndex++; //Chuyển silde kế tiếp
-			if (slideIndex > slides.length - 1) {	//Nếu slide cuối
-				slideIndex = 0;			//Chuyển về slide đầu
-			}
-			setTimeout(showSlides, 5000);	//Lệnh tự động chuyển đồi sau 5s
-		}
-		showSlides(slideIndex = 0);
-		function currentSlide(n) {
-    		showSlides(slideIndex = n);
-  		}
-	</script>
-</div>
-    
-    
 <div class="Main">
     <div>
-        <h1 class="title-background">
-            <span class="title">Sản phẩm mới</span>
-            <a href="SP_Moi.html" class="xemtatca"><span>Xem tất cả&rarr;</span></a>
-            <hr>
-        </h1>
-         <div class="container">
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3013_74216cb16b0b8755de1a.jpg"/></a>
-                <a class="p-name">Áo cho thú cưng size S</a>
-                <p class="gia">155.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3009_f194b965bddf518108ce.jpg"/></a>
-                <a class="p-name">Nệm vòm cao cấp</a>
-                <p class="gia">510.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/2134_RoyalCanin-MiniAdultLight195g.png"/></a>
-                <a class="p-name">Mini Adult Light</a>
-                <p class="gia">59.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/2577_tui-pet-phi-hanh-gia-pet-city2.jpg"/></a>
-                <a class="p-name">Balo di chuyển phi hành gia (nhựa)</a>
-                <p class="gia">520.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/999_furminatorchomeolongdaipetcity.jpg"/></a>
-                <a class="p-name">Lược cho mèo lông dài</a>
-                <p class="gia">652.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/2362_Cats_Eye_petcity.jpg"/></a>
-                <a class="p-name">Thức ăn cho mèo túi 1,5kg</a>
-                <p class="gia">166.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/2953_caymeoleoafpnaturecozypetcity1.jpg"/></a>
-                <a class="p-name">Cây mèo leo</a>
-                <p class="gia">2.380.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/250_3410_makar_toilet_cat_pink_petcity.jpg"/></a>
-                <a class="p-name">Nhà vệ sinh mèo</a>
-                <p class="gia">750.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-        </div>
-    </div>
-    <div class="clear"></div>
-    <div>
-        <h1 class="title-background">
-            <span class="title">Sản phẩm giảm giá</span>
-            <a href="SP_GiamGia.html" class="xemtatca"><span>Xem tất cả&rarr;</span></a>
-            <hr>
-        </h1>
-         <div class="container">
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/120_2271_20431239_341674479620345_7843554253853490907_n.jpg"/></a>
-                <a class="p-name">Nhà đầu mèo</a>
-                <span class="giacu">450.000đ</span>
-                <p class="gia">338.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/120_260_pet_supplies_new_pet_cat_backpack_pet_font_b_handbag_b_font_font_b_dog_b.jpg"/></a>
-                <a class="p-name">Túi xách nylon vòm</a>
-                <span class="giacu">280.000đ</span>
-                <p class="gia">200.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/1399_0_m__y_s___y_chuy__n_d___ng_d__nh_cho_ch___m__o.jpg"/></a>
-                <a class="p-name">Máy sấy lông - CP160</a>
-                <span class="giacu">2.150.000đ</span>
-                <p class="gia">1.720.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/2143_Royalcanin-MaxiAdult10kg.jpg"/></a>
-                <a class="p-name">Maxi Adult 10kg</a>
-                <span class="giacu">1.050.000đ</span>
-                <p class="gia">977.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3271_kimononopetcity4.jpg"/></a>
-                <a class="p-name">Áo kimino</a>
-                <span class="giacu">180.000đ</span>
-                <p class="gia">90.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3748_146725445258.png"/></a>
-                <a class="p-name">Bát đôi hình xương M</a>
-                <span class="giacu">526.000đ</span>
-                <p class="gia">421.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3757_8727323850-1832263803.jpg"/></a>
-                <a class="p-name">Balo di chuyển phi hành gia (nhựa trong)</a>
-                <span class="giacu">700.000đ</span>
-                <p class="gia">560.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-            <div class="sanpham">
-                <a class="p-img"><img src="images/sanpham/3512_Untitl111ed.png"/></a>
-                <a class="p-name">Sữa tắm hoa mẫu đơn 400ml</a>
-                <span class="giacu">355.000đ</span>
-                <p class="gia">308.000đ</p>
-                <p><button>Thêm vào giỏ</button></p>
-            </div>
-        </div>
+        <p><span style="font-size: medium; color: #3366ff;"><strong>Điều khoản sử dụng tại PetShop</strong></span></p>
+        <p><span style="font-size: small;">Chào mừng bạn đến mua sắm tại PetShop. Sau khi truy cập vào PetShop để tham khảo hoặc mua sắm, bạn đã đồng ý tuân thủ và ràng buộc với những quy định dưới đây. Rất mong bạn xem kỹ các quy định và hợp tác với chúng tôi để xây dựng một trung tâm mua sắm thân thiện, phục vụ tốt nhất nhu cầu của chính bạn. Nếu có bất cứ câu hỏi nào về những điều khoản dưới đây, vui lòng email cho chúng tôi qua địa chỉ <strong><a href="mailto:cskh@petshop.com">cskh@petshop.com</a></strong></span></p>
+        <p><span style="font-size: small; color: #3366ff;"><strong>Tài khoản của bạn</strong></span></p>
+        <p><span style="font-size: small;">Khi mua hàng tại PetShop, bạn sẽ được đề nghị đăng ký tài khoản nhằm giúp chúng tôi xử lý đơn hàng và yêu cầu của bạn một cách chính xác. Bên cạnh đó, khi đăng ký tài khoản tại PetShop, bạn sẽ được cung cấp các thông tin khuyến mãi và hưởng nhiều quyền lợi khác dành cho người dùng của PetShop</span></p>
+        <p><span style="font-size: small;">Để đăng ký tài khoản PetShop, bạn cần cung cấp cho chúng tôi thông tin về địa chỉ email, mật khẩu, họ tên và thông tin liên lạc. Việc sử dụng và bảo mật thông tin tài khoản là trách nhiệm và quyền lợi của bạn khi sử dụng PetShop. Trong trường hợp thông tin do bạn cung cấp không đầy đủ hoặc sai dẫn đến việc không thể giao hàng cho bạn, chúng tôi có quyền đình chỉ hoặc từ chối phục vụ. Khi có những thay đổi thông tin của bạn, vui lòng cập nhật lại thông tin trong tài khoản. Bạn phải bảo mật mật khẩu và tài khoản, hoàn toàn chịu trách nhiệm đối với tất cả các hoạt động diễn ra thông qua việc sử dụng mật khẩu hoặc tài khoản của mình</span></p>
+        <p><span style="font-size: small; color: #3366ff;"><strong>Một số lưu ý:</strong></span></p>
+        <p><span style="font-size: small;">Tên đăng nhập được xác định là của riêng cá nhân thành viên. Thành viên có trách nhiệm cập nhật thông tin cá nhân. Không chọn tên đăng nhập đại diện cho một tập thể, hội, nhóm.</span></p>
+        <p><span style="font-size: small;">Không chọn tên đăng nhập liên quan đến chính trị và tôn giáo, dưới bất cứ hình thức nào. Không đặt tên đăng nhập là tên các chính trị gia, các danh nhân Việt Nam.</span></p>
+        <p><span style="font-size: small;">Không chọn tên đăng nhập gây phản cảm, trái với thuần phong mỹ tục Việt Nam.</span></p>
+        <p><span style="font-size: small;">Không dùng tên đăng nhập để chỉ trích, bôi bác, phản đối hay tẩy chay bất kỳ sản phẩm, cá nhân hay tổ chức nào.</span></p>
+        <p><span style="font-size: small;">Không chọn tên đăng nhập giống hay gần giống với Ban Quản trị PetShop, ví dụ như: petshopxyz, Adminxyz, Modxyz,…</span></p>
+        <p><span style="font-size: small; color: #3366ff;"><strong>Quyền lợi bảo mật thông tin của bạn</strong></span></p>
+        <p><span style="font-size: small;">Khi sử dụng dịch vụ tại website PetShop, bạn được đảm bảo rằng những thông tin cung cấp cho chúng tôi sẽ chỉ được dùng để nâng cao chất lượng dịch vụ dành cho khách hàng của PetShop và sẽ không được chuyển giao cho bên thứ ba nào khác vì mục đích thương mại. Chỉ trong trường hợp pháp luật yêu cầu, chúng tôi sẽ buộc phải cung cấp những thông tin này cho các cơ quan chứng năng.</span></p>
+        <p><span style="font-size: small; color: #3366ff;"><strong>Trách nhiệm của bạn khi sử dụng dịch vụ của PetShop</strong></span></p>
+        <p><span style="font-size: small;">Bạn tuyệt đối không được sử dụng bất kỳ công cụ, phương pháp nào để can thiệp, xâm nhập bất hợp pháp vào hệ thống hay làm thay đổi cấu trúc dữ liệu tại trang web PetShop. Bạn không được có những hành động, thực hiện, cổ vũ, can thiệp, xâm nhập dữ liệu của PetShop cũng như hệ thống máy chủ của chúng tôi. Ngoài ra, xin vui lòng thông báo cho Ban Quản Trị website ngay khi bạn phát hiện ra lỗi hệ thống theo số điện thoại <strong>(028) xxxx xxxx</strong> hoặc email <strong><a href="mailto:cskh@petshop.com">cskh@petshop.com</a></strong></span><br /><br /><span style="font-size: small;">Tuyệt đối cấm mọi hành vi mạo nhận, cố ý tạo sự nhầm lẫn mình là một khách hàng khác hoặc là thành viên Ban Quản Trị PetShop.</span></p>
+        <p><span style="font-size: small; color: #3366ff;"><strong>Trách nhiệm và quyền lợi của PetShop</strong></span></p>
+        <p><span style="font-size: small;">Trong trường hợp có những phát sinh ngoài ý muốn hoặc các trường hợp bất khả kháng, PetShop sẽ không chịu trách nhiệm về mọi tổn thất phát sinh. Ngoài ra, chúng tôi không cho phép các tổ chức, cá nhân khác quảng bá sản phẩm tại trang web PetShop mà chưa có sự đồng ý bằng văn bản từ PetShop. Các thỏa thuận và quy định trong Điều khoản sử dụng có thể thay đổi vào bất cứ lúc nào nhưng sẽ được Ban Quản Trị thông báo cụ thể trên trang web PetShop.</span></p>
     </div>
     <div class="clear"></div>
 </div>
@@ -398,7 +254,7 @@ html, body {
         <div class="cot">
             <p>Danh mục</p>
             <ul>
-                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="#">Trang chủ</a></li>
                 <li><a href="#">Shop cho chó</a></li>
                 <li><a href="#">Shop cho mèo</a></li>
                 <li><a href="#">Shop vật nuôi khác</a></li>
@@ -407,19 +263,19 @@ html, body {
         <div class="cot">
             <p>Thông tin</p>
             <ul>
-                <li><a href="gioithieu.html">Giới thiệu</a></li>
-                <li><a href="tuyendung.html">Tuyển dụng</a></li>
-                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Tuyển dụng</a></li>
+                <li><a href="#">Sitemap</a></li>
             </ul>
         </div>
         <div class="cot">
             <p>Chính sách</p>
             <ul>
-                <li><a href="chinhsachgiaohang.html">Chính sách giao hàng</a></li>
-                <li><a href="phuongthucthanhtoan.html">Phương thức thanh toán</a></li>
-                <li><a href="chinhsachbaohanh.html">Chính sách bảo hành</a></li>
-                <li><a href="chinhsachdoitra.html">Chính sách đổi, trả hàng</a></li>
-                <li><a href="dieukhoansudung.html">Điều khoản sử dụng</a></li>
+                <li><a href="#">Chính sách giao hàng</a></li>
+                <li><a href="#">Phương thức thanh toán</a></li>
+                <li><a href="#">Chính sách bảo hành</a></li>
+                <li><a href="#">Chính sách đổi, trả hàng</a></li>
+                <li><a href="#">Điều khoản sử dụng</a></li>
             </ul>
         </div>
         <div class="cot">
