@@ -77,37 +77,60 @@ html, body {
 </style>
 </head>
 
-<body>
+<body onLoad="Check_Tai_Khoan()">
 <script src="js/Scroll_on_Top.js"></script>
+<script src="js/User.js"></script>
 
 <button onclick="Dua_len_dau()" id="Bam_len_top" title="Lên đầu trang"><i class="fa fa-arrow-up"></i></button>
 <button onClick="Mo_Gio_hang()" id="Trang_gio_hang"><i class="fa fa-shopping-cart"></i></button>
 
 <div class="Top_dau">
     <div class="container">
-    	<a href="DangKi.html"><button><i class="fa fa-user-plus"></i> Đăng ký</button></a>
-        <button onclick="document.getElementById('Phan_dang_nhap').style.display='block'"><i class="fa fa-sign-in-alt"></i> Đăng nhập</button>
+    	<span id="signup"><a href="DangKi.html"><button><i class="fa fa-user-plus"></i> Đăng ký</button></a></span>
+        <span id="login"><button onclick="document.getElementById('Phan_dang_nhap').style.display='block'"><i class="fa fa-sign-in-alt"></i> Đăng nhập</button></span>
         <div id="Phan_dang_nhap" class="Khung_dang_nhap">
             <form class="Noi_dung_khung Hoat_canh">
                 <div class="Cach_khung">
                     <div style="padding-bottom:10px">
-                    	<input type="text" placeholder="Tên đăng nhập" id="Ten_dang_nhap" required/>
+                    	<input type="text" placeholder="Tên đăng nhập" id="Ten_dang_nhap" onBlur="KtTen()"/>
+                        <div id="Check_Name" style="text-align:left;font-weight:bold;color:red"></div>
                     </div>
                     <div>
-                    	<input type="password" placeholder="Mật khẩu" id="Mat_khau" required/>
+                    	<input type="password" placeholder="Mật khẩu" id="Mat_khau" onBlur="KtMK()"/>
+                        <div id="Check_Password" style="text-align:left;font-weight:bold;color:red"></div>
                     </div>
                     <span style="float:left;padding:10px">
                         <label><input type="checkbox" id="Nho_mk" checked  />Nhớ mật khẩu</label>
                     </span>
                     <div class="Quen_mat_khau"><a href="#">Quên mật khẩu?</a></div>
-                    <button type="submit"><strong>Đăng nhập</strong></button>
+                    <button type="submit" onClick="SignIn()"><strong>Đăng nhập</strong></button>
                 </div>
             </form>
+            
             <script>
+				function KtTen() {
+					var ten = document.getElementById("Ten_dang_nhap").value;
+					if (ten=="")
+						document.getElementById("Check_Name").innerHTML="Tên đăng nhập đang trống";
+					else
+						document.getElementById("Check_Name").innerHTML="";
+				}
+				
+				function KtMK() {
+					var mk = document.getElementById("Mat_khau").value;
+					if (mk=="")
+						document.getElementById("Check_Password").innerHTML="Mật khẩu đang trống";	
+					else
+						document.getElementById("Check_Password").innerHTML="";	
+				}
+				
                 //Khi người dùng click bên ngoài khung đăng nhập thì khung đăng nhập sẽ tắt
                 window.onclick = function(event) {
-                if(event.target == document.getElementById('Phan_dang_nhap'))
-                    document.getElementById('Phan_dang_nhap').style.display = "none";	
+                	if(event.target == document.getElementById('Phan_dang_nhap')) {
+                    	document.getElementById('Phan_dang_nhap').style.display = "none";
+						document.getElementById('Ten_dang_nhap').value="";
+						document.getElementById('Mat_khau').value="";
+					}
                 }
             </script>
         </div>
