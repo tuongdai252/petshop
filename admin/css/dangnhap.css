@@ -4,8 +4,8 @@
     position: fixed;
     background-color: white;
     width: 30%;
-    height: 100%;;
-    border-right: solid pink;
+    height: 100%;
+    box-shadow: 5px 2px 2px white;
 }
 
 h1{
@@ -30,7 +30,7 @@ form .input i{
     top: 30%;
 }
 
-form input[type=text]{
+form input[type=text], form input[type=password]{
     width: 75%;
     margin: 2px;
     padding: 10px 20px;

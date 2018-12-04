@@ -1,4 +1,13 @@
 // JavaScript Document
+function Admin(email, pass) {
+    this.email = email;
+    this.pass = pass;
+}
+var admin = new Array();
+admin[0] = new Admin('tuongdai252@gmail.com', '3117410042');
+admin[1] = new Admin('trieudat12347@gmail.com', '3117410043');
+admin[2] = new Admin('lukieuhoa21@gmail.com', '3117410082');
+
 function password_help(){
     var detail = document.getElementById('forget_pass');
     if(detail.style.display == 'none'){
@@ -12,7 +21,21 @@ function validateLogin(){
     var user = document.getElementById('username').value;	
     var pass = document.getElementById('password').value;
     var error = "";
-    if(user.length < 2 || pass.length < 5) error = "Email đăng nhập và mật khẩu cần đầy đủ !";
-    if(error != "") {alert(error); return false;}
-    return true;
+    /*for (var i = 0; i < admin.length; i++) 
+    {
+        if (user.value === admin[i].email && pass.value === admin[i].pass)
+        {
+            window.location = 'admin.html';
+            return true;
+        }
+        alert("for number"+i);
+    }*/
+    if(user.value === 'tuongdai252' && pass.value === '2521999')
+        {
+            window.location = 'admin.html';
+            return true;
+        }
+    error = "Email hoặc mật khẩu sai!";
+    if(error != "") {alert(error); }
+    return false;
 }
