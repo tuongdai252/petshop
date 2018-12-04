@@ -12,7 +12,8 @@ function password_help(){
     var detail = document.getElementById('forget_pass');
     if(detail.style.display == 'none'){
         detail.style.display = 'block';
-    }else{
+    }
+    else{
         detail.style.display = 'none';
     }
 }
@@ -25,7 +26,7 @@ function validateLogin(){
     {
         if (user == admin[i].email && pass == admin[i].pass)
         {
-            window.location = 'admin.html';
+            window.location = 'sanpham.html';
             return false;
         }
     }

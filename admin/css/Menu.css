@@ -26,6 +26,11 @@
     width: 100%;
 }
 
+.menu .current{
+    color: #A70045;
+    border-left: groove #A70045;
+}
+
 .menu .closebtn {
     position: absolute;
     top: 20px;
@@ -33,7 +38,7 @@
     font-size: 60px;
 }
 
-.open{
+.nav{
     visibility: hidden;
 }
 
@@ -61,11 +66,17 @@
         color: #f1f1f1;
     }
     
-    .open{
+    .nav{
         visibility: visible;
+        width: 100%;
+        height: 10%;
+        background-color: #A70045;
+    }
+    
+    .open{
         font-size: 200%;
         cursor:pointer;
-        color: black;
+        color: white;
     }
 
     .closebtn {
