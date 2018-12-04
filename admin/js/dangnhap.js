@@ -18,23 +18,17 @@ function password_help(){
 }
 
 function validateLogin(){
-    var user = document.getElementById('username').value;	
+    var user = document.getElementById('username').value;
     var pass = document.getElementById('password').value;
     var error = "";
-    /*for (var i = 0; i < admin.length; i++) 
+    for (var i = 0; i < admin.length; i++) 
     {
-        if (user.value === admin[i].email && pass.value === admin[i].pass)
+        if (user == admin[i].email && pass == admin[i].pass)
         {
             window.location = 'admin.html';
             return true;
         }
-        alert("for number"+i);
-    }*/
-    if(user.value === 'tuongdai252' && pass.value === '2521999')
-        {
-            window.location = 'admin.html';
-            return true;
-        }
+    }
     error = "Email hoặc mật khẩu sai!";
     if(error != "") {alert(error); }
     return false;
