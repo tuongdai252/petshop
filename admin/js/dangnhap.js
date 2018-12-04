@@ -26,7 +26,7 @@ function validateLogin(){
         if (user == admin[i].email && pass == admin[i].pass)
         {
             window.location = 'admin.html';
-            return true;
+            return false;
         }
     }
     error = "Email hoặc mật khẩu sai!";
