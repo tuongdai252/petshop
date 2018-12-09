@@ -103,6 +103,29 @@
 	color:#333333;
 }
 
+.Main .sotrang{
+    width: 100%;
+    text-align: center;
+}
+
+.sotrang .so{
+    display: inline-block;
+    background-color: mediumpurple;
+    width: 20px;
+    height: 20px;
+    border-radius: 30%;
+    margin: 2px;
+}
+
+.so a{
+    text-decoration: none;
+    color: white;
+}
+
+.so a:visited{
+    color: yellow;
+}
+
 /*For small screen*/
 @media only screen and (max-width: 550px) {
     .Main h1{
