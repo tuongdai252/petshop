@@ -248,6 +248,7 @@ function getURL_dog(){
     var thongtin = window.location.href;
     var menu = thongtin.split('?menu=')[1].split('&page=')[0];
     var page = thongtin.split('?menu=')[1].split('&page=')[1];
+    var title = document.getElementsByClassName('title')[0];
     var sanpham = document.getElementById('sp');
     var pagebreak = document.getElementsByClassName('sotrang')[0];
     if(menu == 0){
@@ -276,6 +277,7 @@ function getURL_dog(){
         }
     }
     else if(menu == 1){
+        title.innerHTML = 'Thức ăn cho chó';
         for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
             if(sp[i].madv == "dog" && sp[i].matl == "food"){
             soluong++;
@@ -301,6 +303,7 @@ function getURL_dog(){
         }
     }
     else if(menu == 2){
+        title.innerHTML = 'Vật dụng cho chó';
         for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
             if(sp[i].madv == "dog" && sp[i].matl == "stuff"){
             soluong++;
@@ -326,6 +329,7 @@ function getURL_dog(){
         }
     }
     else if(menu == 3){
+        title.innerHTML = 'Chuồng, giường cho chó';
         for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
             if(sp[i].madv == "dog" && sp[i].matl == "bed"){
             soluong++;
@@ -357,6 +361,7 @@ function getURL_cat(){
     var thongtin = window.location.href;
     var menu = thongtin.split('?menu=')[1].split('&page=')[0];
     var page = thongtin.split('?menu=')[1].split('&page=')[1];
+    var title = document.getElementsByClassName('title')[0];
     var sanpham = document.getElementById('sp');
     var pagebreak = document.getElementsByClassName('sotrang')[0];
     if(menu == 0){
@@ -385,6 +390,7 @@ function getURL_cat(){
         }
     }
     else if(menu == 1){
+        title.innerHTML = 'Thức ăn cho mèo';
         for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
             if(sp[i].madv == "cat" && sp[i].matl == "food"){
             soluong++;
@@ -410,6 +416,7 @@ function getURL_cat(){
         }
     }
     else if(menu == 2){
+        title.innerHTML = 'Vật dụng cho mèo';
         for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
             if(sp[i].madv == "cat" && sp[i].matl == "stuff"){
             soluong++;
@@ -435,6 +442,7 @@ function getURL_cat(){
         }
     }
     else if(menu == 3){
+        title.innerHTML = 'Chuồng, giường cho mèo';
         for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
             if(sp[i].madv == "cat" && sp[i].matl == "bed"){
             soluong++;
@@ -466,6 +474,7 @@ function getURL_bird(){
     var thongtin = window.location.href;
     var menu = thongtin.split('?menu=')[1].split('&page=')[0];
     var page = thongtin.split('?menu=')[1].split('&page=')[1];
+    var title = document.getElementsByClassName('title')[0];
     var sanpham = document.getElementById('sp');
     var pagebreak = document.getElementsByClassName('sotrang')[0];
     if(menu == 0){
@@ -494,6 +503,7 @@ function getURL_bird(){
         }
     }
     else if(menu == 1){
+        title.innerHTML = 'Thức ăn cho chim';
         for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
             if(sp[i].madv == "bird" && sp[i].matl == "food"){
             soluong++;
@@ -519,6 +529,7 @@ function getURL_bird(){
         }
     }
     else if(menu == 2){
+        title.innerHTML = 'Vật dụng cho chim';
         for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
             if(sp[i].madv == "bird" && sp[i].matl == "stuff"){
             soluong++;
@@ -544,6 +555,7 @@ function getURL_bird(){
         }
     }
     else if(menu == 3){
+        title.innerHTML = 'Lồng và phụ kiện cho chim';
         for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
             if(sp[i].madv == "bird" && sp[i].matl == "bed"){
             soluong++;
@@ -575,6 +587,7 @@ function getURL_fish(){
     var thongtin = window.location.href;
     var menu = thongtin.split('?menu=')[1].split('&page=')[0];
     var page = thongtin.split('?menu=')[1].split('&page=')[1];
+    var title = document.getElementsByClassName('title')[0];
     var sanpham = document.getElementById('sp');
     var pagebreak = document.getElementsByClassName('sotrang')[0];
     if(menu == 0){
@@ -603,6 +616,7 @@ function getURL_fish(){
         }
     }
     else if(menu == 1){
+        title.innerHTML = 'Thức ăn cho cá';
         for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
             if(sp[i].madv == "fish" && sp[i].matl == "food"){
             soluong++;
@@ -628,6 +642,7 @@ function getURL_fish(){
         }
     }
     else if(menu == 2){
+        title.innerHTML = 'Vật dụng cho cá';
         for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
             if(sp[i].madv == "fish" && sp[i].matl == "stuff"){
             soluong++;
@@ -653,6 +668,7 @@ function getURL_fish(){
         }
     }
     else if(menu == 3){
+        title.innerHTML = 'Bể cá và phụ kiện';
         for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
             if(sp[i].madv == "fish" && sp[i].matl == "bed"){
             soluong++;
@@ -684,6 +700,7 @@ function getURL_hamster(){
     var thongtin = window.location.href;
     var menu = thongtin.split('?menu=')[1].split('&page=')[0];
     var page = thongtin.split('?menu=')[1].split('&page=')[1];
+    var title = document.getElementsByClassName('title')[0];
     var sanpham = document.getElementById('sp');
     var pagebreak = document.getElementsByClassName('sotrang')[0];
     if(menu == 0){
@@ -712,6 +729,7 @@ function getURL_hamster(){
         }
     }
     else if(menu == 1){
+        title.innerHTML = 'Thức ăn cho hamster';
         for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
             if(sp[i].madv == "hamster" && sp[i].matl == "food"){
             soluong++;
@@ -737,6 +755,7 @@ function getURL_hamster(){
         }
     }
     else if(menu == 2){
+        title.innerHTML = 'Vật dụng cho hamster';
         for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
             if(sp[i].madv == "hamster" && sp[i].matl == "stuff"){
             soluong++;
@@ -762,6 +781,7 @@ function getURL_hamster(){
         }
     }
     else if(menu == 3){
+        title.innerHTML = 'Chuồng và phụ kiện cho hamster';
         for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
             if(sp[i].madv == "hamster" && sp[i].matl == "bed"){
             soluong++;
