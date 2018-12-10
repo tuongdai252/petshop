@@ -76,7 +76,7 @@ html, body {
 </style>
 </head>
 
-<body onLoad="Check_Tai_Khoan()">
+<body onLoad="Check_Tai_Khoan(); getURL_dvkhac()">
 <script src="js/Scroll_on_Top.js"></script>
 <script src="js/User.js"></script>
 
@@ -164,29 +164,21 @@ html, body {
     <div class="container">
         <ul style="margin-top:0;margin-bottom:0">
             <li class="Menu"><a href="index.html">Trang chủ</a></li>
-            <li class="Menu"><a href="#">Giới thiệu</a></li>
+            <li class="Menu"><a href="gioithieu.html">Giới thiệu</a></li>
             <li class="Menu">
                 <a href="cho.html?menu=0&page=1">Shop cho chó <i class="fa fa-angle-down"></i></a>
                 <div class="dropdown-content">
                     <a href="cho.html?menu=1&page=1">Thức ăn</a>
-                    <a href="cho.html?menu=2&page=1">Quần áo</a>
-                    <a href="cho.html?menu=3&page=1">Vòng cổ</a>
-                    <a href="cho.html?menu=4&page=1">Vật dụng</a>
-                    <a href="cho.html?menu=5&page=1">Sữa tắm</a>
-                    <a href="cho.html?menu=6&page=1">Đồ chơi</a>
-                    <a href="cho.html?menu=7&page=1">Chuồng, giường</a>
+                    <a href="cho.html?menu=2&page=1">Vật dụng</a>
+                    <a href="cho.html?menu=3&page=1">Chuồng, giường</a>
                 </div>
             </li>
             <li class="Menu">
                 <a href="meo.html?menu=0&page=1">Shop cho mèo <i class="fa fa-angle-down"></i></a>
                 <div class="dropdown-content">
                     <a href="meo.html?menu=1&page=1">Thức ăn</a>
-                    <a href="meo.html?menu=2&page=1">Quần áo</a>
-                    <a href="meo.html?menu=3&page=1">Vòng cổ</a>
-                    <a href="meo.html?menu=4&page=1">Vật dụng</a>
-                    <a href="meo.html?menu=5&page=1">Sữa tắm</a>
-                    <a href="meo.html?menu=6&page=1">Đồ chơi</a>
-                    <a href="meo.html?menu=7&page=1">Chuồng, giường</a>
+                    <a href="meo.html?menu=2&page=1">Vật dụng</a>
+                    <a href="meo.html?menu=3&page=1">Chuồng, giường</a>
                 </div>
             </li>
             <li class="Menu">
@@ -211,14 +203,14 @@ html, body {
                     <div class="Menu-sub">
                         <a href="hamster.html?menu=0&page=1">Hamster <i class="fa fa-caret-down"></i></a>
                         <div class="dropdown-sub">
-                            <a href="hamster.html?1&page=1">Thức ăn</a>
-                            <a href="hamster.html?2&page=1">Vật dụng</a>
-                            <a href="hamster.html?3&page=1">Chuồng và phụ kiện</a>
+                            <a href="hamster.html?menu=1&page=1">Thức ăn</a>
+                            <a href="hamster.html?menu=2&page=1">Vật dụng</a>
+                            <a href="hamster.html?menu=3&page=1">Chuồng và phụ kiện</a>
                         </div>
                     </div>
                 </div>
             </li>
-            <li class="Menu"><a href="#">Khuyến mãi</a></li>
+            <li class="Menu"><a href="giamgia.html">Khuyến mãi</a></li>
             <div class="clear"></div>
         </ul>
     </div>
@@ -263,17 +255,40 @@ html, body {
 	</script>
 </div>
     
+    
 <div class="Main">
     <div>
         <h1 class="title-background">
-            <span class="title">Sản phẩm cho động vật khác</span>
+            <span class="title">Sản phẩm cho chim</span>
+            <a href="chim.html?menu=0&page=1" class="xemtatca"><span>Xem tất cả&rarr;</span></a>
             <hr>
         </h1>
-         <div class="container" id="sp">
-         </div>
+         <div class="container" id="spchim">
+            
+        </div>
     </div>
     <div class="clear"></div>
-    <div class="sotrang"></div>
+    <div>
+        <h1 class="title-background">
+            <span class="title">Sản phẩm cho cá</span>
+            <a href="ca.html?menu=0&page=1" class="xemtatca"><span>Xem tất cả&rarr;</span></a>
+            <hr>
+        </h1>
+         <div class="container" id="spca">
+            
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div>
+        <h1 class="title-background">
+            <span class="title">Sản phẩm cho hamster</span>
+            <a href="hamster.html?menu=0&page=1" class="xemtatca"><span>Xem tất cả&rarr;</span></a>
+            <hr>
+        </h1>
+         <div class="container" id="sphamster">
+            
+        </div>
+    </div>
     <div class="clear"></div>
 </div>
 

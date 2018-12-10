@@ -37,6 +37,14 @@
     text-align: center;
 }
 
+.sanpham a{
+    color: black;
+}
+
+.sanpham a:visited{
+    color: black;
+}
+
 .Main .sanpham .p-img{
     display: block;
     width: 100%;

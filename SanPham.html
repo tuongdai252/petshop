@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -76,16 +76,17 @@ html, body {
 </style>
 </head>
 
-<body>
+<body onLoad="Check_Tai_Khoan(); getInform()">
 <script src="js/Scroll_on_Top.js"></script>
+<script src="js/User.js"></script>
 
 <button onclick="Dua_len_dau()" id="Bam_len_top" title="Lên đầu trang"><i class="fa fa-arrow-up"></i></button>
 <button onClick="Mo_Gio_hang()" id="Trang_gio_hang"><i class="fa fa-shopping-cart"></i></button>
 
 <div class="Top_dau">
     <div class="container">
-    	<a href="DangKi.html"><button><i class="fa fa-user-plus"></i> Đăng ký</button></a>
-        <button onclick="document.getElementById('Phan_dang_nhap').style.display='block'"><i class="fa fa-sign-in-alt"></i> Đăng nhập</button>
+    	<span id="signup"><a href="DangKi.html"><button><i class="fa fa-user-plus"></i> Đăng ký</button></a></span>
+        <span id="login"><button onclick="document.getElementById('Phan_dang_nhap').style.display='block'"><i class="fa fa-sign-in-alt"></i> Đăng nhập</button></span>
         <div id="Phan_dang_nhap" class="Khung_dang_nhap">
             <form class="Noi_dung_khung Hoat_canh">
                 <div class="Cach_khung">
@@ -141,91 +142,60 @@ html, body {
     <div class="container">
         <ul style="margin-top:0;margin-bottom:0">
             <li class="Menu"><a href="index.html">Trang chủ</a></li>
-            <li class="Menu"><a href="#">Giới thiệu</a></li>
+            <li class="Menu"><a href="gioithieu.html">Giới thiệu</a></li>
             <li class="Menu">
-                <a href="#">Shop cho chó <i class="fa fa-angle-down"></i></a>
+                <a href="cho.html?menu=0&page=1">Shop cho chó <i class="fa fa-angle-down"></i></a>
                 <div class="dropdown-content">
-                    <a href="#">Thức ăn</a>
-                    <a href="#">Quần áo</a>
-                    <a href="#">Vòng cổ</a>
-                    <a href="#">Vật dụng</a>
-                    <a href="#">Sữa tắm</a>
-                    <a href="#">Đồ chơi</a>
-                    <a href="#">Chuồng, giường</a>
+                    <a href="cho.html?menu=1&page=1">Thức ăn</a>
+                    <a href="cho.html?menu=2&page=1">Vật dụng</a>
+                    <a href="cho.html?menu=3&page=1">Chuồng, giường</a>
                 </div>
             </li>
             <li class="Menu">
-                <a href="#">Shop cho mèo <i class="fa fa-angle-down"></i></a>
+                <a href="meo.html?menu=0&page=1">Shop cho mèo <i class="fa fa-angle-down"></i></a>
                 <div class="dropdown-content">
-                    <a href="#">Thức ăn</a>
-                    <a href="#">Quần áo</a>
-                    <a href="#">Vòng cổ</a>
-                    <a href="#">Vật dụng</a>
-                    <a href="#">Sữa tắm</a>
-                    <a href="#">Đồ chơi</a>
-                    <a href="#">Chuồng, giường</a>
+                    <a href="meo.html?menu=1&page=1">Thức ăn</a>
+                    <a href="meo.html?menu=2&page=1">Vật dụng</a>
+                    <a href="meo.html?menu=3&page=1">Chuồng, giường</a>
                 </div>
             </li>
             <li class="Menu">
-                <a href="#">Shop vật nuôi khác <i class="fa fa-angle-down"></i></a>
+                <a href="dongvatkhac.html">Shop vật nuôi khác <i class="fa fa-angle-down"></i></a>
                 <div class="dropdown-content">
                     <div class="Menu-sub">
-                        <a href="#">Chim <i class="fa fa-caret-down"></i></a>
+                        <a href="chim.html?menu=0&page=1">Chim <i class="fa fa-caret-down"></i></a>
                         <div class="dropdown-sub">
-                            <a href="#">Thức ăn</a>
-                            <a href="#">Vật dụng</a>
-                            <a href="#">Lồng và phụ kiện</a>
+                            <a href="chim.html?menu=1&page=1">Thức ăn</a>
+                            <a href="chim.html?menu=2&page=1">Vật dụng</a>
+                            <a href="chim.html?menu=3&page=1">Lồng và phụ kiện</a>
                         </div>
                     </div>
                     <div class="Menu-sub">
-                        <a href="#">Cá <i class="fa fa-caret-down"></i></a>
+                        <a href="ca.html?menu=0&page=1">Cá <i class="fa fa-caret-down"></i></a>
                         <div class="dropdown-sub">
-                            <a href="#">Thức ăn</a>
-                            <a href="#">Vật dụng</a>
-                            <a href="#">Bể cá và phụ kiện</a>
+                            <a href="ca.html?menu=1&page=1">Thức ăn</a>
+                            <a href="ca.html?menu=2&page=1">Vật dụng</a>
+                            <a href="ca.html?menu=3&page=1">Bể cá và phụ kiện</a>
                         </div>
                     </div>
                     <div class="Menu-sub">
-                        <a href="#">Hamster <i class="fa fa-caret-down"></i></a>
+                        <a href="hamster.html?menu=0&page=1">Hamster <i class="fa fa-caret-down"></i></a>
                         <div class="dropdown-sub">
-                            <a href="#">Thức ăn</a>
-                            <a href="#">Vật dụng</a>
-                            <a href="#">Chuồng và phụ kiện</a>
+                            <a href="hamster.html?menu=1&page=1">Thức ăn</a>
+                            <a href="hamster.html?menu=2&page=1">Vật dụng</a>
+                            <a href="hamster.html?menu=3&page=1">Chuồng và phụ kiện</a>
                         </div>
                     </div>
                 </div>
             </li>
-            <li class="Menu"><a href="#">Khuyến mãi</a></li>
+            <li class="Menu"><a href="giamgia.html">Khuyến mãi</a></li>
             <div class="clear"></div>
         </ul>
     </div>
 </div>
 <div class="clear"></div>
 
-<div class="chitietsp">
-    <div class="hinhanh">
-        <img src="images/sanpham/120_2271_20431239_341674479620345_7843554253853490907_n.jpg">
-    </div>
-    <div class="overview">
-        <h1>Nhà đầu mèo</h1>
-        <p>Mã SP: PETSSNDM</p>
-        <p class="gia">338.000đ<span class="giacu">450.000đ</span><p>
-        <div class="soluong">
-            <b>Số lượng: </b>
-            <select name="soluong">
-            <script>
-                for(i=1;i<=10;i++)
-                    document.write("<option value="+i+">"+i+"</option>");
-            </script>
-            </select>
-        </div>
-        <a href="#" class="shop-item-button">Đặt mua ngay</a>
-        <div class="thongtin">
-            Thông tin sản phẩm Thông tin sản phẩm Thông tin sản phẩm Thông tin sản phẩm Thông tin sản phẩm Thông tin sản phẩm
-        </div>
-    </div>
-    <div class="clear"></div>
-</div>
+<div class="chitietsp" id="chitietsp"><h1 style="text-align: center">KHÔNG CÓ THÔNG TIN SẢN PHẨM</h1></div>
 
 <hr style="border:1.5px solid #e6e6e6;margin-bottom:0">
 <div class="Footer">
@@ -273,5 +243,6 @@ html, body {
     </div>
     <div class="clear"></div>
 </div>
+<script src="js/SP.js"></script>
 </body>
 </html>

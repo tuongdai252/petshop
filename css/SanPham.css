@@ -21,7 +21,8 @@
 
 .chitietsp .overview{
     float: left;
-    width: 50%;
+    width: 49%;
+    margin-left: 1%;
 }
 
 .overview .soluong{

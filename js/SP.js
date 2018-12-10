@@ -1,7 +1,4 @@
-﻿var ten_danh_muc_sp = ["Chó", "Mèo", "Chim", "Cá", "Hamster"];
-var list_tieu_de = ["THE BEST DOG", "THE BEST cat", "THE BEST BIRD", "THE BEST FISH", "THE BEST sp"];
-
-var dongvat=[{
+﻿var dongvat=[{
 	name:'Chó',
 	key:'dog'
 },{
@@ -50,7 +47,7 @@ sp[5] = new san_pham("SP5", "Royal spnin - Maxi Adult ","138.000đ", "images/san
 sp[6] = new san_pham("SP6", "Royal spnin - Mini Adult","147.000đ", "images/sanpham/cho/food/food7.jpg","dog","food",0);
 sp[7] = new san_pham("SP7", "Sữa bột Esbilac cho chó con","489.000đ", "images/sanpham/cho/food/food13.jpg","dog","food",0);
 sp[8] = new san_pham("SP8", " Viên gặm dẻo Daily Best For Dogs","274.000đ", "images/sanpham/cho/food/food11.jpg","dog","food",0);
-sp[9] = new san_pham("SP9", "Thức ăn khô Royal spnin Mini Puppy","999.000đ", "images/sanpham/cho/food/food1_.jpg","dog","food",0);
+sp[9] = new san_pham("SP9", "Thức ăn khô Royal spnin Mini Puppy","999.000đ", "images/sanpham/cho/food/food1.jpg","dog","food",0);
 sp[10] = new san_pham("SP10", "Pate Smartheart lon vị gà tây cho chó","35.000đ", "images/sanpham/cho/food/food10.jpg","dog","food",0);
 sp[11] = new san_pham("SP11", "Smartheart - Pate vị bò cho chó lớn","18.000đ", "images/sanpham/cho/food/food9.jpg","dog","food",0);
 sp[12] = new san_pham("SP12", "Viên gặm dẻo Daily Best For Dogs","200.000đ", "images/sanpham/cho/food/food12.jpg","dog","food",0);
@@ -123,11 +120,11 @@ sp[71] = new san_pham("SP71", "Royal spnin - Intense Beauty","32.000đ", "images
 sp[72] = new san_pham("SP72", " Pate Royal spnin - Recovery ","55.000đ", "images/sanpham/meo/food/foodcat9.jpg","cat","food",0);
 
 
-sp[73] = new san_pham("SP73", " SY - Áo cho thú cưng các hình size S","155.000đ", "images/sanpham/meo/ao/aocho6.jpg","cat","stuff",0);
+sp[73] = new san_pham("SP73", " SY - Áo cho thú cưng các hình size S","155.000đ", "images/sanpham/meo/ao/ao6.jpg","cat","stuff",0);
 sp[74] = new san_pham("SP74", "Áo nỉ có tay Gaspard","240.000đ", "images/sanpham/meo/ao/ao5.jpg","cat","stuff",0);
 sp[75] = new san_pham("SP75", " Áo dear bear","130.000đ", "images/sanpham/meo/ao/ao1.jpg","cat","stuff",0);
 sp[76] = new san_pham("SP76", "LHK - Áo con ếch","82.000đ", "images/sanpham/meo/ao/ao2.jpg","cat","stuff",0);
-sp[77] = new san_pham("SP77", " SY - Áo cotton sát nách","100.000đ","images/sanpham/cho/ao/ao3.jpg","cat","stuff",0);
+sp[77] = new san_pham("SP77", " SY - Áo cotton sát nách","100.000đ","images/sanpham/meo/ao/ao3.jpg","cat","stuff",0);
 sp[78] = new san_pham("SP78", " Petstar - Mũ cho Pet","130.000đ", "images/sanpham/meo/ao/ao7.jpg","cat","stuff",0);
 
 sp[79] = new san_pham("SP79", " SS - Vòng cổ kỷ luật","120.000đ", "images/sanpham/meo/vongco/vong1.jpg","cat","stuff",0);
@@ -183,7 +180,7 @@ sp[120]=new san_pham("SP120","Bình thủy tinh đựng thức ăn cho chim","20
 sp[121]=new san_pham("SP121","Bình sứ đựng thứ ăn chim","30.000đ","images/sanpham/dongvatkhac/chim/chim3.jpg","bird","stuff",0);
 sp[122]=new san_pham("SP122","Lồng chim gỗ","200.000đ","images/sanpham/dongvatkhac/chim/chim5.jpg","bird","bed",0);
 sp[123]=new san_pham("SP123","Lồng chim sắt","400.000đ","images/sanpham/dongvatkhac/chim/chim6.jpg","bird","bed",0);
-sp[124]=new san_pham("SP124","Lồng chim nuôi đôi","600.000đ","images/sanpham/dongvatkhac/cchim/chim7.jpg","bird","bed",0);
+sp[124]=new san_pham("SP124","Lồng chim nuôi đôi","600.000đ","images/sanpham/dongvatkhac/chim/chim7.jpg","bird","bed",0);
 
 
 sp[125]=new san_pham("SP125","Thức ăn hamster","40.000đ","images/sanpham/dongvatkhac/hamster/hamster1.jpg","hamster","food",0);
@@ -232,14 +229,14 @@ function create_product() {
     var list_spgiamgia = document.getElementById('spgiamgia');
     for (var i = 0; i < 8; i++) {
         list_spmoi.innerHTML += '<div class="sanpham">\
-                                    <a class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
-                                    <a class="p-name">'+ sp[i].tensp +'</a>\
+                                    <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                    <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                     <p class="gia">'+ sp[i].gia +'</p>\
                                     <p><button>Thêm vào giỏ</button></p>\
                                 </div>';
         list_spgiamgia.innerHTML += '<div class="sanpham">\
-                                        <a class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
-                                        <a class="p-name">'+ sp[i].tensp +'</a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'</p>\
                                         <p><button>Thêm vào giỏ</button></p>\
                                     </div>';
@@ -253,20 +250,105 @@ function getURL_dog(){
     var page = thongtin.split('?menu=')[1].split('&page=')[1];
     var sanpham = document.getElementById('sp');
     var pagebreak = document.getElementsByClassName('sotrang')[0];
-    for (var i = (page-1)*8; i < 64 && soluong < 8; i++) {
-        soluong++;
-        sanpham.innerHTML += '<div class="sanpham">\
-                                    <a class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
-                                    <a class="p-name">'+ sp[i].tensp +'</a>\
-                                    <p class="gia">'+ sp[i].gia +'</p>\
-                                    <p><button>Thêm vào giỏ</button></p>\
-                                </div>';
+    if(menu == 0){
+        for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
+            if(sp[i].madv == "dog"){
+            soluong++;
+            sanpham.innerHTML += '<div class="sanpham">\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                        <p class="gia">'+ sp[i].gia +'</p>\
+                                        <p><button>Thêm vào giỏ</button></p>\
+                                    </div>';
+            }
+        }
+
+        var count = 0;
+        for (var i = 0; i < sp.length; i++) {
+            if(sp[i].madv == "dog"){
+            count++;
+            }
+        }
+        sotrang = Math.ceil(count / 8);
+        for (var i = 1; i <= sotrang; i++) {
+            pagebreak.innerHTML +=
+                '<div class="so"><a href="cho.html?menu=0&page='+i+'">'+i+'</a></div>';
+        }
     }
-    
-    sotrang = Math.ceil(64 / 8);
-    for (var i = 1; i <= sotrang; i++) {
-        pagebreak.innerHTML +=
-            '<div class="so"><a href="cho.html?menu=0&page='+i+'">'+i+'</a></div>';
+    else if(menu == 1){
+        for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
+            if(sp[i].madv == "dog" && sp[i].matl == "food"){
+            soluong++;
+            sanpham.innerHTML += '<div class="sanpham">\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                        <p class="gia">'+ sp[i].gia +'</p>\
+                                        <p><button>Thêm vào giỏ</button></p>\
+                                    </div>';
+            }
+        }
+
+        var count = 0;
+        for (var i = 0; i < sp.length; i++) {
+            if(sp[i].madv == "dog" && sp[i].matl == "food"){
+            count++;
+            }
+        }
+        sotrang = Math.ceil(count / 8);
+        for (var i = 1; i <= sotrang; i++) {
+            pagebreak.innerHTML +=
+                '<div class="so"><a href="cho.html?menu=1&page='+i+'">'+i+'</a></div>';
+        }
+    }
+    else if(menu == 2){
+        for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
+            if(sp[i].madv == "dog" && sp[i].matl == "stuff"){
+            soluong++;
+            sanpham.innerHTML += '<div class="sanpham">\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                        <p class="gia">'+ sp[i].gia +'</p>\
+                                        <p><button>Thêm vào giỏ</button></p>\
+                                    </div>';
+            }
+        }
+
+        var count = 0;
+        for (var i = 0; i < sp.length; i++) {
+            if(sp[i].madv == "dog" && sp[i].matl == "stuff"){
+            count++;
+            }
+        }
+        sotrang = Math.ceil(count / 8);
+        for (var i = 1; i <= sotrang; i++) {
+            pagebreak.innerHTML +=
+                '<div class="so"><a href="cho.html?menu=2&page='+i+'">'+i+'</a></div>';
+        }
+    }
+    else if(menu == 3){
+        for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
+            if(sp[i].madv == "dog" && sp[i].matl == "bed"){
+            soluong++;
+            sanpham.innerHTML += '<div class="sanpham">\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                        <p class="gia">'+ sp[i].gia +'</p>\
+                                        <p><button>Thêm vào giỏ</button></p>\
+                                    </div>';
+            }
+        }
+
+        var count = 0;
+        for (var i = 0; i < sp.length; i++) {
+            if(sp[i].madv == "dog" && sp[i].matl == "food"){
+            count++;
+            }
+        }
+        sotrang = Math.ceil(count / 8);
+        for (var i = 1; i <= sotrang; i++) {
+            pagebreak.innerHTML +=
+                '<div class="so"><a href="cho.html?menu=3&page='+i+'">'+i+'</a></div>';
+        }
     }
 }
 
@@ -277,20 +359,105 @@ function getURL_cat(){
     var page = thongtin.split('?menu=')[1].split('&page=')[1];
     var sanpham = document.getElementById('sp');
     var pagebreak = document.getElementsByClassName('sotrang')[0];
-    for (var i = (page-1)*8 + 64; i < 118 && soluong < 8; i++) {
-        soluong++;
-        sanpham.innerHTML += '<div class="sanpham">\
-                                    <a class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
-                                    <a class="p-name">'+ sp[i].tensp +'</a>\
-                                    <p class="gia">'+ sp[i].gia +'</p>\
-                                    <p><button>Thêm vào giỏ</button></p>\
-                                </div>';
+    if(menu == 0){
+        for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
+            if(sp[i].madv == "cat"){
+            soluong++;
+            sanpham.innerHTML += '<div class="sanpham">\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                        <p class="gia">'+ sp[i].gia +'</p>\
+                                        <p><button>Thêm vào giỏ</button></p>\
+                                    </div>';
+            }
+        }
+
+        var count = 0;
+        for (var i = 0; i < sp.length; i++) {
+            if(sp[i].madv == "cat"){
+            count++;
+            }
+        }
+        sotrang = Math.ceil(count / 8);
+        for (var i = 1; i <= sotrang; i++) {
+            pagebreak.innerHTML +=
+                '<div class="so"><a href="meo.html?menu=0&page='+i+'">'+i+'</a></div>';
+        }
     }
-    
-    sotrang = Math.ceil(54 / 8);
-    for (var i = 1; i <= sotrang; i++) {
-        pagebreak.innerHTML +=
-            '<div class="so"><a href="meo.html?menu=0&page='+i+'">'+i+'</a></div>';
+    else if(menu == 1){
+        for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
+            if(sp[i].madv == "cat" && sp[i].matl == "food"){
+            soluong++;
+            sanpham.innerHTML += '<div class="sanpham">\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                        <p class="gia">'+ sp[i].gia +'</p>\
+                                        <p><button>Thêm vào giỏ</button></p>\
+                                    </div>';
+            }
+        }
+
+        var count = 0;
+        for (var i = 0; i < sp.length; i++) {
+            if(sp[i].madv == "cat" && sp[i].matl == "food"){
+            count++;
+            }
+        }
+        sotrang = Math.ceil(count / 8);
+        for (var i = 1; i <= sotrang; i++) {
+            pagebreak.innerHTML +=
+                '<div class="so"><a href="meo.html?menu=1&page='+i+'">'+i+'</a></div>';
+        }
+    }
+    else if(menu == 2){
+        for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
+            if(sp[i].madv == "cat" && sp[i].matl == "stuff"){
+            soluong++;
+            sanpham.innerHTML += '<div class="sanpham">\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                        <p class="gia">'+ sp[i].gia +'</p>\
+                                        <p><button>Thêm vào giỏ</button></p>\
+                                    </div>';
+            }
+        }
+
+        var count = 0;
+        for (var i = 0; i < sp.length; i++) {
+            if(sp[i].madv == "cat" && sp[i].matl == "stuff"){
+            count++;
+            }
+        }
+        sotrang = Math.ceil(count / 8);
+        for (var i = 1; i <= sotrang; i++) {
+            pagebreak.innerHTML +=
+                '<div class="so"><a href="meo.html?menu=2&page='+i+'">'+i+'</a></div>';
+        }
+    }
+    else if(menu == 3){
+        for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
+            if(sp[i].madv == "cat" && sp[i].matl == "bed"){
+            soluong++;
+            sanpham.innerHTML += '<div class="sanpham">\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                        <p class="gia">'+ sp[i].gia +'</p>\
+                                        <p><button>Thêm vào giỏ</button></p>\
+                                    </div>';
+            }
+        }
+
+        var count = 0;
+        for (var i = 0; i < sp.length; i++) {
+            if(sp[i].madv == "cat" && sp[i].matl == "food"){
+            count++;
+            }
+        }
+        sotrang = Math.ceil(count / 8);
+        for (var i = 1; i <= sotrang; i++) {
+            pagebreak.innerHTML +=
+                '<div class="so"><a href="meo.html?menu=3&page='+i+'">'+i+'</a></div>';
+        }
     }
 }
 
@@ -301,20 +468,105 @@ function getURL_bird(){
     var page = thongtin.split('?menu=')[1].split('&page=')[1];
     var sanpham = document.getElementById('sp');
     var pagebreak = document.getElementsByClassName('sotrang')[0];
-    for (var i = (page-1)*8 + 118; i < 125 && soluong < 8; i++) {
-        soluong++;
-        sanpham.innerHTML += '<div class="sanpham">\
-                                    <a class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
-                                    <a class="p-name">'+ sp[i].tensp +'</a>\
-                                    <p class="gia">'+ sp[i].gia +'</p>\
-                                    <p><button>Thêm vào giỏ</button></p>\
-                                </div>';
+    if(menu == 0){
+        for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
+            if(sp[i].madv == "bird"){
+            soluong++;
+            sanpham.innerHTML += '<div class="sanpham">\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                        <p class="gia">'+ sp[i].gia +'</p>\
+                                        <p><button>Thêm vào giỏ</button></p>\
+                                    </div>';
+            }
+        }
+
+        var count = 0;
+        for (var i = 0; i < sp.length; i++) {
+            if(sp[i].madv == "bird"){
+            count++;
+            }
+        }
+        sotrang = Math.ceil(count / 8);
+        for (var i = 1; i <= sotrang; i++) {
+            pagebreak.innerHTML +=
+                '<div class="so"><a href="chim.html?menu=0&page='+i+'">'+i+'</a></div>';
+        }
     }
-    
-    sotrang = Math.ceil(7 / 8);
-    for (var i = 1; i <= sotrang; i++) {
-        pagebreak.innerHTML +=
-            '<div class="so"><a href="chim.html?menu=0&page='+i+'">'+i+'</a></div>';
+    else if(menu == 1){
+        for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
+            if(sp[i].madv == "bird" && sp[i].matl == "food"){
+            soluong++;
+            sanpham.innerHTML += '<div class="sanpham">\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                        <p class="gia">'+ sp[i].gia +'</p>\
+                                        <p><button>Thêm vào giỏ</button></p>\
+                                    </div>';
+            }
+        }
+
+        var count = 0;
+        for (var i = 0; i < sp.length; i++) {
+            if(sp[i].madv == "bird" && sp[i].matl == "food"){
+            count++;
+            }
+        }
+        sotrang = Math.ceil(count / 8);
+        for (var i = 1; i <= sotrang; i++) {
+            pagebreak.innerHTML +=
+                '<div class="so"><a href="chim.html?menu=1&page='+i+'">'+i+'</a></div>';
+        }
+    }
+    else if(menu == 2){
+        for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
+            if(sp[i].madv == "bird" && sp[i].matl == "stuff"){
+            soluong++;
+            sanpham.innerHTML += '<div class="sanpham">\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                        <p class="gia">'+ sp[i].gia +'</p>\
+                                        <p><button>Thêm vào giỏ</button></p>\
+                                    </div>';
+            }
+        }
+
+        var count = 0;
+        for (var i = 0; i < sp.length; i++) {
+            if(sp[i].madv == "bird" && sp[i].matl == "stuff"){
+            count++;
+            }
+        }
+        sotrang = Math.ceil(count / 8);
+        for (var i = 1; i <= sotrang; i++) {
+            pagebreak.innerHTML +=
+                '<div class="so"><a href="chim.html?menu=2&page='+i+'">'+i+'</a></div>';
+        }
+    }
+    else if(menu == 3){
+        for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
+            if(sp[i].madv == "bird" && sp[i].matl == "bed"){
+            soluong++;
+            sanpham.innerHTML += '<div class="sanpham">\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                        <p class="gia">'+ sp[i].gia +'</p>\
+                                        <p><button>Thêm vào giỏ</button></p>\
+                                    </div>';
+            }
+        }
+
+        var count = 0;
+        for (var i = 0; i < sp.length; i++) {
+            if(sp[i].madv == "bird" && sp[i].matl == "food"){
+            count++;
+            }
+        }
+        sotrang = Math.ceil(count / 8);
+        for (var i = 1; i <= sotrang; i++) {
+            pagebreak.innerHTML +=
+                '<div class="so"><a href="chim.html?menu=3&page='+i+'">'+i+'</a></div>';
+        }
     }
 }
 
@@ -325,20 +577,105 @@ function getURL_fish(){
     var page = thongtin.split('?menu=')[1].split('&page=')[1];
     var sanpham = document.getElementById('sp');
     var pagebreak = document.getElementsByClassName('sotrang')[0];
-    for (var i = (page-1)*8 + 132; i < 138 && soluong < 8; i++) {
-        soluong++;
-        sanpham.innerHTML += '<div class="sanpham">\
-                                    <a class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
-                                    <a class="p-name">'+ sp[i].tensp +'</a>\
-                                    <p class="gia">'+ sp[i].gia +'</p>\
-                                    <p><button>Thêm vào giỏ</button></p>\
-                                </div>';
+    if(menu == 0){
+        for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
+            if(sp[i].madv == "fish"){
+            soluong++;
+            sanpham.innerHTML += '<div class="sanpham">\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                        <p class="gia">'+ sp[i].gia +'</p>\
+                                        <p><button>Thêm vào giỏ</button></p>\
+                                    </div>';
+            }
+        }
+
+        var count = 0;
+        for (var i = 0; i < sp.length; i++) {
+            if(sp[i].madv == "fish"){
+            count++;
+            }
+        }
+        sotrang = Math.ceil(count / 8);
+        for (var i = 1; i <= sotrang; i++) {
+            pagebreak.innerHTML +=
+                '<div class="so"><a href="fish.html?menu=0&page='+i+'">'+i+'</a></div>';
+        }
     }
-    
-    sotrang = Math.ceil(6 / 8);
-    for (var i = 1; i <= sotrang; i++) {
-        pagebreak.innerHTML +=
-            '<div class="so"><a href="fish.html?menu=0&page='+i+'">'+i+'</a></div>';
+    else if(menu == 1){
+        for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
+            if(sp[i].madv == "fish" && sp[i].matl == "food"){
+            soluong++;
+            sanpham.innerHTML += '<div class="sanpham">\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                        <p class="gia">'+ sp[i].gia +'</p>\
+                                        <p><button>Thêm vào giỏ</button></p>\
+                                    </div>';
+            }
+        }
+
+        var count = 0;
+        for (var i = 0; i < sp.length; i++) {
+            if(sp[i].madv == "fish" && sp[i].matl == "food"){
+            count++;
+            }
+        }
+        sotrang = Math.ceil(count / 8);
+        for (var i = 1; i <= sotrang; i++) {
+            pagebreak.innerHTML +=
+                '<div class="so"><a href="ca.html?menu=1&page='+i+'">'+i+'</a></div>';
+        }
+    }
+    else if(menu == 2){
+        for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
+            if(sp[i].madv == "fish" && sp[i].matl == "stuff"){
+            soluong++;
+            sanpham.innerHTML += '<div class="sanpham">\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                        <p class="gia">'+ sp[i].gia +'</p>\
+                                        <p><button>Thêm vào giỏ</button></p>\
+                                    </div>';
+            }
+        }
+
+        var count = 0;
+        for (var i = 0; i < sp.length; i++) {
+            if(sp[i].madv == "fish" && sp[i].matl == "stuff"){
+            count++;
+            }
+        }
+        sotrang = Math.ceil(count / 8);
+        for (var i = 1; i <= sotrang; i++) {
+            pagebreak.innerHTML +=
+                '<div class="so"><a href="ca.html?menu=2&page='+i+'">'+i+'</a></div>';
+        }
+    }
+    else if(menu == 3){
+        for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
+            if(sp[i].madv == "fish" && sp[i].matl == "bed"){
+            soluong++;
+            sanpham.innerHTML += '<div class="sanpham">\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                        <p class="gia">'+ sp[i].gia +'</p>\
+                                        <p><button>Thêm vào giỏ</button></p>\
+                                    </div>';
+            }
+        }
+
+        var count = 0;
+        for (var i = 0; i < sp.length; i++) {
+            if(sp[i].madv == "fish" && sp[i].matl == "food"){
+            count++;
+            }
+        }
+        sotrang = Math.ceil(count / 8);
+        for (var i = 1; i <= sotrang; i++) {
+            pagebreak.innerHTML +=
+                '<div class="so"><a href="ca.html?menu=3&page='+i+'">'+i+'</a></div>';
+        }
     }
 }
 
@@ -349,19 +686,186 @@ function getURL_hamster(){
     var page = thongtin.split('?menu=')[1].split('&page=')[1];
     var sanpham = document.getElementById('sp');
     var pagebreak = document.getElementsByClassName('sotrang')[0];
-    for (var i = (page-1)*8 + 125; i < 132 && soluong < 8; i++) {
+    if(menu == 0){
+        for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
+            if(sp[i].madv == "hamster"){
+            soluong++;
+            sanpham.innerHTML += '<div class="sanpham">\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                        <p class="gia">'+ sp[i].gia +'</p>\
+                                        <p><button>Thêm vào giỏ</button></p>\
+                                    </div>';
+            }
+        }
+
+        var count = 0;
+        for (var i = 0; i < sp.length; i++) {
+            if(sp[i].madv == "hamster"){
+            count++;
+            }
+        }
+        sotrang = Math.ceil(count / 8);
+        for (var i = 1; i <= sotrang; i++) {
+            pagebreak.innerHTML +=
+                '<div class="so"><a href="hamster.html?menu=0&page='+i+'">'+i+'</a></div>';
+        }
+    }
+    else if(menu == 1){
+        for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
+            if(sp[i].madv == "hamster" && sp[i].matl == "food"){
+            soluong++;
+            sanpham.innerHTML += '<div class="sanpham">\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                        <p class="gia">'+ sp[i].gia +'</p>\
+                                        <p><button>Thêm vào giỏ</button></p>\
+                                    </div>';
+            }
+        }
+
+        var count = 0;
+        for (var i = 0; i < sp.length; i++) {
+            if(sp[i].madv == "hamster" && sp[i].matl == "food"){
+            count++;
+            }
+        }
+        sotrang = Math.ceil(count / 8);
+        for (var i = 1; i <= sotrang; i++) {
+            pagebreak.innerHTML +=
+                '<div class="so"><a href="hamster.html?menu=1&page='+i+'">'+i+'</a></div>';
+        }
+    }
+    else if(menu == 2){
+        for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
+            if(sp[i].madv == "hamster" && sp[i].matl == "stuff"){
+            soluong++;
+            sanpham.innerHTML += '<div class="sanpham">\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                        <p class="gia">'+ sp[i].gia +'</p>\
+                                        <p><button>Thêm vào giỏ</button></p>\
+                                    </div>';
+            }
+        }
+
+        var count = 0;
+        for (var i = 0; i < sp.length; i++) {
+            if(sp[i].madv == "hamster" && sp[i].matl == "stuff"){
+            count++;
+            }
+        }
+        sotrang = Math.ceil(count / 8);
+        for (var i = 1; i <= sotrang; i++) {
+            pagebreak.innerHTML +=
+                '<div class="so"><a href="hamster.html?menu=2&page='+i+'">'+i+'</a></div>';
+        }
+    }
+    else if(menu == 3){
+        for (var i = (page-1)*8; i < sp.length && soluong < 8; i++) {
+            if(sp[i].madv == "hamster" && sp[i].matl == "bed"){
+            soluong++;
+            sanpham.innerHTML += '<div class="sanpham">\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                        <p class="gia">'+ sp[i].gia +'</p>\
+                                        <p><button>Thêm vào giỏ</button></p>\
+                                    </div>';
+            }
+        }
+
+        var count = 0;
+        for (var i = 0; i < sp.length; i++) {
+            if(sp[i].madv == "hamster" && sp[i].matl == "food"){
+            count++;
+            }
+        }
+        sotrang = Math.ceil(count / 8);
+        for (var i = 1; i <= sotrang; i++) {
+            pagebreak.innerHTML +=
+                '<div class="so"><a href="hamster.html?menu=3&page='+i+'">'+i+'</a></div>';
+        }
+    }
+}
+
+function getURL_dvkhac(){
+    var sanpham1 = document.getElementById('spchim');
+    var sanpham2 = document.getElementById('spca');
+    var sanpham3 = document.getElementById('sphamster');
+    for (var soluong = 0, i = Math.floor(Math.random()*sp.length); i < sp.length && soluong < 4; i++) {
+        if(sp[i].madv == "bird"){
         soluong++;
-        sanpham.innerHTML += '<div class="sanpham">\
-                                    <a class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
-                                    <a class="p-name">'+ sp[i].tensp +'</a>\
+        sanpham1.innerHTML += '<div class="sanpham">\
+                                    <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                    <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                     <p class="gia">'+ sp[i].gia +'</p>\
                                     <p><button>Thêm vào giỏ</button></p>\
                                 </div>';
+        }
     }
     
-    sotrang = Math.ceil(7 / 8);
-    for (var i = 1; i <= sotrang; i++) {
-        pagebreak.innerHTML +=
-            '<div class="so"><a href="hamster.html?menu=0&page='+i+'">'+i+'</a></div>';
+    for (var soluong = 0, i = Math.floor(Math.random()*sp.length); i < sp.length && soluong < 4; i++) {
+        if(sp[i].madv == "fish"){
+        soluong++;
+        sanpham2.innerHTML += '<div class="sanpham">\
+                                    <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                    <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                    <p class="gia">'+ sp[i].gia +'</p>\
+                                    <p><button>Thêm vào giỏ</button></p>\
+                                </div>';
+        }
+    }
+    
+    for (var soluong = 0, i = Math.floor(Math.random()*sp.length); i < sp.length && soluong < 4; i++) {
+        if(sp[i].madv == "hamster"){
+        soluong++;
+        sanpham3.innerHTML += '<div class="sanpham">\
+                                    <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                    <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                    <p class="gia">'+ sp[i].gia +'</p>\
+                                    <p><button>Thêm vào giỏ</button></p>\
+                                </div>';
+        }
+    }
+}
+
+function getInform(){
+    var thongtin = window.location.href;
+    var ma = thongtin.split('?masp=')[1];
+    var sanpham = document.getElementById('chitietsp');
+    for (var i = 0; i < sp.length; i++) {
+        if(sp[i].masp == ma){
+            sanpham.innerHTML = '<div class="hinhanh">\
+                                    <img src="' +sp[i].hinh+ '">\
+                                </div>\
+                                <div class="overview">\
+                                    <h1 id="tensp">' +sp[i].tensp+ '</h1>\
+                                    <p id="masp">Mã SP: ' +sp[i].masp+ '</p>\
+                                    <p class="gia">' +sp[i].gia+ '<p>\
+                                    <a href="#" class="shop-item-button">Đặt mua ngay</a>\
+                                    <div class="thongtin">\
+                                        Màu sắc và kiểu dáng đẹp<br>\
+                                        Mang đến cho thú cưng cảm giác thoải mái<br>\
+                                        Phù hợp cho thú cưng nhà bạn<br>\
+                                        '+sp[i].tensp+' thường là sự lựa chọn hoàn hảo<br>\
+                                    </div>\
+                                </div>\
+                                <div class="clear"></div>';
+
+            //sản phẩm sale
+            /*sanpham.innerHTML = '<div class="hinhanh">\
+                                    <img src="' +sp[i].hinh+ '">\
+                                </div>\
+                                <div class="overview">\
+                                    <h1 id="tensp">' +sp[i].tensp+ '</h1>\
+                                    <p id="masp">Mã SP: ' +sp[i].masp+ '</p>\
+                                    <p class="gia">' +sp[i].sale+ '<span class="giacu">' +sp[i].gia+ '</span><p>\
+                                    <a href="#" class="shop-item-button">Đặt mua ngay</a>\
+                                    <div class="thongtin">\
+                                        Thông tin sản phẩm Thông tin sản phẩm Thông tin sản phẩm Thông tin sản phẩm Thông tin sản phẩm Thông tin sản phẩm\
+                                    </div>\
+                                </div>\
+                                <div class="clear"></div>';*/
+        }
     }
 }
