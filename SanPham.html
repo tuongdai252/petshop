@@ -111,6 +111,41 @@ html, body {
                 }
             </script>
         </div>
+		<div id="Phan_thong_tin" class="Khung_thong_tin">
+			<div class="Noi_dung_khung Hoat_canh">
+				<caption><h1 style="color: darkblue">Thông tin người dùng</h1></caption>
+				<table class="Bang_thong_tin" cellspacing="20px">
+					<tr>
+						<td style="font-weight: bold">Họ và tên</td>
+						<td id="Ten-NguoiDung"></td>
+					</tr>
+					<tr>
+						<td style="font-weight: bold">Giới tính</td>
+						<td id="Sex-NguoiDung"></td>
+					</tr>
+					<tr>
+						<td style="font-weight: bold">Ngày sinh</td>
+						<td id="Birth-NguoiDung"></td>
+					</tr>
+					<tr>
+						<td style="font-weight: bold">Số điện thoại</td>
+						<td id="Phone-NguoiDung"></td>
+					</tr>
+				</table>
+			</div>
+			<script>
+				var tk = JSON.parse(localStorage.getItem('Tài khoản'));
+				document.getElementById('Ten-NguoiDung').innerHTML = '<td>'+tk.Ten_NguoiDung+'</td>';
+				document.getElementById('Sex-NguoiDung').innerHTML = '<td>'+tk.Gioi_Tinh+'</td>';
+				document.getElementById('Birth-NguoiDung').innerHTML = '<td>'+tk.Ngay_Sinh+'</td>';
+				document.getElementById('Phone-NguoiDung').innerHTML = '<td>'+tk.Sdt+'</td>';
+				window.onclick = function(event) {
+                	if(event.target == document.getElementById('Phan_thong_tin')) {
+                    	document.getElementById('Phan_thong_tin').style.display = "none";
+					}
+                }
+			</script>
+		</div>
     </div>
 </div>
 <hr style="margin-top:0;border:1.5px solid #e6e6e6">
@@ -186,14 +221,14 @@ html, body {
                     </div>
                 </div>
             </li>
-            <li class="Menu"><a href="index.html#giamgia">Khuyến mãi</a></li>
+            <li class="Menu"><a href="giamgia.html">Khuyến mãi</a></li>
             <div class="clear"></div>
         </ul>
     </div>
 </div>
 <div class="clear"></div>
 
-<div class="chitietsp" id="chitietsp"><h1 style="text-align: center">KHÔNG CÓ THÔNG TIN SẢN PHẨM</h1></div>
+<div class="chitietsp" id="chitietsp"><h1 style="text-align: center;color: red">KHÔNG CÓ THÔNG TIN SẢN PHẨM</h1></div>
 
 <hr style="border:1.5px solid #e6e6e6;margin-bottom:0">
 <div class="Footer">

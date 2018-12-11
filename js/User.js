@@ -11,8 +11,6 @@ function User() {
 		Gioi_Tinh: document.getElementById("sex").value,
 		Ngay_Sinh: ngay + '/' + thang + '/' + nam,
 		Sdt: document.getElementById("phone").value,
-		CMND: document.getElementById("cmnd").value,
-		Dia_Chi: document.getElementById("home").value,
 		Trang_Thai: 0
 	};
 	localStorage.setItem('Tài khoản', JSON.stringify(people));
@@ -45,16 +43,13 @@ function Check_Tai_Khoan() {
 	if(localStorage.getItem('Tài khoản')) {
 		var tk = JSON.parse(localStorage.getItem('Tài khoản'));
 		if(tk.Trang_Thai==1) {
-			dang_ki.innerHTML = '<i class="fas fa-user-tie"></i> ' + tk.Ten_NguoiDung;
-			dang_ki.style.color = 'red';
-			dang_ki.style.font = '20px';
-			dang_ki.style.fontWeight= 'bold';
-			dang_nhap.innerHTML = '<button>Đăng xuất<button>';
+			dang_ki.innerHTML = `<button onClick="document.getElementById('Phan_thong_tin').style.display='block'"><i class="fas fa-user-tie"></i> `+ tk.Ten_NguoiDung+`</buton>`;
+			dang_nhap.innerHTML = '<button>Đăng xuất</button>';
 			dang_nhap.setAttribute('href','');
 			dang_nhap.addEventListener('click',function(e) {
 				tk.Trang_Thai=0;
 				localStorage.setItem('Tài khoản',JSON.stringify(tk));
-				location.reload();	
+				location.reload();
 			});
 		}
 	}

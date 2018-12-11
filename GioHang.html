@@ -1,8 +1,43 @@
 <html>
 <head>
+	<link rel="icon" href="images/logo/petshop.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="css/DangNhap_Ki.css" rel="stylesheet" type="text/css" />
+    <link href="css/Header.css" rel="stylesheet" type="text/css" />
+    <link href="css/Menu.css" rel="stylesheet" type="text/css" />
+    <link href="css/Main.css" rel="stylesheet" type="text/css" />
+    <link href="css/Footer.css" rel="stylesheet" type="text/css" />
+    <link href="css/SlideShow.css" rel="stylesheet" type="text/css">
 	<title>Shopping Cart</title>
 </head>
 <style type="text/css">
+* {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;	
+}
+
+::-webkit-scrollbar {
+    width:5px;	
+}
+
+::-webkit-scrollbar-thumb {
+    background:lightpink;
+    border-radius:20px;	
+}
+    
+html {
+ 	scroll-behavior: smooth;
+}
+
+body {
+	margin:0;
+    padding: 0;
+}
+     
+html, body { 
+    cursor:url('http://www.snazzyspace.com/cursorsfolder/dog-paw.png'), auto; 
+}
 
 body {
 	margin:0px;
@@ -166,6 +201,10 @@ body {
 	font-size: 22px;
 }
 
+.clear {
+	clear:both;
+}
+
 </style>
 
 <script type="text/javascript">
@@ -271,8 +310,179 @@ body {
 
 </script>
 
-<body>
-	<section class="section-container content-section">
+<body onLoad="Check_Tai_Khoan(); gio_hang()">
+	
+<script src="js/User.js"></script>
+<script src="js/SP.js"></script>
+
+<div class="Top_dau">
+    <div class="container">
+    	<span id="signup"><a href="DangKi.html"><button><i class="fa fa-user-plus"></i> Đăng ký</button></a></span>
+        <span id="login"><button onclick="document.getElementById('Phan_dang_nhap').style.display='block'"><i class="fa fa-sign-in-alt"></i> Đăng nhập</button></span>
+        <div id="Phan_dang_nhap" class="Khung_dang_nhap">
+            <form class="Noi_dung_khung Hoat_canh">
+                <div class="Cach_khung">
+                    <div style="padding-bottom:10px">
+                    	<input type="text" placeholder="Tên đăng nhập" id="Ten_dang_nhap" onBlur="KtTen()"/>
+                        <div id="Check_Name" style="text-align:left;font-weight:bold;color:red"></div>
+                    </div>
+                    <div>
+                    	<input type="password" placeholder="Mật khẩu" id="Mat_khau" onBlur="KtMK()"/>
+                        <div id="Check_Password" style="text-align:left;font-weight:bold;color:red"></div>
+                    </div>
+                    <span style="float:left;padding:10px">
+                        <label><input type="checkbox" id="Nho_mk" checked  />Nhớ mật khẩu</label>
+                    </span>
+                    <div class="Quen_mat_khau"><a href="#">Quên mật khẩu?</a></div>
+                    <button type="submit" onClick="SignIn()"><strong>Đăng nhập</strong></button>
+                </div>
+            </form>
+            
+            <script>
+				function KtTen() {
+					var ten = document.getElementById("Ten_dang_nhap").value;
+					if (ten=="")
+						document.getElementById("Check_Name").innerHTML="Tên đăng nhập đang trống";
+					else
+						document.getElementById("Check_Name").innerHTML="";
+				}
+				
+				function KtMK() {
+					var mk = document.getElementById("Mat_khau").value;
+					if (mk=="")
+						document.getElementById("Check_Password").innerHTML="Mật khẩu đang trống";	
+					else
+						document.getElementById("Check_Password").innerHTML="";	
+				}
+				
+                //Khi người dùng click bên ngoài khung đăng nhập thì khung đăng nhập sẽ tắt
+                window.onclick = function(event) {
+                	if(event.target == document.getElementById('Phan_dang_nhap')) {
+                    	document.getElementById('Phan_dang_nhap').style.display = "none";
+						document.getElementById('Ten_dang_nhap').value="";
+						document.getElementById('Mat_khau').value="";
+					}
+                }
+            </script>
+        </div>
+		<div id="Phan_thong_tin" class="Khung_thong_tin">
+			<div class="Noi_dung_khung Hoat_canh">
+				<caption><h1 style="color: darkblue">Thông tin người dùng</h1></caption>
+				<table class="Bang_thong_tin" cellspacing="20px">
+					<tr>
+						<td style="font-weight: bold">Họ và tên</td>
+						<td id="Ten-NguoiDung"></td>
+					</tr>
+					<tr>
+						<td style="font-weight: bold">Giới tính</td>
+						<td id="Sex-NguoiDung"></td>
+					</tr>
+					<tr>
+						<td style="font-weight: bold">Ngày sinh</td>
+						<td id="Birth-NguoiDung"></td>
+					</tr>
+					<tr>
+						<td style="font-weight: bold">Số điện thoại</td>
+						<td id="Phone-NguoiDung"></td>
+					</tr>
+				</table>
+			</div>
+			<script>
+				var tk = JSON.parse(localStorage.getItem('Tài khoản'));
+				document.getElementById('Ten-NguoiDung').innerHTML = '<td>'+tk.Ten_NguoiDung+'</td>';
+				document.getElementById('Sex-NguoiDung').innerHTML = '<td>'+tk.Gioi_Tinh+'</td>';
+				document.getElementById('Birth-NguoiDung').innerHTML = '<td>'+tk.Ngay_Sinh+'</td>';
+				document.getElementById('Phone-NguoiDung').innerHTML = '<td>'+tk.Sdt+'</td>';
+				window.onclick = function(event) {
+                	if(event.target == document.getElementById('Phan_thong_tin')) {
+                    	document.getElementById('Phan_thong_tin').style.display = "none";
+					}
+                }
+			</script>
+		</div>
+    </div>
+</div>
+<hr style="margin-top:0;border:1.5px solid #e6e6e6">
+
+<div class="header">
+    <div class="container">
+        <div class="header-logo">
+            <a class="logo" href="index.html">
+                <img src="images/logo/logo.png" height= "75px" width="237.67px">
+            </a>
+        </div>
+        <div class="Timkiem">
+            <form class="Phan_tim_kiem">
+                <input type="text" placeholder="Tìm kiếm" />
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="Giohang">
+            <button class="Phan_gio_hang" onClick="window.location='GioHang.html'"><img class="Hinh-gio-hang" src="images/icon/shopping-cart.png"></button>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="clear"></div>
+
+<div class="Menu-list" style="position:static">
+    <div class="container">
+        <ul style="margin-top:0;margin-bottom:0">
+            <li class="Menu"><a href="index.html">Trang chủ</a></li>
+            <li class="Menu"><a href="gioithieu.html">Giới thiệu</a></li>
+            <li class="Menu">
+                <a href="cho.html?menu=0&page=1">Shop cho chó <i class="fa fa-angle-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="cho.html?menu=1&page=1">Thức ăn</a>
+                    <a href="cho.html?menu=2&page=1">Vật dụng</a>
+                    <a href="cho.html?menu=3&page=1">Chuồng, giường</a>
+                </div>
+            </li>
+            <li class="Menu">
+                <a href="meo.html?menu=0&page=1">Shop cho mèo <i class="fa fa-angle-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="meo.html?menu=1&page=1">Thức ăn</a>
+                    <a href="meo.html?menu=2&page=1">Vật dụng</a>
+                    <a href="meo.html?menu=3&page=1">Chuồng, giường</a>
+                </div>
+            </li>
+            <li class="Menu">
+                <a href="dongvatkhac.html">Shop vật nuôi khác <i class="fa fa-angle-down"></i></a>
+                <div class="dropdown-content">
+                    <div class="Menu-sub">
+                        <a href="chim.html?menu=0&page=1">Chim <i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-sub">
+                            <a href="chim.html?menu=1&page=1">Thức ăn</a>
+                            <a href="chim.html?menu=2&page=1">Vật dụng</a>
+                            <a href="chim.html?menu=3&page=1">Lồng và phụ kiện</a>
+                        </div>
+                    </div>
+                    <div class="Menu-sub">
+                        <a href="ca.html?menu=0&page=1">Cá <i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-sub">
+                            <a href="ca.html?menu=1&page=1">Thức ăn</a>
+                            <a href="ca.html?menu=2&page=1">Vật dụng</a>
+                            <a href="ca.html?menu=3&page=1">Bể cá và phụ kiện</a>
+                        </div>
+                    </div>
+                    <div class="Menu-sub">
+                        <a href="hamster.html?menu=0&page=1">Hamster <i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-sub">
+                            <a href="hamster.html?menu=1&page=1">Thức ăn</a>
+                            <a href="hamster.html?menu=2&page=1">Vật dụng</a>
+                            <a href="hamster.html?menu=3&page=1">Chuồng và phụ kiện</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="Menu"><a href="#">Khuyến mãi</a></li>
+            <div class="clear"></div>
+        </ul>
+    </div>
+</div>
+<div class="clear" style="padding-bottom: 30px"></div>
+	
+	<div class="section-container content-section">
 		<div class="section-header">
 			<span class="section-header-title">GIỎ HÀNG</span>
 			<button class="continue-button" onClick="window.history.back()">Tiếp tục mua hàng?</button>
@@ -296,6 +506,8 @@ body {
 		</div>
 
 		<button class="btn btn-primary btn-purchase">THANH TOÁN</button>
-	</section>
+	</div>
+	
+	
 </body>
 </html>
