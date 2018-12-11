@@ -902,7 +902,7 @@ function xoa_dau(str) {
 
 //Xóa khoảng trắng dư thừa
 function xoa_space(str) {
-    str = str.trim();
+    str = str.replace(/  +/g, ' ');
     return str;
 }
 
@@ -921,7 +921,7 @@ function timkiem(){
 function loadtimkiem()
 {
     var key = window.location.href.split('?key=')[1].toLowerCase();
-    key = key.replace(/%20/g, " ");
+    key = key.replace(/%20/g, " "); //Đổi %20 trên thanh địa chỉ thành kí tự khoảng trắng
     var result = document.getElementById('ketqua');
     var count = 0;
     for(var i = 0; i < sp.length; i++)
