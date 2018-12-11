@@ -81,7 +81,7 @@ html, body {
 <script src="js/User.js"></script>
 
 <button onclick="Dua_len_dau()" id="Bam_len_top" title="Lên đầu trang"><i class="fa fa-arrow-up"></i></button>
-<button onClick="Mo_Gio_hang()" id="Trang_gio_hang"><i class="fa fa-shopping-cart"></i></button>
+<button onClick="window.location='GioHang.html'" id="Trang_gio_hang"><i class="fa fa-shopping-cart"></i></button>
 
 <div class="Top_dau">
     <div class="container">
@@ -151,9 +151,7 @@ html, body {
             </form>
         </div>
         <div class="Giohang">
-            <form class="Phan_gio_hang">
-                <button type="submit"><i class="fa fa-shopping-cart"></i></button>
-            </form>
+            <button class="Phan_gio_hang" onClick="window.location='GioHang.html'"><img class="Hinh-gio-hang" src="images/icon/shopping-cart.png"></button>
         </div>
         <div class="clear"></div>
     </div>
@@ -210,7 +208,7 @@ html, body {
                     </div>
                 </div>
             </li>
-            <li class="Menu"><a href="giamgia.html">Khuyến mãi</a></li>
+            <li class="Menu"><a href="index.html#giamgia">Khuyến mãi</a></li>
             <div class="clear"></div>
         </ul>
     </div>

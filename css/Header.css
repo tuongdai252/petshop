@@ -74,14 +74,17 @@
     margin-top: 20px;
 }
 
-.Giohang form.Phan_gio_hang button{
+.Giohang .Phan_gio_hang {
 	background:none;
-	font-size: 40px;
 	border-radius:20px;
 	cursor:pointer;
 	outline:none;
 	border:0;
-	color:#ff0000;
+}
+
+.Hinh-gio-hang {
+	width:50px;
+	height:45px;
 }
 
 /*For small screen*/

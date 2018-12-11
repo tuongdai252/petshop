@@ -1,0 +1,301 @@
+<html>
+<head>
+	<title>Shopping Cart</title>
+</head>
+<style type="text/css">
+
+body {
+	margin:0px;
+}
+
+.content-section {
+	overflow:auto;
+	padding: 16px 60px;
+	background-image: url(images/depositphotos_94498758-stock-illustration-pet-shop-background.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size:cover;
+	height: 100%;
+}
+
+.section-header {
+	width: 100%;
+	padding: 20px;
+}
+
+.section-header-title {
+	font-size: 40px;
+	font-weight: bolder;
+	padding:20px 50px;
+	color:yellow;
+}
+
+.continue-button {
+	position: absolute;
+	padding:13px;
+	border-radius: 15px;
+	border:none;
+	cursor:pointer;
+	right:100px;
+	font-size: 20px;
+	font-weight: bold;
+	outline: none;
+	background-color: lightyellow;
+	color:green;
+}
+
+.btn {
+	text-align: center;
+	vertical-align: middle;
+	padding: 25px 25px;
+	cursor: pointer;
+}
+
+.btn-primary {
+	color: white;
+	background: #56CCF2;
+	border: none;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+.btn-primary:hover {
+	opacity: 0.8;
+}
+
+.btn-danger {
+	color: white;
+	background-color: #EB5757;
+	border: none;
+	border-radius: 4.8px;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.btn-danger:hover {
+	background-color: #CC4C4C;
+}
+
+.btn-purchase {
+	display: block;
+	margin: 30px 20px 80px auto;
+	font-size: 28px;
+	outline: none;
+}
+
+.cart-header {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.cart-column {
+	display:flex;
+	align-items: center;
+	border-bottom: 1px solid black;
+	margin-right: 24px;
+	padding-bottom: 10px;
+	margin-top:10px;
+	color:deeppink;
+	font-size: 30px;
+}
+
+.cart-row {
+	display:flex;
+}
+
+.cart-item {
+	width:45%;
+}
+
+.cart-price {
+	width:20%;
+	color:red;
+}
+
+.cart-quantity {
+	width: 35%;
+}
+
+.cart-item-title {
+	color:blue;
+	margin-left:8px;
+	font-size:24px;
+}
+
+.cart-item-image {
+	width: 75px;
+	height: auto;
+	border-radius:10px;
+}
+
+.cart-quantity-input {
+	height: 34px;
+	width: 50px;
+	border-radius: 5px;
+	border: 1px solid #56CCF2;
+	background-color: #eee;
+	color: #333;
+	padding:0;
+	text-align:center;
+	font-size:19.2px;
+	margin-right:25px;
+}
+
+.cart-row:last-child .cart-column:last-child {
+	border-bottom: 1px solid black;
+}
+
+.cart-row:last-child {
+	border: none;
+}
+
+.cart-total {
+	text-align: right;
+	margin-top: 10px;
+	margin-right: 25px;
+	color: darkblue;
+}
+
+.cart-total-title {
+	font-weight: bold;
+	font-size: 28px;
+	margin-right: 20px;
+}
+
+.cart-total-price {
+	font-size: 22px;
+}
+
+</style>
+
+<script type="text/javascript">
+	if(document.readyState =='loading') 
+		document.addEventListener('DOMContentLoaded',ready)
+	else
+		ready();
+
+	function ready() {
+		var removeCartItemButtons = document.getElementsByClassName('btn-danger')
+		for(var i=0; i < removeCartItemButtons.length; i++) {
+			var button = removeCartItemButtons[i]
+			button.addEventListener('click', remoneCartItem)
+		}
+
+		var quantityInputs = document.getElementsByClassName('cart-quantity-input')
+		for(var i=0; i < quantityInputs.length; i++) {
+			var input = quantityInputs[i]
+			input.addEventListener('change', quantityChanged)
+		}
+
+		var addToCartButtons = document.getElementsByClassName('shop-item-button')
+		for(var i=0; i < addToCartButtons.length; i++) {
+			var button = addToCartButtons[i]
+			button.addEventListener('click', addToCartClicked)
+		}
+
+		document.getElementsByClassName('btn-purchase')[0].addEventListener('click',purchaseClicked)
+	}
+
+	function purchaseClicked() {
+		alert('Cảm ơn quý khách đã mua hàng')
+		var cartItems = document.getElementsByClassName('cart-items')[0]
+		while(cartItems.hasChildNodes())
+			cartItems.removeChild(cartItems.firstChild)
+		updateCartTotal()
+	}
+
+	function removeCartItem(event) {
+		var buttonClicked = event.target
+		buttonClicked.parentElement.parentElement.remove()
+		updateCartTotal()
+	}
+
+	function quantityChanged(event) {
+		var input = event.target
+		if(isNaN(input.value) || input.value <= 0)
+			input.value = 1
+		updateCartTotal()
+	}
+
+	function addToCartClicked(event) {
+		var button = event.target
+		var shopItem = button.parentElement.parentElement
+		var title = shopItem.getElementsByClassName('p-name')[0].innerText
+		var price = shopItem.getElementsByClassName('gia')[0].innerText
+		var imageSrc = shopItem.getElementsByClassName('p-img')[0].src
+		addItemToCart(title,price,imageSrc)
+		updateCartTotal()
+	}
+
+	function addItemToCart(title, price, imageSrc) {
+		var cartRow = document.createElement('div')
+		cartRow.classList.add('cart-row')
+		var cartItems = document.getElementsByClassName('cart-items')[0]
+		var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
+		for(var i=0; i < cartItemNames.length; i++) 
+			if(cartItemNames[i].innerText == title) {
+				alert('Món hàng này đã được đưa vào giỏ!!!!')
+				return
+			}
+		var cartRowContens = 
+			`<div class="cart-item cart-column">
+				<img class="cart-item-image" src="${imageSrc}" width="100" height="100">
+				<span class="cart-item-title">${title}</span>
+			</div>
+			<span class="cart-price cart-column">${price}</span>
+			<div class="cart-quantity cart-column">
+				<input class="cart-quantity-input" type="number" value="1" min="0">
+				<button class="btn btn-danger">XÓA</button>
+			</div>`
+		cartRow.innerHTML = cartRowContens
+		cartItems.append(cartRow)
+		cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click',removeCartItem)
+		cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('click',quantityChanged)
+	}
+
+	function updateCartTotal() {
+		var cartItemContainer = document.getElementsByClassName('cart-items')[0]
+		var cartRows = cartItemContainer.getElementsByClassName('cart-row')
+		var total = 0
+		for(var i=0; i < cartRows.length; i++) {
+			var cartRow = cartRows[i]
+			var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+			var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
+			var price = parseFloat(priceElement.innerText.replace('đ',""))
+			var quantity = quantityElement.value
+			total = total + (price*quantity)
+		}
+		total = Math.round(total*100)/100
+		document.getElementsByClassName('cart-total-price')[0].innerText = total + '.000' + 'đ'
+	}
+
+</script>
+
+<body>
+	<section class="section-container content-section">
+		<div class="section-header">
+			<span class="section-header-title">GIỎ HÀNG</span>
+			<button class="continue-button" onClick="window.history.back()">Tiếp tục mua hàng?</button>
+		</div>
+
+		<div style="clear:both"></div>
+
+		<div class="cart-row">
+			<span class="cart-item cart-header cart-column">SẢN PHẨM</span>
+			<span class="cart-price cart-column cart-header" style="color:deeppink">ĐƠN GIÁ</span>
+			<span class="cart-quantity cart-header cart-column">SỐ LƯỢNG</span>
+		</div>
+
+		<div class="cart-items">
+
+		</div>
+
+		<div class="cart-total">
+			<strong class="cart-total-title">Tổng: </strong>
+			<span class="cart-total-price">0 đ</span>
+		</div>
+
+		<button class="btn btn-primary btn-purchase">THANH TOÁN</button>
+	</section>
+</body>
+</html>
