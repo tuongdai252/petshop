@@ -9,8 +9,8 @@
 var sp = new Array();
 
 sp[0] = new san_pham("SP0", "Royal spnin - Mini Dermacomfort","192.000đ", "images/sanpham/cho/food/food4.jpg","dog","food");
-sp[1] = new san_pham("SP1", "Thức ăn spo cấp NutriSource thịt gà, đậu Hà Lan ","25.000đ", "images/sanpham/cho/food/food5.jpg","dog","food");
-sp[2] = new san_pham("SP2", "Thức ăn spo cấp NutriSource thịt gà tươi","25.000đ", "images/sanpham/cho/food/food6.jpg","dog","food");
+sp[1] = new san_pham("SP1", "Thức ăn cao cấp NutriSource thịt gà, đậu Hà Lan ","25.000đ", "images/sanpham/cho/food/food5.jpg","dog","food");
+sp[2] = new san_pham("SP2", "Thức ăn cao cấp NutriSource thịt gà tươi","25.000đ", "images/sanpham/cho/food/food6.jpg","dog","food");
 sp[3] = new san_pham("SP3", "Thịt Meat Jerky Pedigree vị bò xông khói","35.000đ", "images/sanpham/cho/food/food8.jpg","dog","food");
 sp[4] = new san_pham("SP4", "Royal spnin - Chihuahua Adult","112.000đ", "images/sanpham/cho/food/food3.jpg","dog","food");
 sp[5] = new san_pham("SP5", "Royal spnin - Maxi Adult ","138.000đ", "images/sanpham/cho/food/food6.jpg","dog","food");
@@ -68,10 +68,10 @@ sp[51] = new san_pham("SP51", "Đĩa bay vải Petstar hình dấu chân","30.00
 sp[52] = new san_pham("SP52", "Kong - Núm vú puppy ","211.000đ", "images/sanpham/cho/dochoi/do7.jpg","dog","stuff");
 sp[53] = new san_pham("SP53", "AFP - Xương/bánh thưởng Treat Krazy Crunch ","322.000đ", "images/sanpham/cho/dochoi/do6.jpg","dog","stuff");
 sp[54] = new san_pham("SP54", "Đồ chơi AFP xí ngầu","156.000đ", "images/sanpham/cho/dochoi/do4.jpg","dog","stuff");
-sp[55] = new san_pham("SP55", "Lật đật spo su ","48.000đ", "images/sanpham/cho/dochoi/do2.jpg","dog","stuff");
+sp[55] = new san_pham("SP55", "Lật đật cao su ","48.000đ", "images/sanpham/cho/dochoi/do2.jpg","dog","stuff");
 sp[56] = new san_pham("SP56", "Pet-Đồ chơi cử tạ","27.000đ", "images/sanpham/cho/dochoi/do1.jpg","dog","stuff");
 
-sp[57] = new san_pham("SP57", "SY - Nệm vòm spo cấp nhiều màu","510.000đ", "images/sanpham/cho/giuong/giuong5.jpg","dog","bed");
+sp[57] = new san_pham("SP57", "SY - Nệm vòm cao cấp nhiều màu","510.000đ", "images/sanpham/cho/giuong/giuong5.jpg","dog","bed");
 sp[58] = new san_pham("SP58", "LHK - Nệm hình chân chó","309.000đ", "images/sanpham/cho/giuong/giuong1.jpg","dog","bed");
 sp[59] = new san_pham("SP59", "Petstar - Nệm chữ nhật","150.000đ", "images/sanpham/cho/giuong/giuong4.jpg","dog","bed");
 sp[60] = new san_pham("SP60", "Petstar - Thảm nằm","140.000đ", "images/sanpham/cho/giuong/giuong3.jpg","dog","bed");
@@ -80,8 +80,8 @@ sp[62] = new san_pham("SP62", "Lồng bánh xe","824.000đ", "images/sanpham/cho
 sp[63] = new san_pham("SP63", " Nệm nằm Petdream","172.000đ", "images/sanpham/cho/giuong/giuong2.jpg","dog","bed");
 
 sp[64] = new san_pham("SP64", "Thức ăn cho mèo cat's Eye ","166.000đ", "images/sanpham/meo/food/foodcat1.jpg","cat","food");
-sp[65] = new san_pham("SP65", "Thức ăn spo cấp NutriSource thịt vịt","25.000đ", "images/sanpham/meo/food/foodcat5.jpg","cat","food");
-sp[66] = new san_pham("SP66", "Thức ăn spo cấp NutriSource cá hồi và gan ","25.000đ", "images/sanpham/meo/food/foodcat6.jpg","cat","food");
+sp[65] = new san_pham("SP65", "Thức ăn cao cấp NutriSource thịt vịt","25.000đ", "images/sanpham/meo/food/foodcat5.jpg","cat","food");
+sp[66] = new san_pham("SP66", "Thức ăn cao cấp NutriSource cá hồi và gan ","25.000đ", "images/sanpham/meo/food/foodcat6.jpg","cat","food");
 sp[67] = new san_pham("SP67", "Viên dinh dưỡng Hairball for cats ","160.000đ", "images/sanpham/meo/food/foodcat3.jpg","cat","food");
 sp[68] = new san_pham("SP68", "Me-O - Thức ăn Meo kitten","105.000đ", "images/sanpham/meo/food/foodcat2.jpg","cat","food");
 sp[69] = new san_pham("SP69", "Thức ăn cho mèo Home cat ","203.000đ", "images/sanpham/meo/food/foodcat4.jpg","cat","food");
@@ -134,7 +134,7 @@ sp[108]= new san_pham("SP108","AFP - Đồ chơi cho mèo Coco'nut WILD & NATURE
 sp[109]= new san_pham("SP109","Chuột cỏ mèo Green Rush ","102.000đ","images/sanpham/meo/dochoi/domeo4.jpg","cat","stuff");
 sp[110]= new san_pham("SP110","Thảm cói trụ chuột ","95.000đ","images/sanpham/meo/dochoi/domeo3.jpg","cat","stuff");
 
-sp[111] = new san_pham("SP111", "SY - Nệm vòm spo cấp nhiều màu","510.000đ", "images/sanpham/meo/giuong/giuong5.jpg","cat","bed");
+sp[111] = new san_pham("SP111", "SY - Nệm vòm cao cấp nhiều màu","510.000đ", "images/sanpham/meo/giuong/giuong5.jpg","cat","bed");
 sp[112] = new san_pham("SP112", "LHK - Nệm hình chân chó","309.000đ", "images/sanpham/meo/giuong/giuong1.jpg","cat","bed");
 sp[113] = new san_pham("SP113", "Petstar - Nệm chữ nhật","150.000đ", "images/sanpham/meo/giuong/giuong4.jpg","cat","bed");
 sp[114] = new san_pham("SP114", "Petstar - Thảm nằm","140.000đ", "images/sanpham/meo/giuong/giuong3.jpg","cat","bed");
@@ -205,7 +205,7 @@ function create_product() {
         list_spgiamgia.innerHTML += '<div class="sanpham">\
                                         <a href="SanPham.html?masp='+spsale[i].masp+'" class="p-img"><img src="'+ spsale[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+spsale[i].masp+'" class="p-name">'+ spsale[i].tensp +'</a>\
-										<span class="giacu">2.000.000đ</span>\
+										<span class="giacu">1.000.000đ</span>\
                                         <p class="gia">'+ spsale[i].gia +'</p>\
                                         <p><button class="shop-item-button" value="'+spsale[i].masp+'">Thêm vào giỏ</button></p>\
                                     </div>';
@@ -881,6 +881,68 @@ function getInform(){
         }
 	}
 }
+
+function xoa_dau(str) {
+    str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
+    str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
+    str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
+    str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
+    str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
+    str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
+    str = str.replace(/đ/g, "d");
+    str = str.replace(/À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ/g, "A");
+    str = str.replace(/È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ/g, "E");
+    str = str.replace(/Ì|Í|Ị|Ỉ|Ĩ/g, "I");
+    str = str.replace(/Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ/g, "O");
+    str = str.replace(/Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ/g, "U");
+    str = str.replace(/Ỳ|Ý|Ỵ|Ỷ|Ỹ/g, "Y");
+    str = str.replace(/Đ/g, "D");
+    return str;
+}
+
+//Xóa khoảng trắng dư thừa
+function xoa_space(str) {
+    str = str.trim();
+    return str;
+}
+
+function timkiem(){
+	var txttimkiem = document.getElementById("searchcontent");
+	if(txttimkiem.value == ""){
+		alert("Vui lòng nhập từ khóa để tìm kiếm");
+	}
+	else{
+		txttimkiem.value = xoa_space(xoa_dau(txttimkiem.value));
+		window.location.assign("timkiem.html?key="+txttimkiem.value);
+	}
+    return false;
+}
+
+function loadtimkiem()
+{
+    var key = window.location.href.split('?key=')[1];
+    var result = document.getElementById('ketqua');
+    var count = 0;
+    for(var i = 0; i < sp.length; i++)
+    {
+        if(xoa_dau(sp[i].masp).indexOf(key) != -1 || 
+           xoa_dau(sp[i].tensp).indexOf(key) != -1 || 
+           xoa_dau(sp[i].madv).indexOf(key) != -1 || 
+           xoa_dau(sp[i].matl).indexOf(key) != -1)
+        {
+            count++;
+            result.innerHTML += '<div class="sanpham">\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
+                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
+                                        <p class="gia">'+ sp[i].gia +'</p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                    </div>';
+        }
+    }
+    if(count == 0)
+        result.innerHTML = '<h1 style="text-align: center">KHÔNG CÓ KẾT QUẢ TÌM KIẾM</h1>';
+}
+
 /*window.addEventListener('load',Click_them_vao_gio);
 
 function Click_them_vao_gio() {
