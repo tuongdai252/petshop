@@ -920,15 +920,16 @@ function timkiem(){
 
 function loadtimkiem()
 {
-    var key = window.location.href.split('?key=')[1];
+    var key = window.location.href.split('?key=')[1].toLowerCase();
+    key = key.replace(/%20/g, " ");
     var result = document.getElementById('ketqua');
     var count = 0;
     for(var i = 0; i < sp.length; i++)
     {
-        if(xoa_dau(sp[i].masp).indexOf(key) != -1 || 
-           xoa_dau(sp[i].tensp).indexOf(key) != -1 || 
-           xoa_dau(sp[i].madv).indexOf(key) != -1 || 
-           xoa_dau(sp[i].matl).indexOf(key) != -1)
+        if(xoa_dau(sp[i].masp.toLowerCase()).indexOf(key) != -1 || 
+           xoa_dau(sp[i].tensp.toLowerCase()).indexOf(key) != -1 || 
+           xoa_dau(sp[i].madv.toLowerCase()).indexOf(key) != -1 || 
+           xoa_dau(sp[i].matl.toLowerCase()).indexOf(key) != -1)
         {
             count++;
             result.innerHTML += '<div class="sanpham">\
