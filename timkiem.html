@@ -74,10 +74,27 @@ html, body {
 .clear{
     clear: both;
 }
+    
+.timkiemnangcao{
+    margin: 20px 50px;
+}
+    
+.searchselect{
+    font-weight: bold;
+    color: darkblue;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 10px;
+}
+    
+.timkiemnangcao select{
+    text-align: center;
+}
+
 </style>
 </head>
 
-<body onLoad="Check_Tai_Khoan(); loadtimkiem()">
+<body onLoad="Check_Tai_Khoan(); loadsearch()">
 <script src="js/Scroll_on_Top.js"></script>
 <script src="js/User.js"></script>
 
@@ -296,6 +313,37 @@ html, body {
             <span class="title">Kết quả tìm kiếm</span>
             <hr>
         </h1>
+        <div class="timkiemnangcao">
+            <div class="searchselect">Thú cưng: 
+                <select id="dv">
+                    <option value="0">[Chọn thú cưng]</option>
+                    <option value="dog">Chó</option>
+                    <option value="cat">Mèo</option>
+                    <option value="bird">Chim</option>
+                    <option value="fish">Cá</option>
+                    <option value="hamster">Hamster</option>
+                </select>
+            </div>
+            <div class="searchselect">Thể loại: 
+                <select id="tl">
+                    <option value="0">[Chọn thể loại]</option>
+                    <option value="food">Thức ăn</option>
+                    <option value="stuff">Vật dụng</option>
+                    <option value="bed">Chuồng, giường</option>
+                </select>
+            </div>
+            <div class="searchselect">Giá tiền: 
+                <select id="price">
+                    <option value="0">[Chọn giá tiền]</option>
+                    <option value="50">0đ - 50.000đ</option>
+                    <option value="100">50.000đ - 100.000đ</option>
+                    <option value="500">100.000đ - 500.000đ</option>
+                    <option value="500plus">> 500.000đ</option>
+                </select>
+            </div>
+            <div><button onClick="timnangcao()" style="background-color: cornflowerblue; color: white">Tìm kiếm</button></div>
+            <div class="clear"></div>
+        </div>
 		
          <div class="container" id="ketqua">
              
