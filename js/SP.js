@@ -946,11 +946,19 @@ function loadtimkiem()
 
 function timnangcao() {
     var diachi = window.location.href;
-    var key = diachi.split('?key=')[1];
+    var key;
+    if(diachi.indexOf("&") != -1)
+    {
+        key = diachi.split('?key=')[1].split('&pet=')[0];
+    }
+    else
+    {
+        key = diachi.split('?key=')[1];
+    }
     var dv = document.getElementById('dv').value;
     var tl = document.getElementById('tl').value;
     var gia = document.getElementById('price').value;
-    window.location.assign('timkiem.html?key=' +key+ '&pet=' +dv+ '&menu=' +tl+ '&price=' +gia);
+    window.location.assign("timkiem.html?key=" +key+ "&pet=" +dv+ "&menu=" +tl+ "&price=" +gia);
 }
 
 function loadtimkiemnangcao()
