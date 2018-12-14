@@ -1414,6 +1414,8 @@ function xoa_sp(key) {
 function tinhtien(i){
     var dongia = document.getElementsByClassName('cart-price');
     var soluong = document.getElementsByClassName('cart-quantity-input');
+    if(soluong[i].value < 1)
+        soluong[i].value = 1;
     var thanhtien = document.getElementsByClassName('cart-sub-total');
     var tien = 0;
     tien = dongia[i+1].getAttribute('giatien') * soluong[i].value;
