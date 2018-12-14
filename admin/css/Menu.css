@@ -3,11 +3,10 @@
 .menu {
     height: 100%;
     width: 15%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
     background-color: #111;
+	position: fixed;
+	left: 0;
+	top:0;
 }
 
 .menu a {
@@ -31,59 +30,36 @@
     border-left: groove #A70045;
 }
 
-.menu .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
+.admin-logo {
+	margin-left: 15%;
+    width: 85%;
+	height: 113px;
+	text-align: right;
+    position: relative;
+    background-color: white;
 }
 
-.nav{
-    visibility: hidden;
+.main{
+    width: 85%;
+	margin-left: 15%;
+	padding-bottom: 30px;
+    position: relative;
+    background-color: #f5f5f5;
 }
 
-.closebtn{
-    visibility: hidden;
-}
-
-/*For small screen*/
-@media screen and (max-width: 600px) {
-    .menu {
-        width: 0;
-        position: fixed;
-        overflow-x: hidden;
-        transition: 0.5s;
+@media only screen and (max-width: 600px){
+    .menu{
+        width: 25%;
     }
     
-    .menu-content {
-        position: relative;
-        top: 15%;
-        width: 100%;
-        text-align: center;
+    .admin-logo{
+        margin-left: 25%;
+        width: 75%;
+        margin-right: 0;
     }
     
-    .menu a:hover{
-        color: #f1f1f1;
-    }
-    
-    .nav{
-        visibility: visible;
-        width: 100%;
-        height: 10%;
-        background-color: #A70045;
-    }
-    
-    .open{
-        font-size: 200%;
-        cursor:pointer;
-        color: white;
-    }
-
-    .closebtn {
-        visibility: visible;
-        position: absolute;
-        margin-top: -13%;
-        margin-right: -13%;
-        z-index: 2;
+    .main{
+        width: 75%;
+        margin-left: 25%;
     }
 }

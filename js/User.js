@@ -15,7 +15,7 @@ function User() {
 	};
 	localStorage.setItem('Tài khoản', JSON.stringify(people));
 	alert("Bạn đã đăng ký thành công");
-	window.location = 'index.html';
+	window.history.back();
 }
 
 function SignIn () {
@@ -28,7 +28,7 @@ function SignIn () {
 			tk.Trang_Thai = 1;
 			localStorage.setItem('Tài khoản',JSON.stringify(tk));
 			alert("Đăng nhập thành công!!!!");
-			window.localStorage='index.html';
+			window.history.back();
 		}
 		else
 			alert("Tài khoản không tồn tại!!!!!!!!");

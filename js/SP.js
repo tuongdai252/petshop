@@ -144,7 +144,7 @@ sp[117] = new san_pham("SP117", "Nệm nằm Petdream",172, "images/sanpham/meo/
 
 
 
-sp[118]=new san_pham("SP118","Thức ăn cho sp",300,"images/sanpham/dongvatkhac/chim/chim2.jpg","bird","food");
+sp[118]=new san_pham("SP118","Thức ăn cho chim",300,"images/sanpham/dongvatkhac/chim/chim2.jpg","bird","food");
 sp[119]=new san_pham("SP119","Thức ăn cho họa mi",15,"images/sanpham/dongvatkhac/chim/chim1.jpg","bird","food");
 sp[120]=new san_pham("SP120","Bình thủy tinh đựng thức ăn cho chim",20,"images/sanpham/dongvatkhac/chim/chim4.jpg","bird","stuff");
 sp[121]=new san_pham("SP121","Bình sứ đựng thứ ăn chim",30,"images/sanpham/dongvatkhac/chim/chim3.jpg","bird","stuff");
@@ -200,14 +200,14 @@ function create_product() {
                                     <a href="SanPham.html?masp='+spmoi[i].masp+'" class="p-img"><img src="'+ spmoi[i].hinh +'"/></a>\
                                     <a href="SanPham.html?masp='+spmoi[i].masp+'" class="p-name">'+ spmoi[i].tensp +'</a>\
                                     <p class="gia">'+ spmoi[i].gia +'.000đ</p>\
-                                    <p><button class="shop-item-button" value="'+spmoi[i].masp+'">Thêm vào giỏ</button></p>\
+                                    <p><button class="shop-item-button" value="'+spmoi[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                 </div>';
         list_spgiamgia.innerHTML += '<div class="sanpham">\
                                         <a href="SanPham.html?masp='+spsale[i].masp+'" class="p-img"><img src="'+ spsale[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+spsale[i].masp+'" class="p-name">'+ spsale[i].tensp +'</a>\
 										<span class="giacu">1.000.000đ</span>\
                                         <p class="gia">'+ spsale[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+spsale[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+spsale[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
     }
 }
@@ -228,7 +228,7 @@ function getURL_dog(){
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
             }
         }
@@ -254,7 +254,7 @@ function getURL_dog(){
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
             }
         }
@@ -280,7 +280,7 @@ function getURL_dog(){
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
             }
         }
@@ -306,7 +306,7 @@ function getURL_dog(){
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
             }
         }
@@ -341,7 +341,7 @@ function getURL_cat(){
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
             }
         }
@@ -367,7 +367,7 @@ function getURL_cat(){
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
             }
         }
@@ -393,7 +393,7 @@ function getURL_cat(){
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
             }
         }
@@ -419,7 +419,7 @@ function getURL_cat(){
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
             }
         }
@@ -454,7 +454,7 @@ function getURL_bird(){
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
             }
         }
@@ -480,7 +480,7 @@ function getURL_bird(){
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
             }
         }
@@ -506,7 +506,7 @@ function getURL_bird(){
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
             }
         }
@@ -532,7 +532,7 @@ function getURL_bird(){
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
             }
         }
@@ -567,7 +567,7 @@ function getURL_fish(){
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
             }
         }
@@ -593,7 +593,7 @@ function getURL_fish(){
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
             }
         }
@@ -619,7 +619,7 @@ function getURL_fish(){
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
             }
         }
@@ -645,7 +645,7 @@ function getURL_fish(){
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
             }
         }
@@ -680,7 +680,7 @@ function getURL_hamster(){
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
             }
         }
@@ -706,7 +706,7 @@ function getURL_hamster(){
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
             }
         }
@@ -732,7 +732,7 @@ function getURL_hamster(){
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
             }
         }
@@ -758,7 +758,7 @@ function getURL_hamster(){
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
             }
         }
@@ -788,7 +788,7 @@ function getURL_dvkhac(){
                                     <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                     <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                     <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                    <p><button class="shop-item-button value="'+sp[i].masp+'"">Thêm vào giỏ</button></p>\
+                                    <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                 </div>';
         }
     }
@@ -800,7 +800,7 @@ function getURL_dvkhac(){
                                     <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                     <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                     <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                    <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                    <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                 </div>';
         }
     }
@@ -812,7 +812,7 @@ function getURL_dvkhac(){
                                     <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                     <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                     <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                    <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                    <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                 </div>';
         }
     }
@@ -842,7 +842,7 @@ function getInform(){
                                 <div class="clear"></div>';
         }
 	}
-	for (var i = 0; i < sp.length; i++) {
+	for (var i = 0; i < 8; i++) {
         if(spmoi[i].masp == ma){
             sanpham.innerHTML = '<div class="hinhanh">\
                                     <img src="' +spmoi[i].hinh+ '">\
@@ -936,7 +936,7 @@ function loadtimkiem()
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                         <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                         <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                        <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                     </div>';
         }
     }
@@ -986,7 +986,7 @@ function loadtimkiemnangcao()
                                             <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                             <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                             <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                            <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                            <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                         </div>';
             }
         }
@@ -1002,7 +1002,7 @@ function loadtimkiemnangcao()
                                             <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                             <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                             <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                            <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                            <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                         </div>';
             }
         }
@@ -1017,7 +1017,7 @@ function loadtimkiemnangcao()
                                             <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                             <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                             <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                            <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                            <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                         </div>';
             }
         }
@@ -1033,7 +1033,7 @@ function loadtimkiemnangcao()
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                                 <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                                <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                                <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                             </div>';
                 }
             }
@@ -1046,7 +1046,7 @@ function loadtimkiemnangcao()
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                                 <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                                <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                                <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                             </div>';
                 }
             }
@@ -1059,7 +1059,7 @@ function loadtimkiemnangcao()
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                                 <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                                <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                                <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                             </div>';
                 }
             }
@@ -1072,7 +1072,7 @@ function loadtimkiemnangcao()
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                                 <p class="gia">'+ sp[i].gia +'</p>\
-                                                <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                                <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                             </div>';
                 }
             }
@@ -1090,7 +1090,7 @@ function loadtimkiemnangcao()
                                             <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                             <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                             <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                            <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                            <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                         </div>';
             }
         }
@@ -1107,7 +1107,7 @@ function loadtimkiemnangcao()
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                                 <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                                <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                                <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                             </div>';
                 }
             }
@@ -1121,7 +1121,7 @@ function loadtimkiemnangcao()
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                                 <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                                <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                                <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                             </div>';
                 }
             }
@@ -1135,7 +1135,7 @@ function loadtimkiemnangcao()
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                                 <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                                <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                                <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                             </div>';
                 }
             }
@@ -1149,7 +1149,7 @@ function loadtimkiemnangcao()
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                                 <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                                <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                                <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                             </div>';
                 }
             }
@@ -1167,7 +1167,7 @@ function loadtimkiemnangcao()
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                                 <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                                <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                                <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                             </div>';
                 }
             }
@@ -1181,7 +1181,7 @@ function loadtimkiemnangcao()
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                                 <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                                <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                                <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                             </div>';
                 }
             }
@@ -1195,7 +1195,7 @@ function loadtimkiemnangcao()
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                                 <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                                <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                                <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                             </div>';
                 }
             }
@@ -1209,7 +1209,7 @@ function loadtimkiemnangcao()
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                                 <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                                <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                                <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                             </div>';
                 }
             }
@@ -1228,7 +1228,7 @@ function loadtimkiemnangcao()
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                                 <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                                <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                                <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                             </div>';
                 }
             }
@@ -1243,7 +1243,7 @@ function loadtimkiemnangcao()
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                                 <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                                <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                                <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                             </div>';
                 }
             }
@@ -1258,7 +1258,7 @@ function loadtimkiemnangcao()
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                                 <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                                <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                                <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                             </div>';
                 }
             }
@@ -1273,7 +1273,7 @@ function loadtimkiemnangcao()
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
                                                 <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
                                                 <p class="gia">'+ sp[i].gia +'.000đ</p>\
-                                                <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
+                                                <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Thêm vào giỏ</button></p>\
                                             </div>';
                 }
             }
@@ -1291,62 +1291,163 @@ function loadsearch()
     else
         loadtimkiem();
 }
-/*window.addEventListener('load',Click_them_vao_gio);
-
-function Click_them_vao_gio() {
-	var add = document.getElementsByClassName('shop-item-button');
-	for(var i=0; i < add.length; i++) {
-		var productID = add[i];
-		add[i].addEventListener('click',function() {
-			saveProduct(productID);
-		});
-	}
-}
 
 function saveProduct(productID) {
 	var Ma_sp;
 	var Hinh_sp;
 	var Ten_sp;
-	var SoLuong_sp;
 	var Gia_sp;
 	var DongVat_sp;
 	var TheLoai_sp;
 	for(var i=0; i < sp.length; i++) {
-		if(sp[i].id == productID) {
-			Ma_sp = sp[i].id;
+		if(sp[i].masp == productID) {
+			Ma_sp = sp[i].masp;
 			Ten_sp = sp[i].tensp;
 			Hinh_sp = sp[i].hinh;
 			Gia_sp = sp[i].gia;
-			SoLuong_sp = 1;
-			break;
+            break;
 		}
-	}
-	var Gio_SP = {
-		Ma : Ma_sp,
-		Ten : Ten_sp,
-		Hinh : Hinh_sp,
-		Gia : Gia_sp,
-		SoLuong : SoLuong_sp,
-	};
-	localStorage.setItem('Box_',JSON.stringify(Gio_SP));
+    }
+    for(var i = 0; i < 8; i++){
+        if(spmoi[i].masp == productID) {
+			Ma_sp = spmoi[i].masp;
+			Ten_sp = spmoi[i].tensp;
+			Hinh_sp = spmoi[i].hinh;
+			Gia_sp = spmoi[i].gia;
+            break;
+		}
+        else if(spsale[i].masp == productID) {
+			Ma_sp = spsale[i].masp;
+			Ten_sp = spsale[i].tensp;
+			Hinh_sp = spsale[i].hinh;
+			Gia_sp = spsale[i].gia;
+            break;
+		}
+    }
+    var Gio_SP = {
+        Ma : Ma_sp,
+        Ten : Ten_sp,
+        Hinh : Hinh_sp,
+        Gia : Gia_sp
+    };
+    var so_sp = localStorage.length;
+    if (localStorage.getItem('Tài khoản')) so_sp--;
+    for(var i = 0; i < so_sp; i ++)
+    {
+        var ma = JSON.parse(localStorage.getItem('item'+i)).Ma;
+        if(productID == ma)
+        {
+            alert('Sản phẩm này đã được thêm vào giỏ hàng!');
+            return false;
+        }
+    }
+    localStorage.setItem("item"+so_sp, JSON.stringify(Gio_SP));
 }
 
-function timkiem () {
-	var text = document.getElementById('searchcontent');
-	var sanpham = document.getElementById('spmoi');
-	document.getElementsByClassName('title').innerHTML = 'Tìm kiếm';
-	for(var i=0; i < sp.length; i++) {
-		var temp = sp[i].tensp;
-		if(temp.indexOf(text) != -1) {
-			sanpham.innerHTML += '<div class="sanpham">\
-                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-img"><img src="'+ sp[i].hinh +'"/></a>\
-                                        <a href="SanPham.html?masp='+sp[i].masp+'" class="p-name">'+ sp[i].tensp +'</a>\
-                                        <p class="gia">'+ sp[i].gia +'</p>\
-                                        <p><button class="shop-item-button" value="'+sp[i].masp+'">Thêm vào giỏ</button></p>\
-                                    </div>';
-		}
-		else {
-			sanpham.innerHTML = "Ko tìm thấy!!!!";
-		}
-	}
-}*/
+function load_gio_hang() {
+    for (var j = 0; j < localStorage.length; j++) {
+        var key = "item" + j;
+        if (localStorage.getItem(key)) {
+            var item = JSON.parse(localStorage.getItem(key))
+            var list_sp = document.getElementsByClassName('cart-items')[0];
+            var ma = item.Ma;
+            for(var i = 0; i < sp.length; i++)
+            {
+                if(sp[i].masp == ma){
+                    list_sp.innerHTML += '\
+                        <div class="cart-row" id="' +key+ '">\
+                            <div class="cart-item cart-column">\
+                                <img class="cart-item-image" src="' +sp[i].hinh+ '" width="100" height="100">\
+                                <span class="cart-item-title">' +sp[i].tensp+'</span>\
+                            </div>\
+                            <span class="cart-price cart-column"  giatien="' +sp[i].gia+ '">' +sp[i].gia+ '.000đ</span>\
+                            <div class="cart-quantity cart-column">\
+                                <input class="cart-quantity-input" type="number" value="1" min="1" oninput="tinhtien(' +key.split('item')[1]+ '); tongtien()">\
+                                <button value="' +key+ '" class="btn btn-danger" onClick = "xoa_sp(this.value)">XÓA</button>\
+                            </div>\
+                            <div class="cart-sub-total cart-column">' +sp[i].gia+ '.000đ</div>\
+                        </div>'
+                }
+            }
+            for(var i = 0; i < 8; i++){
+                if(spmoi[i].masp == ma){
+                    list_sp.innerHTML += '\
+                        <div class="cart-row" id="' +key+ '">\
+                            <div class="cart-item cart-column">\
+                                <img class="cart-item-image" src="' +spmoi[i].hinh+ '" width="100" height="100">\
+                                <span class="cart-item-title">' +spmoi[i].tensp+'</span>\
+                            </div>\
+                            <span class="cart-price cart-column" giatien="' +spmoi[i].gia+ '">' +spmoi[i].gia+ '.000đ</span>\
+                            <div class="cart-quantity cart-column">\
+                                <input class="cart-quantity-input" type="number" value="1" min="1" oninput="tinhtien(' +key.split('item')[1]+ '); tongtien()">\
+                                <button value="' +key+ '" class="btn btn-danger" onClick = "xoa_sp(this.value)">XÓA</button>\
+                            </div>\
+                            <div class="cart-sub-total cart-column">' +spmoi[i].gia+ '.000đ</div>\
+                        </div>'
+                }
+                else if(spsale[i].masp == ma){
+                    list_sp.innerHTML += '\
+                        <div class="cart-row" id="' +key+ '">\
+                            <div class="cart-item cart-column">\
+                                <img class="cart-item-image" src="' +spsale[i].hinh+ '" width="100" height="100">\
+                                <span class="cart-item-title">' +spsale[i].tensp+'</span>\
+                            </div>\
+                            <span class="cart-price cart-column" giatien="' +spsale[i].gia+ '">' +spsale[i].gia+ '.000đ</span>\
+                            <div class="cart-quantity cart-column">\
+                                <input class="cart-quantity-input" type="number" value="1" min="1" oninput="tinhtien(' +key.split('item')[1]+ '); tongtien()">\
+                                <button value="' +key+ '" class="btn btn-danger" onClick = "xoa_sp(this.value)">XÓA</button>\
+                            </div>\
+                            <div class="cart-sub-total cart-column">' +spsale[i].gia+ '.000đ</div>\
+                        </div>'
+                }
+            }
+        }
+    }
+}
+
+function xoa_sp(key) {
+    localStorage.removeItem(key);
+    document.getElementById(key).style.display = 'none';
+}
+
+function tinhtien(i){
+    var dongia = document.getElementsByClassName('cart-price');
+    var soluong = document.getElementsByClassName('cart-quantity-input');
+    var thanhtien = document.getElementsByClassName('cart-sub-total');
+    var tien = 0;
+    tien = dongia[i+1].getAttribute('giatien') * soluong[i].value;
+    thanhtien[i+1].innerHTML = formatmoney(tien) + '.000đ';
+}
+
+function tongtien()
+{
+    var so_sp = localStorage.length;
+    if (localStorage.getItem('Tài khoản')) so_sp--;
+    if(so_sp > 0)
+    {
+        var tien = 0;
+        var thanhtien = document.getElementsByClassName('cart-sub-total');
+        var tongtien = document.getElementsByClassName('cart-total-price')[0];
+        for(var i = 1; i < thanhtien.length; i++)
+        {
+            tien += parseInt(thanhtien[i].innerHTML.split('.000đ')[0].replace('.',''));
+        }
+        tongtien.innerHTML = formatmoney(tien) + '.000đ';
+    }
+}
+
+//Cứ 3 số thì chèn dấu chấm
+function formatmoney(val)
+{
+    var v = Number(val);
+    if (isNaN(v)) { return val; }
+    var sign = (v < 0) ? '-' : '';
+    var res = Math.abs(v).toString().split('').reverse().join('').replace(/(\d{3}(?!$))/g, '$1.').split('').reverse().join('');
+    return sign + res;
+}
+
+function shopcart()
+{
+    load_gio_hang();
+    tongtien();
+}
