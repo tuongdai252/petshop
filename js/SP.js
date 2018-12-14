@@ -1408,6 +1408,7 @@ function load_gio_hang() {
 function xoa_sp(key) {
     localStorage.removeItem(key);
     document.getElementById(key).style.display = 'none';
+    window.location.reload();
 }
 
 function tinhtien(i){
