@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="css/Menu.css" rel="stylesheet" type="text/css" />
     <link href="css/sanpham.css" rel="stylesheet" type="text/css" />
+    <script src="js/sp.js"></script>
 <title>Admin area</title>
 <style>
     * {
@@ -36,6 +37,16 @@ body {
 html, body { 
     cursor:url('http://www.snazzyspace.com/cursorsfolder/dog-paw.png'), auto; 
 }
+    
+@media only screen and (max-width: 620px){
+    .admin-logo{
+        width: 620px;
+    }
+
+    .main{
+        width: 620px;
+    }
+}    
 </style>
 <script>
     function signout() {
@@ -44,7 +55,7 @@ html, body {
 </script>
 </head>
 
-<body>
+<body onLoad="load_quan_ly_sp() ;them_xoa_sp()">
 <div id="MENU" class="menu">
     <img src="images/logo.png">
     <div class="menu-content">
@@ -57,6 +68,88 @@ html, body {
 </div>
 
 <div class="admin-logo"><img src="images/rsz_admin-header.png"></div>
+<div class="main">
+		<div class="them-sp" align="center"><button onclick="popup_themsp()">Thêm Sản Phẩm</button></div>
+	<table id="table-sp" cellpadding="10px" cellspacing="0">
+		<caption><span class="table-caption"><h1>Quản lí sản phẩm</h1></span></caption>
+        
+		<thead>
+			<tr style="background-color: #f5f5f5;text-align: center;font-size: 20px;font-weight: bold"> 
+				<th>STT</th>
+                <th>Hình ảnh</th>
+      		  	<th>Mã sản phẩm</th>
+      		  	<th>Tên sản phẩm</th>
+                <th>Giá</th>
+                <th>Trạng thái</th>
+        		<th>Thao tác</th>
+    		</tr>
+		</thead>
+		<tbody>
+			<tr></tr>
+		</tbody>
+	</table>
+</div>	
+
+<div style="clear: both"></div>
 	
+<div class="popup-themsp">
+        <div class="popup-themsp__content">
+            <div class="popup-themsp__title">Thêm Sản Phẩm</div>
+            <div class="popup-themsp-left">
+                <div class="popup-themsp-left__label">Nhập Mã sản phẩm</div>
+                <div class="popup-themsp-left__label">Nhập tên sản phẩm</div>
+                <div class="popup-themsp-left__label">Nhập giá</div>
+                <div class="popup-themsp-left__label">Chọn Hình</div>
+                <div class="popup-themsp-left__label">Hiển Thị</div>
+            </div>
+            <div class="popup-themsp-right">
+                <div class="popup-themsp-left__input"><input class="them-thu-tu them-mot-sp" type="text" placeholder="Mã sản phẩm"></div>
+              <div class="popup-themsp-left__input"><input class="them-ten them-mot-sp" type="text" placeholder="Tên sản phẩm"></div>
+                <div class="popup-themsp-left__input"><input class="them-gia them-mot-sp" type="text" placeholder="Giá"></div>
+                <div class="popup-themsp-left__input"><input class="them-hinh them-mot-sp" type="file"></div>
+                <div class="popup-themsp-left__input">
+                    <select  width="30" class="them-mot-sp">
+                        <option>on</option>
+                        <option>off</option>
+                    </select>
+                </div>
+            </div>
+            <button class="popup-themsp__btn" onclick="them_mot_sp()">Thêm</button>
+            <span class="back" onclick="close_popup_themsp()">&times;</span>
+        </div>
+    </div>
+    <!-- popup sửa sp -->
+     <div class="popup-themsp">
+        <div class="popup-themsp__content">
+            <div class="popup-themsp__title">Sửa Sản Phẩm</div>
+            <div class="popup-themsp-left">
+                <div class="popup-themsp-left__label">STT</div>
+                 <div class="popup-themsp-left__label">Mã sản phẩm</div>
+                <div class="popup-themsp-left__label">Tên sản phẩm</div>
+                <div class="popup-themsp-left__label">Giá</div>
+               
+                <div class="popup-themsp-left__label">Hình ảnh</div>
+                <div class="popup-themsp-left__label">Hiển thị</div>
+            </div>
+            <div class="popup-themsp-right">
+            	 <div class="popup-themsp-left__input"><input class="them-thu-tu sua-sp" type="text" placeholder="Thứ tự"></div>
+                <div class="popup-themsp-left__input"><input class="them-stt sua-sp" type="text" placeholder="Mã sản phẩm"></div>
+                <div class="popup-themsp-left__input"><input class="them-ten sua-sp" type="text" placeholder="Tên sản phẩm"></div>
+                <div class="popup-themsp-left__input"><input class="them-gia sua-sp" type="text" placeholder="Giá sản phẩm"></div>
+                
+                <div class="popup-themsp-left__input"><input class="them-hinh sua-sp" type="file"></div>
+                <div class="popup-themsp-left__input">
+                    <select  width="30" class="sua-sp">
+                        <option>on</option>
+                        <option>off</option>
+                    </select>
+                </div>
+            </div>
+            <button class="popup-themsp__btn" onclick="sua_thong_tin_sp()">Sửa</button>
+            <span class="back" onclick="close_popup_themsp()">&times;</span>
+            <img src="images/avata.jpg" class="sua-hinh" style="width: 100px; height: 75px; margin-top: 12px">
+        </div>
+    </div>
+    <script src="js/sp.js"></script>
 </body>
 </html>
