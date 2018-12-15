@@ -82,11 +82,11 @@ sp[63] = new san_pham("SP63", " Nệm nằm Petdream",172, "images/sanpham/cho/g
 sp[64] = new san_pham("SP64", "Thức ăn cho mèo cat's Eye ",166, "images/sanpham/meo/food/foodcat1.jpg","cat","food");
 sp[65] = new san_pham("SP65", "Thức ăn cao cấp NutriSource thịt vịt",25, "images/sanpham/meo/food/foodcat5.jpg","cat","food");
 sp[66] = new san_pham("SP66", "Thức ăn cao cấp NutriSource cá hồi và gan ",25, "images/sanpham/meo/food/foodcat6.jpg","cat","food");
-sp[67] = new san_pham("SP67", "Viên dinh dưỡng Hairball for cats ",160, "images/sanpham/meo/food/foodcat3.jpg","cat","food");
+sp[67] = new san_pham("SP67", "Viên dinh dưỡng Hairball for cats ",160, "images/sanpham/meo/food/foodcat3.JPG","cat","food");
 sp[68] = new san_pham("SP68", "Me-O - Thức ăn Meo kitten",105, "images/sanpham/meo/food/foodcat2.jpg","cat","food");
 sp[69] = new san_pham("SP69", "Thức ăn cho mèo Home cat ",203, "images/sanpham/meo/food/foodcat4.jpg","cat","food");
 sp[70] = new san_pham("SP70", "Me-O - Creamy Treats Bonito Flavor",45, "images/sanpham/meo/food/foodcat8.jpg","cat","food");
-sp[71] = new san_pham("SP71", "Royal spnin - Intense Beauty",32, "images/sanpham/meo/food/foodcat7.JPG","cat","food");
+sp[71] = new san_pham("SP71", "Royal spnin - Intense Beauty",32, "images/sanpham/meo/food/foodcat7.jpg","cat","food");
 sp[72] = new san_pham("SP72", "Pate Royal spnin - Recovery ",55, "images/sanpham/meo/food/foodcat9.jpg","cat","food");
 
 
