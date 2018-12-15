@@ -1338,7 +1338,7 @@ function saveProduct(productID) {
         var ma = JSON.parse(localStorage.getItem('item'+i)).Ma;
         if(productID == ma)
         {
-            alert('Sản phẩm này đã được thêm vào giỏ hàng!');
+            alert('Sản phẩm đã có trong giỏ hàng!');
             return false;
         }
     }
