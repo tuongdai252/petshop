@@ -831,7 +831,7 @@ function getInform(){
                                     <h1 id="tensp">' +sp[i].tensp+ '</h1>\
                                     <p id="masp">Mã SP: ' +sp[i].masp+ '</p>\
                                     <p class="gia">' +sp[i].gia+ '.000đ<p>\
-                                    <a href="#" class="shop-item-button">Đặt mua ngay</a>\
+                                    <p><button class="shop-item-button" value="'+sp[i].masp+'" onClick="saveProduct(this.value)">Đặt mua ngay</button></p>\
                                     <div class="thongtin">\
                                         Màu sắc và kiểu dáng đẹp<br>\
                                         Mang đến cho thú cưng cảm giác thoải mái<br>\
@@ -851,7 +851,7 @@ function getInform(){
                                     <h1 id="tensp">' +spmoi[i].tensp+ '</h1>\
                                     <p id="masp">Mã SP: ' +spmoi[i].masp+ '</p>\
                                     <p class="gia">' +spmoi[i].gia+ '.000đ<p>\
-                                    <a href="#" class="shop-item-button">Đặt mua ngay</a>\
+                                    <p><button class="shop-item-button" value="'+spmoi[i].masp+'" onClick="saveProduct(this.value)">Đặt mua ngay</button></p>\
                                     <div class="thongtin">\
                                         Màu sắc và kiểu dáng đẹp<br>\
                                         Mang đến cho thú cưng cảm giác thoải mái<br>\
@@ -869,7 +869,7 @@ function getInform(){
                                     <h1 id="tensp">' +spsale[i].tensp+ '</h1>\
                                     <p id="masp">Mã SP: ' +spsale[i].masp+ '</p>\
                                     <p class="gia">' +spsale[i].gia+ '.000đ<span class="giacu">2.000.000đ</span><p>\
-                                    <a href="#" class="shop-item-button">Đặt mua ngay</a>\
+                                    <p><button class="shop-item-button" value="'+spsale[i].masp+'" onClick="saveProduct(this.value)">Đặt mua ngay</button></p>\
                                     <div class="thongtin">\
                                         Màu sắc và kiểu dáng đẹp<br>\
                                         Mang đến cho thú cưng cảm giác thoải mái<br>\
@@ -1332,6 +1332,7 @@ function saveProduct(productID) {
     };
     var so_sp = localStorage.length;
     if (localStorage.getItem('Tài khoản')) so_sp--;
+    
     for(var i = 0; i < so_sp; i ++)
     {
         var ma = JSON.parse(localStorage.getItem('item'+i)).Ma;
@@ -1342,6 +1343,7 @@ function saveProduct(productID) {
         }
     }
     localStorage.setItem("item"+so_sp, JSON.stringify(Gio_SP));
+    alreadyorder();
 }
 
 function load_gio_hang() {
